@@ -1,0 +1,42 @@
+body{
+    display: flex; 
+    flex-direction: column;
+    gap: 0px 0px; 
+}
+
+body{
+    background-color: #d5d6d5
+    !important;
+}
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr;
+    grid-template-areas:
+        "contact contact contact"
+        "email linkedin discord";
+
+    background-color: #EFEBE9;
+}
+
+i:focus{
+    outline:none; border-style: none;    
+}
+
+i:hover{
+    text-shadow: 0 0 150px black;
+    color: black;
+}
+
+i{
+    color: black;
+    transition: color 0.2s ease-out;
+    transition: text-shadow 0.2s ease-out;
+}
+
+
+
+
+
+

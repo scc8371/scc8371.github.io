@@ -1,0 +1,129 @@
+
+.project-panel{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "project project-alt";
+
+}
+
+@media (max-width: 950px) {
+    .project-panel{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "project";
+    }
+}
+
+.navbar-custom{
+    background-color: #35405F;
+}
+
+.container-fluid a{
+    color: #EFEBE9;
+}
+
+.carousel.carousel-fade .carousel-item {
+    display: block;
+    opacity: 0;
+    transition: opacity ease-out 0.7s;
+
+    filter: brightness(75%);
+}
+
+.carousel.carousel-fade .carousel-item.active {
+    opacity: 1 !important;
+}
+
+.card{
+    margin: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 20px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.left{
+    margin-right: 7rem;
+    justify-self:center;
+    grid-area: project-alt;
+}
+
+.right{
+    margin-left: 7rem;
+    justify-self:center;
+    grid-area: project;
+}
+
+.card{
+    width: 40vw;
+}
+
+@media (max-width: 950px) {
+    .left{
+        grid-area: project;
+        margin: 0rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .right{
+        margin: 0rem;
+    }
+
+    .card{
+        width: 80vw;
+    }
+
+}
+
+.first{
+    margin-top: 2rem;
+}
+
+.bottom{
+    margin-bottom: 2rem;
+}
+
+.contact-label{
+    grid-area: contact;
+    justify-self: Center;
+    margin: 2rem;
+    font-size: 2.5rem;
+}
+
+.card-body{
+    background-color: #EFEBE9;
+}
+
+.mission-text {
+    position: absolute;
+    z-index: 99;
+    height: 10vh;
+    left: 12.5vw;
+    top: 20vw;
+    display: grid;
+    place-items: center;
+  }
+  
+  .cool-text {
+    width: 27ch;
+    animation: typing 3s steps(50), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-size: 5vw;
+    color: #EFEBE9
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
