@@ -28,7 +28,7 @@
 @media (max-width: 950px) {
     #about{
         grid-template-columns: 1fr;
-        grid-template-rows: 0.5fr 0.1fr 1fr;
+        grid-template-rows: 0.5fr 0.1fr 0.5fr;
         grid-template-areas:
             "image"
             "header"
@@ -48,6 +48,20 @@
 
     #about h2{
         margin-top: 2rem;
+    }
+    .mission-text{
+        visibility: hidden;
+    }
+
+    #about p{
+        padding: 0rem !important;
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+        margin-bottom: 1rem;
+    }
+
+    #about h2{
+        padding-left: 2rem !important
     }
 
     
@@ -76,7 +90,7 @@
     padding-left: 4rem;
     font-size: 1.25rem;
     padding-right: 5rem;
-    text-align: justify;
+    text-align: left;
     grid-area: desc;
 }
 

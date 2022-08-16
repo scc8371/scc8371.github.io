@@ -4,6 +4,24 @@ body{
     gap: 0px 0px; 
 }
 
+p, a{
+    font-family: 'Nunito', sans-serif;
+}
+
+h1, h2, h3, h5{
+    font-size: 2rem;
+    font-family: 'Lalezar', cursive;
+}
+
+a{
+    color: #d5d6d5;
+    font-size: 1.5rem;
+}
+
+a:hover{
+    color: white;
+}
+
 body{
     background-color: #d5d6d5
     !important;
@@ -33,6 +51,7 @@ i{
     color: black;
     transition: color 0.2s ease-out;
     transition: text-shadow 0.2s ease-out;
+    padding-bottom: 2rem;
 }
 
 
