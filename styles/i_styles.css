@@ -62,9 +62,7 @@
 
     #about h2{
         padding-left: 2rem !important
-    }
-
-    
+    }    
 }
 
 #about h2{
@@ -90,7 +88,7 @@
     padding-left: 4rem;
     font-size: 1.25rem;
     padding-right: 5rem;
-    text-align: left;
+    text-align: justify;
     grid-area: desc;
 }
 
@@ -121,4 +119,8 @@
     grid-area: linkedin;
     justify-self: center;
     transition: transform 0.2s;
+}
+
+#contact-right, #contact-left, #contact-middle{
+    height: 50%;
 }

@@ -52,6 +52,7 @@ i{
     transition: color 0.2s ease-out;
     transition: text-shadow 0.2s ease-out;
     padding-bottom: 2rem;
+    height: 25%;
 }
 
 
