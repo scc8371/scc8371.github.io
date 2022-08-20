@@ -6,6 +6,7 @@
     grid-template-areas:
         "project project-alt";
 
+    scroll-margin-top: 250px;
 }
 
 @media (max-width: 950px) {
@@ -33,13 +34,25 @@
     font-family: 'Lalezar', cursive;
 }
 
+.btn{
+    border-color: black;
+    background-color: #35405F !important
+}
+
+.btn:hover{
+    background-color: #1f2638 !important
+}
+
 .carousel.carousel-fade .carousel-item {
     display: block;
     opacity: 0;
-    transition: opacity ease-out 0.7s;
+    transition: opacity ease-out 1s;
+}
 
+.carousel-item img{
     filter: brightness(75%);
 }
+
 
 .carousel.carousel-fade .carousel-item.active {
     opacity: 1 !important;

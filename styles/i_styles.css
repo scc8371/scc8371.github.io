@@ -23,6 +23,8 @@
 
     background-color: #EFEBE9;
     color: black;
+
+    scroll-margin-top: 150px;
 }
 
 @media (max-width: 950px) {
@@ -127,4 +129,8 @@
 
 #contact-right, #contact-left, #contact-middle{
     height: 50%;
+}
+
+#projects{
+    scroll-margin-top: 100px;
 }

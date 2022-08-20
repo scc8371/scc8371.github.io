@@ -1,0 +1,67 @@
+/* popup styles (derived from project 2) */
+
+.popup{
+    transition: all 0.5s ease-in;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 15% 55% 20%;
+    grid-template-areas:"exit . ."
+    "description description description"
+    "buttonsYes .  buttonsNo";
+
+    background-color: gray;
+    border: 10px solid black;
+    position: fixed;
+    top: 15%;
+    left: 12.5%;
+    width: 75%;
+    height: 75%;
+    visibility: visible;
+}
+
+
+.popup h2{
+    font-size:  5vw;
+    text-align: center;
+    grid-area: heading;
+    height: 40%;
+    margin-bottom: 3vw;
+    align-self: flex-end;
+}
+
+.popup p{
+    background-color: gray;
+    width: 100%;
+    font-size: 2rem;
+    padding: 1rem;
+    grid-area: description;
+    text-align: center;
+    justify-self: center;
+    
+}
+
+.popup button#yes{
+    grid-area: buttonsYes;
+    width: 100%;
+    font-size: 2rem;
+    margin-left: 50%;
+}
+
+.popup button#no{
+    grid-area: buttonsNo;
+    font-size: 2rem;
+    width: 100%;
+    position: relative;
+
+    right: 50%;
+}
+
+.exitButton{
+    background-color: maroon;
+    margin: 1rem;
+    transition: all .1s ease-in;
+}
+
+.exitButton:hover{
+    background-color: red;
+}
