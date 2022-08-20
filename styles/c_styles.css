@@ -22,8 +22,9 @@
 }
 
 .navbar-brand:hover{
-    color: #EFEBE9;
+    color: #d5d6d5 !important;
 }
+
 .container-fluid a{
     color: #EFEBE9;
 }

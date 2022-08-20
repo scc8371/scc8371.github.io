@@ -19,7 +19,21 @@ a{
 }
 
 a:hover{
-    color: white;
+    color: #9bb1ed !important;
+}
+
+header a{
+    margin-left: 1rem;
+    color:#d5d6d5 !important; 
+}
+
+header i{
+    margin: 0rem;
+    padding: 0rem;
+}
+
+header button{
+    margin-right: 1rem;
 }
 
 body{

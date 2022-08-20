@@ -29,11 +29,29 @@
 </head>
 <body>
     <header class="sticky-top">
-        <nav class="navbar sticky-top navbar-custom">
-            <div class="container-fluid">
-                <a class="navbar-brand">Sami Chamberlain</a>
-              </div>
-          </nav>
+        <nav class="navbar sticky-top navbar-expand-lg navbar-custom">
+          <a class="navbar-brand" href="#">Sami Chamberlain</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-navicon" style="color:#fff; font-size:28px;"></i>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Resume</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#projects">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact Me</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
     </header>
     <main>
       <div class="mission-text">
@@ -71,7 +89,7 @@
 
         <section id="about">
             <h2>About Me</h2>
-            <img id="sami_picture" src="media/Staring.jpg" alt="picture of Sami Chamberlain" data-aos="zoom-out">
+            <img id="sami_picture" src="media/pfp.jpg" alt="picture of Sami Chamberlain" data-aos="zoom-out">
             <p id="my-desc">
                     My name is Sami Chamberlain, and I design software for people.
                     People use software to accomplish greatness, and my number one mission is to see that happen.<br><br>
@@ -144,10 +162,10 @@
         </section>
     </main>
     <footer>
-        <h3 class="contact-label">Contact Me</h3>
-        <a href="google.com" id="contact-left"><i class="fa-regular fa-envelope fa-5x"></i></a>
-        <a href="google.com" id="contact-middle"><i class="fa-brands fa-discord fa-5x"></i></a>
-        <a href="google.com" id="contact-right"><i class="fa-brands fa-linkedin fa-5x"></i></a>
+        <h3 class="contact-label" id="contact">Contact Me</h3>
+        <a href="mailto:scc8371@rit.edu" id="contact-left"><i class="fa-regular fa-envelope fa-5x"></i></a>
+        <a href="https://discord.com/users/369982280988360714" id="contact-middle"><i class="fa-brands fa-discord fa-5x"></i></a>
+        <a href="https://www.linkedin.com/in/sami-chamberlain-a1449a1b5/" id="contact-right"><i class="fa-brands fa-linkedin fa-5x"></i></a>
     </footer>
 
     <script>

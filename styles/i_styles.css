@@ -78,6 +78,8 @@
     grid-area: image;
     display: flex;
 
+    width: 50%;
+
     justify-content: center;
     align-items: center;
 }
@@ -90,7 +92,9 @@
     padding-right: 5rem;
     text-align: justify;
     grid-area: desc;
+
 }
+
 
 #sami_picture{
     width: 75%;
