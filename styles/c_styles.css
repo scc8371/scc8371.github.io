@@ -133,21 +133,20 @@
     display: grid;
     place-items: center;
   }
-  
+
   .cool-text {
-    width: 90vw;
+    font-size: 2.5vw;
+    color: #EFEBE9;
     font-family: 'Press Start 2P', cursive;
-    animation: typing 3s steps(250);
+    animation: typing 2s steps(30, end), blink 1s step-end infinite;
     white-space: nowrap;
     overflow: hidden;
-    font-size: 2.5vw;
-    color: #EFEBE9
+    border-right: 2px solid white;
   }
   
   @keyframes typing {
-    from {
-      width: 0
-    }
+    from { width: 0; }
+    to { width: 100%; }
   }
       
   @keyframes blink {
