@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Audio Visualizer</title>
+    <link href="./styles/default-styles.css" type="text/css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.6/dat.gui.min.js" integrity="sha256-HJ7j+71YYw6Kcs8THwQV9lXmPOcR0eXlg7n8KRTZsyA=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.js" integrity="sha256-u8njNpzE/7fzKRST7Eu38nECKwFREeLMkipUauqgPpY=" crossorigin="anonymous"></script>
+	<script type="module" src="src/loader.js"></script>
+</head>
+
+<body>
+    <main>
+        <div id="controls">
+            <section>
+                <button id="play-button" data-playing="no"></button>
+                <button id="fs-button">Full Screen</button>
+            </section>
+        </div>
+        <canvas width="1245" height="700"></canvas>
+    </main>
+</body>
+
+</html>

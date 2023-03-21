@@ -1,0 +1,17 @@
+I. I used both the treble and bass audio effect nodes, which can be increased or decreased in potency based on a dat.gui slider I set up in my application. 
+The maximum for each would be 50 units, and minimum would be -50 units.
+
+II. My Sprite class is called Sprite (located in sprite.js), and it animates some moving shapes and computers in the background of my visualizer. 
+The sprites will rotate and grow in size depending on the average frequency found in the audio data. I also made a 3D sphere (albeit not in the sprite class), which
+uses the canvas api similar to the Sprite class.
+
+III. I put the title of the application, titles and paths of audio files, all parameters passed into the canvas.js file (most of which are controllable by the dat.gui interface),
+as well as some parameters for the audio nodes (which are all also controllable by the dat.gui interface).
+
+
+IV. To improve aesthetics from the original HW assignment, I first changed the CSS of the page a bit to make the site look a bit less garish. Along with this, I implemented a dat.gui interface that users can interact
+with and change multiple parameters that affect the visualizer. However, the biggest improvement in this app is the "3D" rendered sphere that uses perlin noise to react to audio data. Getting this working took 
+many hours (and a lot of troubleshooting), and the sphere is almost fully controllable by the user (they can change color, number of subdivisions, radius, noise intensity, etc.). That being said, I had some troubles with optimization
+when experimenting with higher subdivisions, so the visualizer can be a bit laggy when using close to max settings. The main bottleneck was the amount of ctx.stroke() calls in the code, which I tried to fix but had no luck doing so. 
+
+Overall, I still believe this improvement deserves a 15%, based on how much time I spent making it and how different it looks from the starting example.

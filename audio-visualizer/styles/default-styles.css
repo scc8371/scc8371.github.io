@@ -1,0 +1,60 @@
+body {
+    background: #eeeeee;
+    font-family: tahoma, verdana, sans serif;
+  }
+  
+  canvas {
+    margin-left: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+    background: #fafafa;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+  
+  #controls{
+    margin-left: 1rem;
+
+    /* ALign the controls to the center of the page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #controls button {
+    margin: 0.5rem;
+    width: 10rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+
+    margin-bottom: 0rem;
+
+  }
+  
+  #playButton{
+    font-size: 1.2rem;
+    width: 10rem;
+    
+  }
+  
+  button[data-playing="yes"]:after{
+    content: "Pause";
+  }
+  
+  button[data-playing="no"]:after{
+    content: "Play";
+  }
+  
+  #fsButton{
+    font-size: 1.2rem;
+    width: 8rem;
+  }
+
+  body{
+    background-color: gray;
+  }

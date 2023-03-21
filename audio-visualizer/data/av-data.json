@@ -1,0 +1,169 @@
+{
+    "title": "Audio Visualizer",
+    "tracks": [
+        {
+            "name": "Yeti Caves - Spelunky",
+            "path": "media/yeticaves.mp3"
+        },
+        {
+            "name": "Alivel Mall - Kirby and the Forgotten Land",
+            "path": "media/alivelmall.mp3"
+        },
+        {
+            "name": "Okinawa Theme - Persona 5 Strikers",
+            "path": "media/okinawa.mp3"
+        },
+        {
+            "name": "Cobalt Coastlands - Pokemon Legends Arceus",
+            "path": "media/cobalt.mp3"
+        },
+        {
+            "name": "Bubblaine - Super Mario Odyssey",
+            "path": "media/bubblaine.mp3"
+        },
+        {
+            "name": "Autumn Mountain - Paper Mario: The Origami King",
+            "path": "media/autumnMountain.mp3"
+        },
+        {
+            "name": "Credits Theme - Super Mario 3D World",
+            "path": "media/credits.mp3"
+        },
+        {
+            "name": "The Death I Deservioli - Pizza Tower",
+            "path": "media/deservioli.mp3"
+        },
+        {
+            "name": "Fall Theme - Stardew Valley",
+            "path": "media/fall-sd.mp3"
+        },
+        {
+            "name": "Exploring the Great Sea - Paper Mario: The Origami King",
+            "path": "media/greatsea.mp3"
+        },
+        {
+            "name": "Lost Woods Battle - Cadence of Hyrule",
+            "path": "media/lostwoods.mp3"
+        },
+        {
+            "name": "World 3 Cave Theme - Legends of IdleOn",
+            "path": "media/idleon.mp3"
+        },
+        {
+            "name": "Palmtree Panic Past - Sonic CD",
+            "path": "media/palmtreepast.mp3"
+        },
+        {
+            "name": "The Wight to Remain - Crypt of the Necrodancer",
+            "path": "media/TheWright.mp3"
+        },
+        {
+            "name": "Okinawa Theme - Persona 5 Strikers",
+            "path": "media/okinawa.mp3"
+        },
+        {
+            "name": "Train Rush - A Hat in Time",
+            "path": "media/trainrush.mp3"
+        },
+        {
+            "name": "Vs. Susie - Deltarune",
+            "path": "media/vssusie.mp3"
+        },
+        {
+            "name": "Sand Storm - Himiko Kikuchi",
+            "path": "media/flyingbeagle.mp3"
+        },
+        {
+            "name": "Fighter Select - Rivals of Aether",
+            "path": "media/aether.mp3"
+        },
+        {
+            "name": "City Escape, Classic Ver. - Sonic Generations",
+            "path": "media/cityescape.mp3"
+        },
+        {
+            "name": "Time to Make History - Persona 4",
+            "path": "media/p4.mp3"
+        },
+        {
+            "name": "Stickerbush Symphony - Donkey Kong Country",
+            "path": "media/stickerbush.mp3"
+        },
+        {
+            "name": "Unexpectancy - Pizza Tower",
+            "path": "media/unexpectancy.mp3"
+        },
+        {
+            "name": "Air Rally - Rhythm Heaven Fever",
+            "path": "media/airrally.mp3"
+        }
+    ],
+    "drawParams": {
+        "showGradient": true,
+        "showInvert": false,
+        "showEmboss": false,
+        "showWaveform": false,
+        "showSphere": true,
+        "sphereRadius": 75,
+        "sphereSegments": 50,
+        "noiseIntensity": 10,
+        "wireframeMode" : false,
+        "primaryColor": "#006400",
+        "secondaryColor": "#000000",
+        "images": [
+            {
+                "path": "media/star.png",
+                "x": 0,
+                "y": 0,
+                "width": 25,
+                "height": 25
+            },
+            {
+                "path": "media/triangle.png",
+                "x": 0,
+                "y": 0,
+                "width": 25,
+                "height": 25
+            },
+            {
+                "path": "media/circle.png",
+                "x": 0,
+                "y": 0,
+                "width": 25,
+                "height": 25
+            },
+            {
+                "path": "media/square.png",
+                "x": 0,
+                "y": 0,
+                "width": 25,
+                "height": 25
+            },
+            {
+                "path": "media/computer.png",
+                "x": 0,
+                "y": 0,
+                "width": 25,
+                "height": 25
+            },
+            {
+                "path": "media/laptop.png",
+                "x": 0,
+                "y": 0,
+                "width": 25,
+                "height": 25
+            }
+        ]
+    },
+    "nodeParams": {
+        "highshelf": 0,
+        "lowshelf": 0,
+        "distortion": 0,
+        "volume": 50,
+        "playbackSpeed": 1,
+        "audioDataType": [
+            "Frequency",
+            "Waveform"
+        ]
+    }
+}
