@@ -53,6 +53,41 @@ let guiInit = () => {
         //update play button to show that the track is paused
         playButton.dataset.playing = "no";
     });
+
+    let fileTrackAdder = gui.add({loadFile: function() {}}, 'loadFile').name("Load File");
+    fileTrackAdder.onChange((value) => {
+        let input = document.createElement("input");
+        input.type = "file";
+        input.accept = "audio/*";
+        input.onchange = (e) => {
+            let file = e.target.files[0];
+            
+            let track = {
+                name: file.name,
+                path: URL.createObjectURL(file)
+            };
+            let tracks = [];
+            tracks.push(track);
+            //push all of the controllerObject tracks into the tracks array
+            for(let i in controllerObject.tracks){
+                tracks.push(controllerObject.tracks[i]);
+            }
+            controllerObject.tracks = tracks;
+            
+            //clear trackObj optiosn
+            trackObj.__select.options.length = 0;
+            //add the new track to the dropdown menu
+            for(let i in controllerObject.tracks){
+                trackObj.__select.options.add(new Option(controllerObject.tracks[i].name, controllerObject.tracks[i].name));
+            }
+
+            //set the new track as the selected track
+            trackObj.setValue(track.name);
+            audio.loadSoundFile(track.path);
+        }
+        input.click();
+    });
+
     
     //add waveform and frequency data type dropdowns to the datgui menu
     let audioDataTypeObj = gui.add({dropdown: 'frequency'}, 'dropdown', controllerObject.nodeParams.audioDataType).name("Audio Data Type");
