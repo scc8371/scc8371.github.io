@@ -41,16 +41,6 @@ body{
     !important;
 }
 
-footer{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.5fr 1fr;
-    grid-template-areas:
-        "contact contact contact"
-        "email linkedin discord";
-
-    background-color: #EFEBE9;
-}
 
 i:focus{
     outline:none; border-style: none;    
@@ -68,6 +58,7 @@ i{
     padding-bottom: 2rem;
     height: 25%;
 }
+
 
 
 

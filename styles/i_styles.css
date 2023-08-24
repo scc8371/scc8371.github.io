@@ -5,7 +5,7 @@
     background-color: #000;
 }
 
-#about{
+/* #about{
     margin: 2rem;
     margin-left: 0rem;
     margin-right: 0rem;
@@ -14,58 +14,20 @@
     padding-bottom: 5rem;
 
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr 2fr 1.5fr;
     grid-template-rows: 1fr 3fr;
 
     grid-template-areas:
-        "image header"
+        "icons icons"
+        "image "
         "image desc";
 
     background-color: #EFEBE9;
     color: black;
 
     scroll-margin-top: 150px;
-}
+} */
 
-@media (max-width: 950px) {
-    #about{
-        grid-template-columns: 1fr;
-        grid-template-rows: 0.5fr 0.1fr 0.5fr;
-        grid-template-areas:
-            "image"
-            "header"
-            "desc";
-
-        margin: 0rem;
-        padding: 0rem;
-
-        margin-top: 2rem;
-        padding-top: 2rem;
-        padding-bottom: 1rem;
-    }
-
-    #about img{
-        width: 75%;
-    }
-
-    #about h2{
-        margin-top: 2rem;
-    }
-    .mission-text{
-        visibility: hidden;
-    }
-
-    #about p{
-        padding: 0rem !important;
-        padding-left: 2rem !important;
-        padding-right: 2rem !important;
-        margin-bottom: 1rem;
-    }
-
-    #about h2{
-        padding-left: 2rem !important
-    }    
-}
 
 #about h2{
     grid-area: header;
@@ -76,39 +38,44 @@
     text-decoration: underline;
 }
 
-#about img{
-    grid-area: image;
-    display: flex;
-
-    width: 50%;
-
-    justify-content: center;
-    align-items: center;
-}
-
 #about p{
-    padding: 1rem;
     padding-top: 0rem;
-    padding-left: 4rem;
     font-size: 1.25rem;
-    padding-right: 5rem;
     text-align: justify;
-    grid-area: desc;
-
 }
 
-
-#sami_picture{
-    width: 75%;
-    justify-self: center;
-    align-self: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 20px 20px 0 rgba(0, 0, 0, 0.19);
-}
 
 #contact-left{
     grid-area: email;
     justify-self: center;
     transition: transform 0.2s;
+}
+
+#no-move{
+    position: fixed;
+}
+
+@media (max-width: 950px) {
+    #no-move{
+        position: relative;
+    }
+}
+
+#resumeBtn{
+    width: 350px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #000;
+    color: #fff;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+}
+
+#resumeBtn:hover{
+    background-color: #fff;
+    color: #000;
 }
 
 #contact-left:hover, #contact-right:hover, #contact-middle:hover{
