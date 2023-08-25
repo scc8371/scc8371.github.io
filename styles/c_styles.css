@@ -86,6 +86,7 @@
 .card{
     margin: 1rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 20px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 40vw;
 }
 
 .left{
@@ -100,8 +101,92 @@
     grid-area: project;
 }
 
-.card{
-    width: 40vw;
+
+
+
+@media (max-width: 950px) {
+    .project-panel{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "project";
+        position: relative;
+    }
+    .left{
+        justify-self:center;
+        grid-area: project;
+        position: relative;
+        right: 29%;
+
+    }
+    
+    .right{
+        justify-self:center;
+        grid-area: project;
+        position: relative;
+        right: 29%;
+    }
+}
+
+@media (max-width: 768px) {
+    .left{
+        right: 33%;
+
+    }
+    
+    .right{
+        right: 33%;
+    }
+}
+
+
+
+@media (max-width: 1500px) {
+    .project-panel{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "project";
+    
+        scroll-margin-top: 250px;
+    }
+
+    .left{
+        justify-self:center;
+        grid-area: project;
+        margin-left: 0rem;
+        margin-right: 0rem;
+    }
+    
+    .right{
+        justify-self:center;
+        grid-area: project;
+        margin-right: 0rem;
+        margin-left: 0rem;
+    }
+
+    .card{
+        width: 50vw;
+    }
+    
+}
+
+@media (max-width: 1150px) {
+    .left{
+        justify-self:center;
+        grid-area: project;
+        margin-left: 5rem;
+        margin-right: 0rem;
+    }
+    
+    .right{
+        justify-self:center;
+        grid-area: project;
+        margin-right: 0rem;
+        margin-left: 5rem;
+    }
+    
 }
 
 .contact-label{
