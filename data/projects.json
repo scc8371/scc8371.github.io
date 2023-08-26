@@ -1,0 +1,16 @@
+{
+    "projects": [
+        {
+            "name": "Project 1",
+            "description": "This is a project",
+            "image": "media/bottle-knights.png",
+            "link": "index.html"
+        },
+        {
+            "name": "Project 2",
+            "description": "This is a project",
+            "image": "media/bottle-knights.png",
+            "link": "index.html"
+        }
+    ]
+}

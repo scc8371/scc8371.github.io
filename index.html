@@ -36,12 +36,14 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+  <script src="src/main.js" type="module"></script>
+
 
 </head>
 
 <body>
   <main>
-    <div class="columns" >
+    <div class="columns">
       <div class="column is-one-third" id="no-move"> <!-- Adjust the column width -->
         <section id="about" class="hero is-fullheight">
           <div class="container" style="padding: 2rem;"> <!-- Increase the padding -->
@@ -94,108 +96,12 @@
 
     <section id="projects">
       <div class="columns is-vcentered">
-        <div class="column is-two-thirds">
-          <div class="project-panel first" id="1" data-aos="fade-up">
-            <div class="card right">
-              <img src="media/MyneEngine.png" class="card-img-top" alt="Myne logo">
-              <div class="card-body">
-                <h5 class="card-title">Myne Graphics Engine</h5>
-                <p class="card-text">A C++ graphics engine that utilizes OpenGL and OpenAL libraries. Fully capable of
-                  managing sprites,
-                  audio, and text. Has a built in physics and UI manager.
-                </p>
-                <a href="https://github.com/scc8371/Myne-Engine" class="btn btn-primary">Github Repository</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-panel" id="7" data-aos="fade-up">
-            <div class="card left">
-              <img src="media/icarus.jpg" class="card-img-top" alt="Myne logo">
-              <div class="card-body">
-                <h5 class="card-title">Icarus VR</h5>
-                <p class="card-text">a virtual reality game with fast-paced gun shooting and skill-based bow and arrow
-                  mechanics.</p>
-                <a href="https://sciencedoge.itch.io/icarus-vr" class="btn btn-primary">Try it! (itch.io)</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-panel" id="2" data-aos="fade-up">
-            <div class="card right">
-              <img src="media/karnissa-castle-title.jpg" class="card-img-top" alt="Roll Arena Graphic">
-              <div class="card-body">
-                <h5 class="card-title">Karnissa's Castle</h5>
-                <p class="card-text">A puzzle game inspired by Lawrence Watt-Evens' bookseries "The World of Ethshar".
-                </p>
-                <a href="https://sciencedoge.itch.io/karnissas-castle" class="btn btn-primary">Try it! (itch.io)</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-panel" id="3" data-aos="fade-up">
-            <div class="card left">
-              <img src="media/lights-out.png" class="card-img-top" alt="Lights Out screen capture">
-              <div class="card-body">
-                <h5 class="card-title">Lights Out</h5>
-                <p class="card-text">A game set in the Dresden Files universe. Made using Unity and C#.
-                </p>
-                <a href="https://sciencedoge.itch.io/lights-out" class="btn btn-primary">Try it! (itch.io)</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-panel" id="4" data-aos="fade-up">
-            <div class="card right">
-              <img src="media/roll-arena.png" class="card-img-top" alt="Roll Arena Graphic">
-              <div class="card-body">
-                <h5 class="card-title">Roll Arena 64</h5>
-                <p class="card-text">Created for the GMTK 2022 Game Jam. Roll your dice and conquer the most land!</p>
-                <a href="https://prestosilver.itch.io/ra64" class="btn btn-primary">Try it! (itch.io)</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-panel" id="5" data-aos="fade-up">
-            <div class="card left">
-              <img src="media/visualizer.png" class="card-img-top" alt="Audio Visualizer Screenshot">
-              <div class="card-body">
-                <h5 class="card-title">Audio Visualizer</h5>
-                <p class="card-text">An audio visualizer that uses the JavaScript canvas api to display audio data.
-                  Features
-                  an isometric sphere that rotates and grows using frequency/waveform data and perlin noise. Utilizes a
-                  dat.gui interface for easy user controls.</p>
-                <a href="visualizer/" class="btn btn-primary">Try it!</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-panel bottom" id="6" data-aos="fade-up">
-            <div class="card right">
-              <img src="media/bottle-knights.png" class="card-img-top" alt="Bottle Knights screenshot">
-              <div class="card-body">
-                <h5 class="card-title">Bottle Knights</h5>
-                <p class="card-text">An incremental rougelike where you assume the role as a knight in bottle cap-clad
-                  armor.</p>
-                <a href="bottle-knights/index.html" class="btn btn-primary">Try it!</a>
-              </div>
-            </div>
-          </div>
-
+        <div class="column is-two-thirds projectSection">
         </div>
-
       </div>
 
     </section>
   </main>
-  <!-- <footer>
-    <h3 class="contact-label" id="contact">Contact Me</h3>
-    <a href="mailto:scc8371@rit.edu" id="contact-left"><i class="fa-regular fa-envelope fa-5x"></i></a>
-    <a href="https://github.com/scc8371" id="contact-middle"><i class="fa-brands fa-github fa-5x"></i></a>
-    <a href="https://www.linkedin.com/in/sami-chamberlain-a1449a1b5/" id="contact-right"><i
-        class="fa-brands fa-linkedin fa-5x"></i></a>
-  </footer> -->
-
   <script>
     AOS.init();
   </script>
