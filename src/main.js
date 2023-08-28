@@ -15,3 +15,30 @@ window.onload = () =>{
         isLeft = !isLeft;
     });
 }
+
+let scrollToTopButton = document.querySelector(".back-button");
+
+scrollToTopButton.addEventListener('click', scrollToTop);
+
+let root = document.documentElement;
+
+function scrollToTop(){
+    root.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+};
+
+window.onscroll = () => {
+    let top = window.scrollY || root.scrollTop
+
+    if(top > window.innerHeight){
+        console.log("true");
+        scrollToTopButton.classList.remove("hidden");
+        scrollToTopButton.classList.add("shown");
+    }
+    else{
+        scrollToTopButton.classList.add("hidden");
+        scrollToTopButton.classList.remove("shown");
+    }
+}

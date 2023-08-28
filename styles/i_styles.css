@@ -45,13 +45,6 @@
     width: 66.5%;
 }
 
-#my-name{
-    display: inline;
-    text-align: center;
-    left: 50%;
-    border: 1px solid black;
-}
-
 
 @media (max-width: 1150px) {
     #no-move {

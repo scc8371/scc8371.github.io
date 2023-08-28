@@ -75,6 +75,54 @@
     color: transparent;
 }
 
+.back-button{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #007bff;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+    transition: background-color 0.3s ease;
+
+    color: transparent;
+
+    position: fixed;
+
+    top: 90%;
+    left: -10%;
+
+    opacity: 90%;
+
+    
+}
+
+.hidden{
+    animation: slide-back 1.0s forwards;
+}
+
+.shown{
+    animation: slide 0.5s forwards;
+}
+
+@keyframes slide{
+    100% {left: 2%; }
+}
+
+@keyframes slide-back{
+    100% {left: -10%;}
+}
+
+
+.back-button:hover {
+    background-color: #0056b3;
+    color: transparent;
+    text-decoration: none;
+}
+
 .resButtonWrapper {
     display: flex;
     align-items: center;
@@ -253,18 +301,3 @@
     text-decoration: none !important;
 }
 
-@keyframes typing {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent
-    }
-}
