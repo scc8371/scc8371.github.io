@@ -42,3 +42,4 @@ window.onscroll = () => {
         scrollToTopButton.classList.remove("shown");
     }
 }
+

@@ -41,10 +41,17 @@
 }
 
 .social-button:hover {
-    background-color: #0056b3;
+    background-color: black;
+    color: white !important;
     color: transparent;
     text-decoration: none;
 }
+
+.social-button:hover i {
+    color: white;
+}
+
+
 
 .imgWrapper {
     display: flex;
@@ -68,18 +75,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: black;
+    background-color: white;
     font-size: 30px;
     transition: background-color 0.3s ease;
 
     color: transparent;
 }
 
-.back-button{
-    width: 75px;
-    height: 75px;
+.back-button {
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
-    background-color: #007bff;
+    background-color: black;
     margin: 0 10px;
     display: flex;
     align-items: center;
@@ -97,30 +105,43 @@
 
     opacity: 90%;
 
-    
+
 }
 
-.hidden{
+.back-button i {
+    color: white;
+}
+
+.hidden {
     animation: slide-back 1.0s forwards;
 }
 
-.shown{
+.shown {
     animation: slide 0.5s forwards;
 }
 
-@keyframes slide{
-    100% {left: 2%; }
+@keyframes slide {
+    100% {
+        left: 1.5%;
+    }
 }
 
-@keyframes slide-back{
-    100% {left: -10%;}
+@keyframes slide-back {
+    100% {
+        left: -100%;
+    }
 }
 
 
 .back-button:hover {
-    background-color: #0056b3;
+    background-color: white;
+    color: black !important;
     color: transparent;
     text-decoration: none;
+}
+
+.back-button:hover i {
+    color: black;
 }
 
 .resButtonWrapper {
@@ -145,6 +166,10 @@
     margin: 1rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 20px 20px 0 rgba(0, 0, 0, 0.19);
     width: 40vw;
+
+    border: 2px solid black;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
 }
 
 .projectSection {
@@ -249,6 +274,18 @@
         padding-bottom: 2.5rem;
     }
 
+    @keyframes slide {
+        100% {
+            left: 1.5%;
+        }
+    }
+
+    @keyframes slide-back {
+        100% {
+            left: -100%;
+        }
+    }
+
 }
 
 .first {
@@ -259,13 +296,13 @@
     margin-bottom: 2rem;
 }
 
-.sectionHeader{
+.sectionHeader {
     text-align: center;
 }
 
 
 
-.sectionHeaderHr{
+.sectionHeaderHr {
     border: none;
     position: relative;
     top: 43px;
@@ -275,13 +312,13 @@
     background-color: gray;
 
     z-index: 0;
-    
+
     border: 0;
     height: 0;
     box-shadow: 0 0 20px 5px black;
 }
 
-.sectionHeaderH3{
+.sectionHeaderH3 {
     position: relative;
     z-index: 200;
     font-size: 3rem !important;
@@ -289,9 +326,20 @@
 
 .card-body {
     background-color: #EFEBE9;
+
+    background:
+        linear-gradient(135deg, #0000 18.75%, #e7e7e7 0 31.25%, #0000 0),
+        repeating-linear-gradient(45deg, #e7e7e7 -6.25% 6.25%, #cecece 0 18.75%);
+    background-size: 160px 160px;
+    color: black !important;
+
 }
 
-.my-name{
+.card-text{
+    font-size: 1.2rem;
+}
+
+.my-name {
     display: block;
     text-align: center !important;
     margin: 0 !important;
@@ -299,5 +347,21 @@
 
     margin-bottom: 2rem !important;
     text-decoration: none !important;
+
+    color: white;
+    text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+        1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
 }
 
+.seen {
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    margin: 0rem;
+    left: 0;
+    background-color: black;
+    top: 30%;
+
+    opacity: 0.8;
+
+}

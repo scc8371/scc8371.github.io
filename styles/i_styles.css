@@ -26,6 +26,10 @@
     transition: transform 0.2s;
 }
 
+#my-desc{
+    color: white;
+}
+
 #no-move {
     position: fixed;
     bottom: 0;
@@ -36,7 +40,19 @@
         linear-gradient(180deg, white 30%, rgba(255, 255, 255, 0)) repeat,
         linear-gradient(90deg, black 1px, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0)) no-repeat,
         linear-gradient(90deg, rgba(255, 255, 255, 0) 5px, black 5px, black 6px, rgba(255, 255, 255, 0) 6px, rgba(255, 255, 255, 0)) no-repeat;
-    background-color: white;
+
+        background:
+      conic-gradient(from -60deg at 50% calc(100%/3),#9a9a9a 0 120deg,#0000 0),
+      conic-gradient(from 120deg at 50% calc(200%/3),#9a9a9a 0 120deg,#0000 0),
+      conic-gradient(from  60deg at calc(200%/3),#9a9a9a 60deg,#676767 0 120deg,#0000 0),
+      conic-gradient(from 180deg at calc(100%/3),#343434 60deg,#9a9a9a 0 120deg,#0000 0),
+      linear-gradient(90deg,#343434 calc(100%/6),#676767 0 50%,
+      #343434 0 calc(500%/6), #676767 0);
+background-size: 66px 38px;
+
+
+
+        border-left: 3px solid black;
 
 }
 
@@ -63,7 +79,7 @@
         height: 50%;
     }
 
-    #projects{
+    #projects {
         width: 100%;
     }
 }
@@ -109,5 +125,3 @@
 #contact-middle {
     height: 50%;
 }
-
-
