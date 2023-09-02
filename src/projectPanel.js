@@ -10,14 +10,13 @@ const template = `
 <link rel="stylesheet" href="styles/e_styles.css">
 <link rel="stylesheet" href="styles/i_styles.css">
 
-
-<div class="project-panel" data-aos="fade-up">
+<div class="project-panel">
 <div class="card">
   <img src="media/bottle-knights.png" class="card-img-top" alt="Default">
-  <div class="card-body">
-    <h5 class="card-title">Default</h5>
+  <div class="card-body">   
+  
+  <h5 class="card-title">Default</h5>
     <p class="card-text">Default</p>
-    <a href="/default" class="btn btn-primary">Learn More</a>
   </div>
 </div>
 </div>
@@ -39,11 +38,12 @@ class ProjectPanel extends HTMLElement {
     }
 
     connectedCallback() {
-        console.log('connected');
         this.shadowRoot.querySelector('.card-img-top').src = this.image;
         this.shadowRoot.querySelector('.card-title').innerHTML = this.name;
         this.shadowRoot.querySelector('.card-text').innerHTML = this.description;
-        this.shadowRoot.querySelector('.btn').href = this.link;
+        
+        this.shadowRoot.querySelector('.card').onclick = () => location.href = this.link;
+        this.shadowRoot.querySelector('.card').style.cursor = "pointer";
 
         if (this.isLeft) {
             this.shadowRoot.querySelector('.card').classList.add('left');

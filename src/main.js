@@ -5,7 +5,6 @@ import * as sectionHeader from "./sectionHeader.js"
 //load project panels and display in the project section
 let isLeft = true;
 let projectSection = document.querySelector('.projectSection')
-console.log(projectSection);
 
 window.onload = () =>{
     loader.projectData.projects.forEach(project => {
@@ -33,7 +32,6 @@ window.onscroll = () => {
     let top = window.scrollY || root.scrollTop
 
     if(top > window.innerHeight){
-        console.log("true");
         scrollToTopButton.classList.remove("hidden");
         scrollToTopButton.classList.add("shown");
     }
