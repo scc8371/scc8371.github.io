@@ -213,12 +213,79 @@
 }
 
 .title{
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-left: 1rem;
-
     font-size: 4rem;
 
     text-align: center;
+
+    padding: 1.5rem;
+}
+
+.education-info{
+    display: grid;
+
+    grid-template-areas: "img gpa"
+                          "img degree";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+
+    padding-bottom: 2rem;
+}
+
+@media (max-width: 960px){
+    .education-info{
+        grid-template-areas: "img"
+                             "degree"
+                             "gpa";
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr; 
+    }
+
+    .education-info img{
+        padding: 0rem !important;
+        margin: 0rem !important;
+    }
+
+    .education-info #gpa{
+        text-align: center; 
+        font-size: 1.5rem;
+    }
+
+    .education-info #degree{
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .edu-title{
+        margin: 0rem !important;
+        padding: 0rem !important;
+    }
+}
+
+.education-info img{
+    grid-area: img;
+    align-self: center;
+    justify-self: center;
+    padding-right: 2rem;
+    padding-left: 4rem;
+}
+
+.edu-title{
+    margin-bottom: 1rem !important;
+    padding: 0rem !important;
+}
+
+.education-info #gpa{
+    margin: 0rem;
+    padding: 0rem;
+    align-self: center;
+}
+
+.education-info #degree{
+    margin: 0rem;
+    align-self: center;
 }
 
 .centered-div{
@@ -282,10 +349,21 @@
 
 }
 
+ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    justify-content: center !important;
+
+    border: 5px solid black;
+}
+
+li{
+    margin: 0.5rem;
+}
+
 .langTitle, .toolTitle{
     margin-left: 0rem !important;
     margin-top: 2rem !important;
-    border: 1px solid black;
 }
 
 @media (max-width: 1300px){
@@ -293,7 +371,7 @@
         font-size: 3rem;
         margin-left: 0;
         margin-right: 0;
-        margin-top: 3rem !important;
+        margin-top: 1rem;
     }
 }
 
