@@ -7,9 +7,9 @@ let isLeft = true;
 let projectSection = document.querySelector('.projectSection')
 
 window.onload = () =>{
+    if(!projectSection) return;
     loader.projectData.projects.forEach(project => {
         let panel = new projectPanel.ProjectPanel(project.name, project.description, project.image, project.link, isLeft);
-
         projectSection.appendChild(panel);
         isLeft = !isLeft;
     });
