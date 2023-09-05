@@ -110,8 +110,8 @@ background-size: 66px 38px;
 
 #project-desc-section p{
     grid-area: desc;
-    margin-top: 2rem !important;
-    padding: 1rem;
+    margin-top: 0rem !important;
+    padding: 0.6rem;
 }
 
 #project-desc-section .imgWrapper img{
@@ -134,16 +134,19 @@ background-size: 66px 38px;
 
 #project-desc-section .resButtonWrapper{
     grid-area: btn;
+    margin:0rem !important;
 }
 
 
 #project-desc-section .centered-div{
+    border: 5px solid black;
     display: grid;
-    grid-template-areas: "header btn"
-                          "video desc";
+    grid-template-areas: "header btn"            
+                             "video desc"
+                             ". desc";
 
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.1fr 1fr 0.1fr;
+    grid-template-rows: 0.1fr 1fr 1fr;
 }
 
 #projects, #about-me-section, #project-desc-section {
@@ -158,13 +161,16 @@ background-size: 66px 38px;
     }
 
     #project-desc-section .centered-div{
-        grid-template-areas: "header header"            
+        grid-template-areas: "header btn"            
                              "video video"
-                             "btn btn"
                              "desc desc";
 
         grid-template-columns: 1fr;
         grid-template-rows: 0.1fr 1fr;
+    }
+
+    #project-desc-section p{
+        font-size: 1rem !important;
     }
 
     #project-desc-section .resButtonWrapper{
@@ -180,6 +186,17 @@ background-size: 66px 38px;
 
     #projects, #about-me-section, #project-desc-section {
         width: 60%;
+    }
+
+    #project-desc-section .centered-div{
+        grid-template-areas: "header header"            
+                             "video video"
+                             "btn btn"
+                             "desc desc";
+    }
+
+    #project-desc-section .resButtonWrapper{
+        margin: 1rem !important;
     }
 
     #about-me-section h1, #project-desc-section h1{

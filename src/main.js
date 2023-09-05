@@ -13,10 +13,23 @@ window.onload = () => {
 
     if(projectDescSection){
         //load info into section based on clicked panel/local storage
-        console.log(window.localStorage.getItem("scc8371-activeLink"));
-        console.log(window.localStorage.getItem("scc8371-name"));
-        console.log(window.localStorage.getItem("scc8371-activeTrailer"));
-        console.log(window.localStorage.getItem("scc8371-activeRole"));
+        
+        let name = window.localStorage.getItem("scc8371-name");
+        let link = window.localStorage.getItem("scc8371-activeLink");
+        let trailer = window.localStorage.getItem("scc8371-activeTrailer");
+        let role = window.localStorage.getItem("scc8371-activeRole");
+
+        if(name != null) document.querySelector(".modTitle").innerHTML = name;
+        else document.querySelector(".modTitle").innerHTML = "Dark Matter";
+
+        if(name != null) document.querySelector('.modButton').setAttribute("href", link);
+        else document.querySelector(".modButton").setAttribute("href", "https://prestosilver.itch.io/dark-matter");
+
+        if(trailer != null) document.querySelector(".modFrame").setAttribute("src", trailer);
+        else document.querySelector(".modFrame").setAttribute("src", "https://www.youtube.com/embed/OlgM1a4RoXk");
+
+        if(role != null) document.querySelector(".modP").innerHTML = role;
+        else document.querySelector(".modP").innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus praesentium, nesciunt animi recusandae consequatur hic quasi. Perspiciatis, asperiores a? Voluptatum rem ex debitis vero possimus corrupti modi laborum consequatur exercitationem similique dolore harum minus est quisquam in voluptatem quasi consectetur labore, fuga obcaecati. Quisquam pariatur vel debitis error, nobis, illum nesciunt quis recusandae voluptate corporis non blanditiis adipisci veniam aliquam quod sint modi nihil totam tenetur ducimus? Inventore nobis eos expedita possimus modi maiores officia, voluptas iusto hic temporibus similique, amet tenetur impedit ab non laboriosam fugit architecto commodi. Ipsa, dignissimos tempora inventore provident culpa hic aliquam? Earum, animi delectus?";
     }
 }
 
