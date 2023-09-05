@@ -140,9 +140,13 @@
     text-decoration: none;
 }
 
+
+
 .back-button:hover i {
     color: black;
 }
+
+
 
 .resButtonWrapper {
     display: flex;
@@ -349,16 +353,21 @@
 
 }
 
-ul{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 1fr);
-    justify-content: center !important;
+.backToProjectsButton{
+    position: fixed;
+    top: 5px;
+    left: 5px;
 
-    border: 5px solid black;
+    opacity: 0.75;
 }
 
-li{
-    margin: 0.5rem;
+.backToProjectsButton i{
+    color: white;
+    margin-right: 2rem;
+}
+
+.backToProjectsButton:hover i{
+    color: black;
 }
 
 .langTitle, .toolTitle{
@@ -413,8 +422,8 @@ li{
     }
 
     .social-button {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
         margin-left: 1rem;
         margin-right: 1rem;
     }
@@ -434,6 +443,10 @@ li{
         100% {
             left: -100%;
         }
+    }
+
+    .about-me-content p{
+        font-size: 1.5rem !important; 
     }
 
 }

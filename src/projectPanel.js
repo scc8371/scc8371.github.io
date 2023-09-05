@@ -1,3 +1,7 @@
+let activeVideo = '';
+let activeRole = '';
+let activeLink = '';
+
 const template = `
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
@@ -23,16 +27,20 @@ const template = `
 `
 
 class ProjectPanel extends HTMLElement {
-    constructor(name, description, image, link, left = true) {
+    constructor(name, shortDescription, description, image, trailer, role, projectLink, left = true) {
         super();
 
         this.name = name;
         this.description = description;
+        this.shortDescription = shortDescription;
+        this.trailer = trailer;
+        this.role = role;
         this.image = image;
-        this.link = link;
+        this.link = "project.html";
         this.isLeft = left;
+        this.projectLink = projectLink;
 
-        
+
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.innerHTML = template;
     }
@@ -41,8 +49,19 @@ class ProjectPanel extends HTMLElement {
         this.shadowRoot.querySelector('.card-img-top').src = this.image;
         this.shadowRoot.querySelector('.card-title').innerHTML = this.name;
         this.shadowRoot.querySelector('.card-text').innerHTML = this.description;
-        
-        this.shadowRoot.querySelector('.card').onclick = () => location.href = this.link;
+
+        this.shadowRoot.querySelector('.card').onclick = () => {
+            location.href = this.link;
+            activeLink = this.projectLink;
+            activeVideo = this.trailer;
+            activeRole = this.role;
+
+            //set in local storage
+            window.localStorage.setItem("scc8371-name", this.name);
+            window.localStorage.setItem("scc8371-activeLink", activeLink);
+            window.localStorage.setItem("scc8371-activeTrailer", activeVideo);
+            window.localStorage.setItem("scc8371-activeRole", activeRole);
+        }
         this.shadowRoot.querySelector('.card').style.cursor = "pointer";
 
         if (this.isLeft) {
@@ -80,4 +99,4 @@ class ProjectPanel extends HTMLElement {
 
 customElements.define('project-panel', ProjectPanel);
 
-export {ProjectPanel};
+export { ProjectPanel, activeVideo, activeLink, activeRole };

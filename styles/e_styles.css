@@ -22,6 +22,8 @@ a {
     font-size: 1.5rem;
 }
 
+
+
 a:hover {
     color: #9bb1ed !important;
 }
@@ -56,6 +58,15 @@ body {
     height: 100%;
 }
 
+ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 100px);
+    justify-content: center !important;
+}
+
+li{
+    margin: 0.5rem;
+}
 
 i:focus {
     outline: none;
