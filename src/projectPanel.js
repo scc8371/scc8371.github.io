@@ -1,7 +1,3 @@
-let activeVideo = '';
-let activeRole = '';
-let activeLink = '';
-
 const template = `
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
@@ -27,7 +23,7 @@ const template = `
 `
 
 class ProjectPanel extends HTMLElement {
-    constructor(name, shortDescription, description, image, trailer, role, projectLink, left = true) {
+    constructor(name, shortDescription, description, image, trailer, role, projectLink, images, left = true) {
         super();
 
         this.name = name;
@@ -39,6 +35,7 @@ class ProjectPanel extends HTMLElement {
         this.link = "project.html";
         this.isLeft = left;
         this.projectLink = projectLink;
+        this.images = images;
 
 
         this.attachShadow({ mode: 'open' });
@@ -52,15 +49,12 @@ class ProjectPanel extends HTMLElement {
 
         this.shadowRoot.querySelector('.card').onclick = () => {
             location.href = this.link;
-            activeLink = this.projectLink;
-            activeVideo = this.trailer;
-            activeRole = this.role;
-
             //set in local storage
             window.localStorage.setItem("scc8371-name", this.name);
-            window.localStorage.setItem("scc8371-activeLink", activeLink);
-            window.localStorage.setItem("scc8371-activeTrailer", activeVideo);
-            window.localStorage.setItem("scc8371-activeRole", activeRole);
+            window.localStorage.setItem("scc8371-activeLink", this.link);
+            window.localStorage.setItem("scc8371-activeTrailer", this.trailer);
+            window.localStorage.setItem("scc8371-activeRole", this.role);
+            window.localStorage.setItem("scc8371-activeImages", this.images);
         }
         this.shadowRoot.querySelector('.card').style.cursor = "pointer";
 
@@ -99,4 +93,4 @@ class ProjectPanel extends HTMLElement {
 
 customElements.define('project-panel', ProjectPanel);
 
-export { ProjectPanel, activeVideo, activeLink, activeRole };
+export { ProjectPanel };

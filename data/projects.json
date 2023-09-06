@@ -7,7 +7,12 @@
             "coverImage": "media/bottle-knights.png",
             "trailerEmbed": "https://www.youtube.com/embed/OlgM1a4RoXk",
             "role": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus praesentium, nesciunt animi recusandae consequatur hic quasi. Perspiciatis, asperiores a? Voluptatum rem ex debitis vero possimus corrupti modi laborum consequatur exercitationem similique dolore harum minus est quisquam in voluptatem quasi consectetur labore, fuga obcaecati. Quisquam pariatur vel debitis error, nobis, illum nesciunt quis recusandae voluptate corporis non blanditiis adipisci veniam aliquam quod sint modi nihil totam tenetur ducimus? Inventore nobis eos expedita possimus modi maiores officia, voluptas iusto hic temporibus similique, amet tenetur impedit ab non laboriosam fugit architecto commodi. Ipsa, dignissimos tempora inventore provident culpa hic aliquam? Earum, animi delectus?",
-            "link": "https://prestosilver.itch.io/dark-matter"
+            "link": "https://prestosilver.itch.io/dark-matter",
+            "photoGallery": [
+                "media/icarus.jpg",
+                "media/lights-out.png",
+                "media/RIT.png"
+            ]
         }
     ]
 }

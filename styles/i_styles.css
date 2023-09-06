@@ -173,7 +173,7 @@
     grid-area: img;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, 300px);
+    grid-template-columns: repeat(auto-fit, 500px);
 
     align-items: center;
     justify-content: center;
@@ -279,6 +279,15 @@
         margin-top: 0rem !important;
         margin-bottom: 0rem;
         font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px){
+    #project-desc-section .imgSection {
+    
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 300px);
+    
     }
 }
 

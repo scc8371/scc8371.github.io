@@ -490,6 +490,11 @@ background-size: 66px 38px;
     font-size: 3rem !important;
 }
 
+.procImg{
+    padding: 2rem !important;
+    margin: 0rem !important;
+}
+
 .card-body {
     background:
         conic-gradient(from -60deg at 50% calc(100%/3), #9a9a9a 0 120deg, #0000 0),
