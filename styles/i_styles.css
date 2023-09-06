@@ -151,7 +151,7 @@
         "img img";
 
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.1fr 1fr 0.1fr;
+    grid-template-rows: 0.1fr 1fr 150px;
 }
 
 #project-desc-section button {
@@ -173,10 +173,14 @@
     grid-area: img;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, 500px);
+    grid-template-columns: repeat(auto-fill, 500px);
 
     align-items: center;
     justify-content: center;
+}
+
+#project-desc-section .imgSection *{
+    margin: 0rem !important;
 }
 
 #project-desc-section .imgSection img {

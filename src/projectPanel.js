@@ -32,7 +32,7 @@ class ProjectPanel extends HTMLElement {
         this.trailer = trailer;
         this.role = role;
         this.image = image;
-        this.link = "project.html";
+        this.link = "project.html#project-desc-section";
         this.isLeft = left;
         this.projectLink = projectLink;
         this.images = images;

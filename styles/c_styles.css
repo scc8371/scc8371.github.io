@@ -161,6 +161,8 @@
 
     box-shadow: 0 0 5px gray;
 
+
+
 }
 
 .card {
@@ -204,13 +206,13 @@
     top: -5%
 }
 
-.about-me-content p{
+.about-me-content p {
     margin: 3rem;
     margin-top: 0;
     font-size: 1.1rem;
 }
 
-.title{
+.title {
     margin-top: 1rem;
     margin-left: 1rem;
     font-size: 4rem;
@@ -219,54 +221,53 @@
 
     padding: 1.5rem;
 
-    color: #dedede !important;
-    -webkit-text-stroke: 1pt black;
+    color: white !important;
 
 }
 
-.education-info{
+.education-info {
     display: grid;
 
     grid-template-areas: "img gpa"
-                          "img degree";
+        "img degree";
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
 
     padding-bottom: 2rem;
 }
 
-@media (max-width: 960px){
-    .education-info{
+@media (max-width: 960px) {
+    .education-info {
         grid-template-areas: "img"
-                             "degree"
-                             "gpa";
+            "degree"
+            "gpa";
 
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr 1fr;
     }
 
-    .education-info img{
+    .education-info img {
         padding: 0rem !important;
         margin: 0rem !important;
     }
 
-    .education-info #gpa{
-        text-align: center; 
-        font-size: 1.5rem;
-    }
-
-    .education-info #degree{
+    .education-info #gpa {
         text-align: center;
         font-size: 1.5rem;
     }
 
-    .edu-title{
+    .education-info #degree {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .edu-title {
         margin: 0rem !important;
         padding: 0rem !important;
     }
 }
 
-.education-info img{
+.education-info img {
     grid-area: img;
     align-self: center;
     justify-self: center;
@@ -274,23 +275,32 @@
     padding-left: 4rem;
 }
 
-.edu-title{
+.edu-title {
     margin-bottom: 1rem !important;
     padding: 0rem !important;
 }
 
-.education-info #gpa{
+.education-info #gpa {
     margin: 0rem;
     padding: 0rem;
     align-self: center;
 }
 
-.education-info #degree{
+.education-info #degree {
     margin: 0rem;
     align-self: center;
 }
 
-.centered-div{
+.imgTitle {
+    text-align: left !important;
+}
+
+.modP{
+    position: relative;
+    top: -5%;
+}
+
+.centered-div {
     width: 90%;
     height: 95%;
     position: relative;
@@ -298,15 +308,15 @@
     left: 5%;
 
     background:
-      conic-gradient(from -60deg at 50% calc(100%/3),#9a9a9a 0 120deg,#0000 0),
-      conic-gradient(from 120deg at 50% calc(200%/3),#9a9a9a 0 120deg,#0000 0),
-      conic-gradient(from  60deg at calc(200%/3),#9a9a9a 60deg,#676767 0 120deg,#0000 0),
-      conic-gradient(from 180deg at calc(100%/3),#343434 60deg,#9a9a9a 0 120deg,#0000 0),
-      linear-gradient(90deg,#343434 calc(100%/6),#676767 0 50%,
-      #343434 0 calc(500%/6), #676767 0);
-background-size: 66px 38px;
+        conic-gradient(from -60deg at 50% calc(100%/3), #9a9a9a 0 120deg, #0000 0),
+        conic-gradient(from 120deg at 50% calc(200%/3), #9a9a9a 0 120deg, #0000 0),
+        conic-gradient(from 60deg at calc(200%/3), #9a9a9a 60deg, #676767 0 120deg, #0000 0),
+        conic-gradient(from 180deg at calc(100%/3), #343434 60deg, #9a9a9a 0 120deg, #0000 0),
+        linear-gradient(90deg, #343434 calc(100%/6), #676767 0 50%,
+            #343434 0 calc(500%/6), #676767 0);
+    background-size: 66px 38px;
 
-    box-shadow: inset 0px 0px 1000px 1000px rgba(0, 0, 0, 0.6), 0px 0px 15px 15px rgba(0, 0, 0, 0.7);
+    box-shadow: inset 0px 0px 1000px 1000px rgba(0, 0, 0, 0.8), 0px 0px 15px 15px rgba(0, 0, 0, 0.7);
 
     border-radius: 10px;
 
@@ -315,11 +325,21 @@ background-size: 66px 38px;
     border: 3px solid black;
 }
 
+.push-down {
+    position: relative;
+    top: 1rem;
+}
+
 
 @media (max-width: 1600px) {
     .social-button {
         width: 50px;
         height: 50px;
+    }
+
+    .seen {
+        top: 25% !important;
+        height: 100% !important;
     }
 }
 
@@ -352,36 +372,51 @@ background-size: 66px 38px;
         width: 50vw;
     }
 
-}
+    .seen {
+        top: 23% !important;
+        height: 100% !important;
+    }
 
-.backToProjectsButton{
-    position: fixed;
-    top: 5px;
-    left: 5px;
+    .backToProjectsButton {
+        position: fixed;
+        top: 5px;
+        left: 5px;
 
-    opacity: 0.75;
-}
+        opacity: 0.75;
+    }
 
-.backToProjectsButton i{
-    color: white;
-    margin-right: 2rem;
-}
+    .backToProjectsButton i {
+        color: white;
+        margin-right: 2rem;
+    }
 
-.backToProjectsButton:hover i{
-    color: black;
-}
+    .backToProjectsButton:hover i {
+        color: black;
+    }
 
-.langTitle, .toolTitle{
-    margin-left: 0rem !important;
-    margin-top: 2rem !important;
-}
+    .langTitle,
+    .toolTitle {
+        margin-left: 0rem !important;
+        margin-top: 2rem !important;
+    }
 
-@media (max-width: 1300px){
-    .title{
-        font-size: 3rem;
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: 1rem;
+    @media (max-width: 1300px) {
+        .title {
+            font-size: 3rem;
+            margin-left: 0;
+            margin-right: 0;
+            margin-top: 1rem;
+        }
+
+        .imgTitle {
+            text-align: center !important;
+        }
+
+        .modP{
+            top: 0%;
+            margin-top: 2rem !important;
+        }
+
     }
 }
 
@@ -395,6 +430,11 @@ background-size: 66px 38px;
         justify-self: center;
         grid-area: project;
     }
+
+    .seen {
+        top: 22% !important;
+        height: 100% !important;
+    }
 }
 
 .contact-label {
@@ -402,9 +442,16 @@ background-size: 66px 38px;
     justify-self: Center;
     margin: 2rem;
     font-size: 2.5rem;
+
+    
 }
 
 @media (max-width: 950px) {
+
+    .seen {
+        top: 30% !important;
+        height: 70% !important;
+    }
     .left {
         grid-area: project;
         margin: 0rem;
@@ -446,10 +493,16 @@ background-size: 66px 38px;
         }
     }
 
-    .about-me-content p{
-        font-size: 1.5rem !important; 
+    .about-me-content p {
+        font-size: 1.5rem !important;
     }
 
+}
+
+@media (max-width: 440px){
+    .social-button{
+        margin: 0.25rem;
+    }
 }
 
 .first {
@@ -462,10 +515,6 @@ background-size: 66px 38px;
 
 .sectionHeader {
     text-align: center;
-}
-
-.imgTitle{
-    text-align: center !important;
 }
 
 .sectionHeaderHr {
@@ -490,9 +539,16 @@ background-size: 66px 38px;
     font-size: 3rem !important;
 }
 
-.procImg{
+.procImg {
     padding: 2rem !important;
-    margin: 0rem !important;
+    margin: 2rem !important;
+
+    transition: transform 0.2s;
+}
+
+.procImg:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px black;
 }
 
 .card-body {

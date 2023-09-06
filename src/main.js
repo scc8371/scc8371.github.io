@@ -1,6 +1,7 @@
 import * as projectPanel from './projectPanel.js';
 import * as loader from './loader.js';
 import * as sectionHeader from "./sectionHeader.js"
+import * as popoutWords from "./popoutWords.js"
 
 //load project panels and display in the project section
 let isLeft = true;
