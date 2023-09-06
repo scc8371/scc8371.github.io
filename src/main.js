@@ -32,15 +32,20 @@ window.onload = () => {
         if(role != null) document.querySelector(".modP").innerHTML = role;
         else document.querySelector(".modP").innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus praesentium, nesciunt animi recusandae consequatur hic quasi. Perspiciatis, asperiores a? Voluptatum rem ex debitis vero possimus corrupti modi laborum consequatur exercitationem similique dolore harum minus est quisquam in voluptatem quasi consectetur labore, fuga obcaecati. Quisquam pariatur vel debitis error, nobis, illum nesciunt quis recusandae voluptate corporis non blanditiis adipisci veniam aliquam quod sint modi nihil totam tenetur ducimus? Inventore nobis eos expedita possimus modi maiores officia, voluptas iusto hic temporibus similique, amet tenetur impedit ab non laboriosam fugit architecto commodi. Ipsa, dignissimos tempora inventore provident culpa hic aliquam? Earum, animi delectus?";
 
+        let imageSection = document.querySelector(".imgSection");
+
         if(images != null){
-            let imageSection = document.querySelector(".imgSection");
-            
             for(let image of images){
                 let img = document.createElement("img");
                 img.setAttribute("src", image);
                 img.classList.add("procImg");
                 imageSection.appendChild(img);            
             }
+        }
+        else{
+            let notice = document.createElement("p");
+            p.innerHTML = "No images for this project!"
+            imageSection.appendChild(notice);
         }
     }
 }
