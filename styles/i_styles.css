@@ -20,6 +20,18 @@
     text-align: center;
 }
 
+#list-languages img, #list-tools img{
+    max-width: 75px;
+    max-height: 85px;
+    min-width: 75px;
+    min-height: 75px;
+    transition: transform 0.2s;
+}
+
+#list-languages img:hover, #list-tools img:hover{
+    transform: scale(1.15);
+}
+
 #about h2 {
     grid-area: header;
     padding-left: 4rem;
