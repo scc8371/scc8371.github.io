@@ -435,6 +435,10 @@
         top: 22% !important;
         height: 100% !important;
     }
+
+    .title{
+        font-size: 1.75rem;
+    }
 }
 
 .contact-label {
