@@ -8,8 +8,6 @@ let isLeft = true;
 let projectSection = document.querySelector('.projectSection')
 
 window.onload = () => {
-    if (projectSection) loadProjectPreviewData();
-
     let projectDescSection = document.querySelector("#project-desc-section");
 
     if(projectDescSection){
@@ -26,7 +24,6 @@ window.onload = () => {
 
         if(name != null){
             document.querySelector('.modButton').setAttribute("href", link);
-            console.log('found link button!');
         } 
         else document.querySelector(".modButton").setAttribute("href", "https://prestosilver.itch.io/dark-matter");
 
@@ -56,6 +53,7 @@ window.onload = () => {
 
 
 function loadProjectPreviewData() {
+    if(!loader.projectData.projects) console.log("wtf");
     loader.projectData.projects.forEach(project => {
         let panel = new projectPanel.ProjectPanel(project.name, project.shortDescription, project.description, project.coverImage, project.trailerEmbed, project.role, project.link, project.photoGallery, isLeft);
         projectSection.appendChild(panel);
@@ -126,4 +124,7 @@ window.onscroll = () => {
         }
     }
 }
+
+
+export {loadProjectPreviewData};
 
