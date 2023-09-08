@@ -1,17 +1,29 @@
 {
     "projects": [
         {
-            "name": "Project 1",
-            "shortDescription": "This is a project",
-            "description" : "This is a project",
-            "coverImage": "media/bottle-knights.png",
-            "trailerEmbed": "https://www.youtube.com/embed/OlgM1a4RoXk",
-            "role": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus praesentium, nesciunt animi recusandae consequatur hic quasi. Perspiciatis, asperiores a? Voluptatum rem ex debitis vero possimus corrupti modi laborum consequatur exercitationem similique dolore harum minus est quisquam in voluptatem quasi consectetur labore, fuga obcaecati. Quisquam pariatur vel debitis error, nobis, illum nesciunt quis recusandae voluptate corporis non blanditiis adipisci veniam aliquam quod sint modi nihil totam tenetur ducimus? Inventore nobis eos expedita possimus modi maiores officia, voluptas iusto hic temporibus similique, amet tenetur impedit ab non laboriosam fugit architecto commodi. Ipsa, dignissimos tempora inventore provident culpa hic aliquam? Earum, animi delectus?",
-            "link": "https://prestosilver.itch.io/dark-matter",
+            "name": "Changeling VR",
+            "description" : "A Virtual Reality Mystery experience.",
+            "coverImage": "media/changeling/changeling.gif",
+            "trailerEmbed": "https://www.youtube.com/embed/nZGJtnUvC2I?autoplay=1",
+            "role": "Changeling is a VR mystery, first-person 3D platformer game built upon the idea of magical realism and a sense of unease and wonder. You play as Aurelia, a dream-walker who has the ability to see through the eyes of anyone she touches. You are tasked with helping this family figure out what is wrong with their child, and as you contact each member, you see through the lens of their hopes and fears of what the child is.<br><br> During the Summer of 2023, I worked as a <ui-designer></ui-designer> to improve team workflow and general functionality of core gameplay mechanics. Notable inclusions that I worked on are the player's physics-based hands and the teleportation system. I also assisted with various needs from all of the development teams, and was responsible for building the executable at the end of development sprints.",
+            "link": "https://www.changelingvr.com/",
             "photoGallery": [
-                "media/icarus.jpg",
-                "media/lights-out.png",
-                "media/RIT.png"
+                "media/changeling/changeling1.png",
+                "media/changeling/changeling2.png",
+                "media/changeling/changeling5.png",
+                "media/changeling/changeling6.png"
+            ]
+        },
+        {
+            "name": "Icarus VR",
+            "description" : "A Virtual Reality Archery simulator with realistic gameplay elements.",
+            "coverImage": "media/icarus/icarus.gif",
+            "trailerEmbed": "https://www.youtube.com/embed/gQI9dTzCXXo?autoplay=1",
+            "role": "Description To be added.",
+            "link": "https://sciencedoge.itch.io/icarus-vr",
+            "photoGallery": [
+                "media/icarus/icarus1.jpg",
+                "media/icarus/icarus2.jpg"
             ]
         }
     ]

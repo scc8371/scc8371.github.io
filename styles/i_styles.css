@@ -28,6 +28,11 @@
     transition: transform 0.2s;
 }
 
+#list-languages, #list-tools{
+    margin: 0rem !important;
+    padding: 0rem !important;
+}
+
 #list-languages img:hover, #list-tools img:hover{
     transform: scale(1.15);
 }

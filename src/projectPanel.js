@@ -17,6 +17,9 @@ const template = `
   
   <h5 class="card-title">Default</h5>
     <p class="card-text">Default</p>
+    <div class="block resButtonWrapper">
+                            <a href="project.html" class="nextBtn"><button class="resumeBtn">Learn More</button></a>
+                        </div>
   </div>
 </div>
 </div>
@@ -51,11 +54,24 @@ class ProjectPanel extends HTMLElement {
             location.href = this.link;
             //set in local storage
             window.localStorage.setItem("scc8371-name", this.name);
-            window.localStorage.setItem("scc8371-activeLink", this.link);
+            window.localStorage.setItem("scc8371-activeLink", this.projectLink);
             window.localStorage.setItem("scc8371-activeTrailer", this.trailer);
             window.localStorage.setItem("scc8371-activeRole", this.role);
             window.localStorage.setItem("scc8371-activeImages", this.images);
         }
+
+        let learnMoreButton = this.shadowRoot.querySelector(".nextBtn");
+        learnMoreButton.onclick = () => {
+            location.href = this.link;
+            //set in local storage
+            window.localStorage.setItem("scc8371-name", this.name);
+            window.localStorage.setItem("scc8371-activeLink", this.projectLink);
+            window.localStorage.setItem("scc8371-activeTrailer", this.trailer);
+            window.localStorage.setItem("scc8371-activeRole", this.role);
+            window.localStorage.setItem("scc8371-activeImages", this.images);
+        }
+
+
         this.shadowRoot.querySelector('.card').style.cursor = "pointer";
 
         if (this.isLeft) {

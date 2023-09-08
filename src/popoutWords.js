@@ -7,10 +7,14 @@ let template = `
             outline: 3px solid #005B7F;
             border-radius: 10px;
             font-size: 1.35rem;
-            padding-left: 0.5rem;
-            padding-right: 0.5rem;
             margin-left: 0.25rem;
             margin-right: 0.25rem;
+            box-shadow: 0px 0px 10px #00A8E8;
+
+            font-family: 'Lalezar', cursive;
+            text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+        1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+
         }
     </style>
 `
@@ -24,29 +28,37 @@ let template2 = `
             outline: 3px solid #333333;
             border-radius: 10px;
             font-size: 1.35rem;
-            padding-left: 0.5rem;
-            padding-right: 0.5rem;
 
             margin-left: 0.25rem;
             margin-right: 0.25rem;
+            box-shadow: 0px 0px 15px black;
+
+            font-family: 'Lalezar', cursive;
+            text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+        1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
         }
     </style>
 `
 
 let template3 = `
-<span class='ui-developer'>UI/UX Designer</span>
+<span class='ui-developer'>Backend Developer</span>
 
 <style>
     .ui-developer{
-        background-color:  #FF6B6B;
-        outline: 3px solid #FFD166;
+        background-color:  #1E1E1E;
+        outline: 3px solid #333333;
         border-radius: 10px;
         font-size: 1.35rem;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
 
         margin-left: 0.25rem;
         margin-right: 0.25rem;
+        box-shadow: 0px 0px 15px black;
+        margin-top: -0.25rem;
+
+
+        font-family: 'Lalezar', cursive;
+            text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+        1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
     }
 </style>
 `

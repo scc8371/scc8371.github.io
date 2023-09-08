@@ -24,7 +24,10 @@ window.onload = () => {
         if(name != null) document.querySelector(".modTitle").innerHTML = name;
         else document.querySelector(".modTitle").innerHTML = "Dark Matter";
 
-        if(name != null) document.querySelector('.modButton').setAttribute("href", link);
+        if(name != null){
+            document.querySelector('.modButton').setAttribute("href", link);
+            console.log('found link button!');
+        } 
         else document.querySelector(".modButton").setAttribute("href", "https://prestosilver.itch.io/dark-matter");
 
         if(trailer != null) document.querySelector(".modFrame").setAttribute("src", trailer);
