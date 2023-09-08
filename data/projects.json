@@ -19,7 +19,7 @@
             "description" : "A Virtual Reality Archery simulator with realistic gameplay elements.",
             "coverImage": "media/icarus/icarus.gif",
             "trailerEmbed": "https://www.youtube.com/embed/gQI9dTzCXXo?autoplay=1",
-            "role": "Description To be added.",
+            "role": "Icarus VR is a virtual reality game that has fast-paced gun shooting and skill-based bow and arrow mechanics. Players compete in sky islands, each with its own unique features and challenges. The game offers a variety of game modes, such as Target Frenzy, Quick Draw, and Archery, each having a server-side leaderboard.<br><br>During the Spring of 2023, I worked as a <game-developer></game-developer> on this project, implementing core gameplay mechanics and backend systems that manage server-side storage of player data.",
             "link": "https://sciencedoge.itch.io/icarus-vr",
             "photoGallery": [
                 "media/icarus/icarus1.jpg",
