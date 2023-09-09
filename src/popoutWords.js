@@ -34,7 +34,7 @@ let template3 = `
 
 <style>
     .ui-developer{
-        color: #1E1E1E;
+        color: #C1C1C1;
         font-size: 1.35rem;
 
         font-family: 'Lalezar', cursive;
