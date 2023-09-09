@@ -48,6 +48,16 @@
             "link": "https://github.com/scc8371/DiMyne-Engine",
             "photoGallery": [  
             ]
+        },
+        {
+            "name": "Myne Graphics Engine",
+            "description" : "A 2D Graphics, Audio, and Physics Engine using C++ and OpenGL.",
+            "coverImage": "media/myne/myne.gif",
+            "trailerEmbed": "media/myne/myne.mp4",
+            "role": "Myne Graphics Engine is a game engine that fully supports rendering 2D bitmaps and glyphs, playing back .wav files, and performing physics calculations between objects via the built-in math functions.<br><br>For multiple years, I have worked on this project as a <software-developer></software-developer>, iterating upon it to improve the engine's speed and user-friendliness. This was created from scratch using C++ and OpenGL to test my programming and computer graphics knowledge. ",
+            "link": "https://github.com/scc8371/DiMyne-Engine",
+            "photoGallery": [  
+            ]
         }
     ]
 }
