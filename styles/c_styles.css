@@ -631,16 +631,12 @@ iframe {
     height: 70%;
     margin: 0rem;
     left: 0;
-    background-color: black;
     top: 30%;
 
     opacity: 0.8;
-
-    box-shadow: 0 0 25px black;
-    -webkit-box-shadow: 0 0 25px black;
     /* Safari fallback */
 
-    background-color: rgba(0, 0, 0, );
+    background-color: black;
     /* Fallback background color */
 
 }
