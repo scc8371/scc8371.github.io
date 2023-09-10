@@ -53,7 +53,7 @@
             "name": "Audio Visualizer Application",
             "description" : "A Web Application that visualizes audio frequencies. ",
             "coverImage": "media/visualizer/visualizer.gif",
-            "trailerEmbed": "media/visualizer/visualizer.mp4",
+            "trailerEmbed": "https://www.youtube.com/embed/bI0-IUr1g7M?autoplay=1",
             "role": "An Audio Visualizer created using JavaScript's canvas and web audio APIs. The controls of the application were integrated through the datgui library. This project was created in hopes to give users as much customizability as possible, letting them customize how the visualizer works in several different aspects.<br><br>During the Spring of 2023, I was tasked as a <software-developer></software-developer> to create this for a class. I went above and beyond the expectations of this assignment, putting an excess of functionality that made this project shine over others.",
             "link": "visualizer/index.html",
             "photoGallery": [  
@@ -63,7 +63,7 @@
             "name": "Roll Arena 64",
             "description" : "A Dice Rolling Game made for the GMTK Game Jam 2022.",
             "coverImage": "media/rollarena/rollarena.gif",
-            "trailerEmbed": "media/rollarena/rollarena.mp4",
+            "trailerEmbed": "https://www.youtube.com/embed/z6m6COi9G5M?autoplay=1",
             "role": "A 3D Unity prototype created in the span of 2 days for the GMTK Game Jam 2022. Players control a blue dice and can roll onto different sides, each representing a pattern that is drawn on the floor. The objective of the game is to have the most of your color on the floor before the round counter reaches zero. This project garnered a successful rating during the jam, just missing a top 1000 placement out of over 6000 entries.<br><br>During the Summer of 2022, I worked as a <game-developer></game-developer> and implemented the functionality of AI opponents, as well as the logic of painting the ground.",
             "link": "https://prestosilver.itch.io/ra64",
             "photoGallery": [  
