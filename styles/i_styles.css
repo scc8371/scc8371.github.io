@@ -72,6 +72,7 @@
     position: fixed;
     bottom: 0;
     right: 0;
+    top: 0;
 
     background-color: black;
 
@@ -97,6 +98,13 @@
 
     border-left: 3px solid black;
 
+
+}
+
+@media screen and (max-height: 780px){
+    #no-move{
+        overflow-y: auto;
+    }
 }
 
 #about-me-section,

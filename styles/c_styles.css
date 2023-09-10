@@ -339,9 +339,10 @@
 
     .seen {
         top: 25% !important;
-        height: 100% !important;
+        height: 75% !important;
     }
 }
+
 
 @media (max-width: 1500px) {
     .project-panel {
@@ -374,7 +375,7 @@
 
     .seen {
         top: 23% !important;
-        height: 100% !important;
+        height: 83% !important;
     }
 
     .backToProjectsButton {
@@ -586,7 +587,7 @@
 
 
 .resumeBtn {
-    width: 350px;
+    width: 275px;
     height: 50px;
     border-radius: 15px;
     background-color: #000;
@@ -638,5 +639,21 @@ iframe {
 
     background-color: black;
     /* Fallback background color */
+    max-height: 100vh;
 
+}
+
+@media (max-height: 780px){
+    .seen{
+        height: 110vh !important;
+        max-height: 110vh;
+    }
+}
+@media (max-height: 600px){
+    .seen{
+        top: 40% !important;
+
+        height: 150vh !important;
+        max-height: 150vh;
+    }
 }
