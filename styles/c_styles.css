@@ -643,63 +643,66 @@ iframe {
 
 }
 
-@media (max-height: 780px){
-    .seen{
-        height: 110vh !important;
-        max-height: 110vh;
-    }
 
-    .back-button{
-        top: 89%;
+@media screen and (max-height: 815px) {
+    .pfp {
+        height: 50% !important;
+        width: 50% !important;
     }
 }
-@media (max-height: 600px){
-    .seen{
-        top: 40% !important;
 
-        height: 150vh !important;
-        max-height: 150vh;
+@media screen and (max-height: 720px) {
+    #my-desc{
+        margin: 0rem !important;
+        padding: 0rem !important;
     }
+
+    .diffBtn{
+        margin: 0.2rem !important;
+        padding: 0rem !important;
+        margin-bottom: 5rem;
+    }
+
+    .block{
+        margin: 0rem !important;
+        padding: 0rem !important;
+    }
+
+    .pfp{
+        margin: 0rem !important;
+        padding: 0rem !important;
+    }
+
+    #my-desc{
+        margin-top: 0rem !important;
+        font-size: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .my-name{
+        margin: 0rem !important; 
+        margin-bottom: 0.5rem;
+        padding: 0rem !important;
+        font-size: 1.25rem !important;
+    }
+
+    .seen{
+        top: 30% !important;
+    }
+
+    .columns .is-vcentered{
+        margin: 0rem !important;
+        padding: 0rem !important;
+
+    }
+
     .back-button{
         top: 85%;
     }
 }
 
-@media (max-height: 400px){
-    .seen{
-        top: 50% !important;
-
-        height: 200vh !important;
-        max-height: 200vh;
-    }
-
+@media screen and (max-height: 450px) {
     .back-button{
-        top: 75%;
-    }
-}
-
-@media (max-height: 300px){
-    .seen{
-        top: 70% !important;
-
-        height: 250vh !important;
-        max-height: 250vh;
-    }
-
-    .back-button{
-        top: 68%;
-    }
-}
-
-@media (max-height: 250px){
-    .seen{
-        top: 90% !important;
-
-        height: 300vh !important;
-        max-height: 300vh;
-    }
-
-    .back-button{
-        top: 58%;
+        top: 80%;
     }
 }

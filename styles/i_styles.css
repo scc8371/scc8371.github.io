@@ -104,12 +104,6 @@
 
 }
 
-@media screen and (max-height: 780px){
-    #no-move{
-        overflow-y: auto;
-    }
-}
-
 #about-me-section,
 #project-desc-section {
     height: auto;
@@ -228,7 +222,7 @@
     #about-me-section p,
     #project-desc-section p {
         margin: 0rem;
-        font-size: 2.1vh;
+        font-size: 1.5vw;
     }
 
     #project-desc-section .centered-div {
@@ -354,4 +348,10 @@
 #contact-left,
 #contact-middle {
     height: 50%;
+}
+
+@media screen and (max-height: 620px){
+    #no-move *{
+        margin: 0rem !important;
+    }
 }
