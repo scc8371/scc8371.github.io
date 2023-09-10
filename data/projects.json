@@ -71,6 +71,33 @@
                 "media/rollarena/rollarena2.jpg",
                 "media/rollarena/rollarena3.png"
             ]
+        },
+        {
+            "name": "Bottle Knights!",
+            "description" : "A 2D Web Idle game made in JavaScript and pixi.JS",
+            "coverImage": "media/bottleknights/bottleknights.gif",
+            "trailerEmbed": "https://www.youtube.com/embed/WR9k8mJyouc?autoplay=1",
+            "role": "Bottle Knights is a 2D Web Idle game developed from scratch in JavaScript and the pixi.JS library. The player interacts with the game by pressing buttons located on the browser DOM to upgrade their character and gain bonuses that last until the end of the game.<br><br>During the Spring of 2021, I was tasked as a <game-developer></game-developer> to create this for a class after learning the essentials of web development.",
+            "link": "bottle-knights/index.html",
+            "photoGallery": [  
+                    "media/bottleknights/bottleknights1.png", 
+                    "media/bottleknights/bottleknights2.png",
+                    "media/bottleknights/bottleknights3.png",
+                    "media/bottleknights/bottleknights4.png"
+            ]
+        },
+        {
+            "name": "Karnissa's Castle",
+            "description" : "A 3D Puzzle game taking inspiration from the World of Ethshar.",
+            "coverImage": "media/karnissascastle/karnissa.gif",
+            "trailerEmbed": "https://www.youtube.com/embed/ZeVq3YvQDkc?autoplay=1",
+            "role": "Karnissa's Castle is a 3D puzzle game created in Unity, inspired by the World of Ethshar book series. The fundamental mechanics of the game revolve around switching between two characters to solve one puzzle.<br><br>During the Fall of 2022, I worked as a <game-developer></game-developer>, programming most of the puzzle mechanics and logic.",
+            "link": "bottle-knights/index.html",
+            "photoGallery": [  
+                "media/karnissascastle/karnissa1.png",
+                "media/karnissascastle/karnissa2.png",
+                "media/karnissascastle/karnissa3.png"
+            ]
         }
     ]
 }
