@@ -2,6 +2,10 @@
     "title": "Audio Visualizer",
     "tracks": [
         {
+            "name": "Directors Cut: Theme #2",
+            "path": "media/rob_song.wav"
+        },
+        {
             "name": "Yeti Caves - Spelunky",
             "path": "media/yeticaves.mp3"
         },
