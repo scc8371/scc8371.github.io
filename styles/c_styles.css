@@ -648,6 +648,10 @@ iframe {
         height: 110vh !important;
         max-height: 110vh;
     }
+
+    .back-button{
+        top: 89%;
+    }
 }
 @media (max-height: 600px){
     .seen{
@@ -655,6 +659,9 @@ iframe {
 
         height: 150vh !important;
         max-height: 150vh;
+    }
+    .back-button{
+        top: 85%;
     }
 }
 
@@ -665,6 +672,10 @@ iframe {
         height: 200vh !important;
         max-height: 200vh;
     }
+
+    .back-button{
+        top: 75%;
+    }
 }
 
 @media (max-height: 300px){
@@ -674,6 +685,10 @@ iframe {
         height: 250vh !important;
         max-height: 250vh;
     }
+
+    .back-button{
+        top: 68%;
+    }
 }
 
 @media (max-height: 250px){
@@ -682,5 +697,9 @@ iframe {
 
         height: 300vh !important;
         max-height: 300vh;
+    }
+
+    .back-button{
+        top: 58%;
     }
 }
