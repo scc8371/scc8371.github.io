@@ -657,3 +657,30 @@ iframe {
         max-height: 150vh;
     }
 }
+
+@media (max-height: 400px){
+    .seen{
+        top: 50% !important;
+
+        height: 200vh !important;
+        max-height: 200vh;
+    }
+}
+
+@media (max-height: 300px){
+    .seen{
+        top: 70% !important;
+
+        height: 250vh !important;
+        max-height: 250vh;
+    }
+}
+
+@media (max-height: 250px){
+    .seen{
+        top: 90% !important;
+
+        height: 300vh !important;
+        max-height: 300vh;
+    }
+}
