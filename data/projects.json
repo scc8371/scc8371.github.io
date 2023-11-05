@@ -27,6 +27,20 @@
             ]
         },
         {
+            "name": "Doodle Day",
+            "description" : "🏆<b>3rd Place Winner at the Wolfjam Hackathon 2023</b>🏆<br>Made in under 24 hours.",
+            "coverImage": "media/doodleday/doodleday.gif",
+            "trailerEmbed": "https://www.youtube.com/embed/_gJh6aqzuP8?autoplay=1",
+            "role": "Doodle Day is a simulation made in 24 hours for the Wolfjam Hackathon 2023. The primary goal of the game is to use a rubber mallet to defeat aliens that appear on your screen, which look cartoon-ish and make cartoon sound effects. However, there is also a news tab that reveals a darker side of what you are doing, which is affecting life beside you negatively. The game ends as you destroy your own planet.<br><br>During the Fall of 2023, I worked as a <game-developer></game-developer> and <software-developer></software-developer>, implementing much of the core functionality of the experience. The project recieved 3rd place out of 18 teams that participated in the hackathon.",
+            "link": "https://prestosilver.itch.io/d-day",
+            "photoGallery": [
+                "media/doodleday/doodleday-1.png",
+                "media/doodleday/doodleday-2.png",
+                "media/doodleday/doodleday-3.png",
+                "media/doodleday/doodleday-4.png"
+            ]
+        },
+        {
             "name": "Dark Matter",
             "description" : "A 1-Bit Space Shooter taking inspiration from classic arcade games.",
             "coverImage": "media/darkmatter/darkmatter.gif",
