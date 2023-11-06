@@ -174,18 +174,20 @@
     border-top-right-radius: 7px;
     transition: transform .2s;
 
-    box-shadow: 0 0 20px black;
+    box-shadow: 0 0 10px black;
 
 
 }
 
 .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.025);
     box-shadow: 0 0 25px black;
 }
 
 .projectSection {
     width: 100%;
+    margin: 0rem !important;
+    padding: 0rem !important;
 }
 
 
