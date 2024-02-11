@@ -1,4 +1,5 @@
 import * as projectPanel from './projectPanel.js';
+import * as webFooter from "./footer.js";
 import * as loader from './loader.js';
 import * as sectionHeader from "./sectionHeader.js"
 import * as popoutWords from "./popoutWords.js"
@@ -53,11 +54,9 @@ window.onload = () => {
 
 
 function loadProjectPreviewData() {
-    if(!loader.projectData.projects) console.log("wtf");
     loader.projectData.projects.forEach(project => {
-        let panel = new projectPanel.ProjectPanel(project.name, project.shortDescription, project.description, project.coverImage, project.trailerEmbed, project.role, project.link, project.photoGallery, isLeft);
+        let panel = new projectPanel.ProjectPanel(project.name, project.shortDescription, project.description, project.coverImage, project.trailerEmbed, project.role, project.link, project.photoGallery);
         projectSection.appendChild(panel);
-        isLeft = !isLeft;
     });
 }
 

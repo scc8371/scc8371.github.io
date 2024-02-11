@@ -26,7 +26,7 @@ const template = `
 `
 
 class ProjectPanel extends HTMLElement {
-    constructor(name, shortDescription, description, image, trailer, role, projectLink, images, left = true) {
+    constructor(name, shortDescription, description, image, trailer, role, projectLink, images) {
         super();
 
         this.name = name;
@@ -36,7 +36,6 @@ class ProjectPanel extends HTMLElement {
         this.role = role;
         this.image = image;
         this.link = "project.html#project-desc-section";
-        this.isLeft = left;
         this.projectLink = projectLink;
         this.images = images;
 
@@ -73,13 +72,6 @@ class ProjectPanel extends HTMLElement {
 
 
         this.shadowRoot.querySelector('.card').style.cursor = "pointer";
-
-        if (this.isLeft) {
-            this.shadowRoot.querySelector('.card').classList.add('left');
-        }
-        else {
-            this.shadowRoot.querySelector('.card').classList.add('right');
-        }
     }
 
     static get observedAttributes() {

@@ -1,20 +1,11 @@
 .project-panel {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas:
-        "project project-alt";
-
     scroll-margin-top: 250px;
-}
+    width: 100%;
+    height: 100%;
+    text-align: Center;
 
-@media (max-width: 950px) {
-    .project-panel {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        grid-template-areas:
-            "project";
-    }
+    display: flex;
+    justify-content: center;
 }
 
 .container-fluid a {
@@ -167,7 +158,7 @@
 
 .card {
     margin: 1rem;
-    width: 40vw;
+    width: 85%;
 
     border: 2px solid black;
     border-top-left-radius: 7px;
@@ -176,30 +167,27 @@
 
     box-shadow: 0 0 10px black;
 
+    &::before {
+        color: black;
+    }
 
+    &:hover::before {
+        top: 0;
+    }
 }
 
 .card:hover {
     transform: scale(1.025);
-    box-shadow: 0 0 25px black;
 }
 
 .projectSection {
     width: 100%;
     margin: 0rem !important;
     padding: 0rem !important;
-}
 
-
-
-.left {
-    justify-self: center;
-    grid-area: project-alt;
-}
-
-.right {
-    justify-self: center;
-    grid-area: project;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
 }
 
 .about-me-content {
@@ -217,7 +205,7 @@
 .title {
     margin-top: 1rem;
     margin-left: 1rem;
-    font-size: 4rem;
+    font-size: 3rem;
 
     text-align: center;
 
@@ -351,27 +339,7 @@
 
 @media (max-width: 1500px) {
     .project-panel {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        grid-template-areas:
-            "project";
-
         scroll-margin-top: 250px;
-    }
-
-    .left {
-        justify-self: center;
-        grid-area: project;
-        margin-left: 0rem;
-        margin-right: 0rem;
-    }
-
-    .right {
-        justify-self: center;
-        grid-area: project;
-        margin-right: 0rem;
-        margin-left: 0rem;
     }
 
     .card {
@@ -427,16 +395,6 @@
 }
 
 @media (max-width: 1150px) {
-    .left {
-        justify-self: center;
-        grid-area: project;
-    }
-
-    .right {
-        justify-self: center;
-        grid-area: project;
-    }
-
     .seen {
         top: 22% !important;
         height: 100% !important;
@@ -446,6 +404,10 @@
         font-size: 1.75rem;
         min-height: 75px;
     }
+
+    .card-body .resumeBtn {
+        width: 200px;
+    }
 }
 
 .contact-label {
@@ -453,8 +415,6 @@
     justify-self: Center;
     margin: 2rem;
     font-size: 2.5rem;
-
-
 }
 
 @media (max-width: 950px) {
@@ -515,13 +475,36 @@
 
 }
 
+@media (max-width: 750px) {
+    .card-body .resumeBtn {
+        width: 200px !important;
+    }
+}
+
+@media (max-width: 550px) {
+    .card-body .resumeBtn {
+        width: 150px !important;
+    }
+}
+
+@media (max-width: 500px) {
+    .projectSection {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card-body .resumeBtn {
+        width: 250px !important;
+    }
+}
+
+
 @media (max-width: 440px) {
     .social-button {
         margin: 0.25rem;
     }
 
     .resumeBtn {
-        width: 250px !important;
+        width: 250px;
     }
 }
 
@@ -589,6 +572,21 @@
 
     color: white !important;
 
+    display: grid;
+
+    transition: filter 0.5s ease, background-color 0.5s ease, color 0.5s ease;
+}
+
+.card:hover .card-body {
+    filter: invert(1);
+    background-color: black;
+    color: #343434;
+}
+
+.card:not(:hover) .card-body {
+    filter: invert(0);
+    background-color: #343434;
+    color: white;
 }
 
 
@@ -602,6 +600,8 @@
     font-size: 1.5rem;
     font-weight: bold;
     font-family: 'Nunito', sans-serif;
+
+    transition: filter 0.5s ease, backgrond-color 0.5s ease, color 0.5s ease;
 }
 
 .resumeBtn:hover {
@@ -658,57 +658,57 @@ iframe {
 }
 
 @media screen and (max-height: 720px) {
-    #my-desc{
+    #my-desc {
         margin: 0rem !important;
         padding: 0rem !important;
     }
 
-    .diffBtn{
+    .diffBtn {
         margin: 0.2rem !important;
         padding: 0rem !important;
         margin-bottom: 5rem;
     }
 
-    .block{
+    .block {
         margin: 0rem !important;
         padding: 0rem !important;
     }
 
-    .pfp{
+    .pfp {
         margin: 0rem !important;
         padding: 0rem !important;
     }
 
-    #my-desc{
+    #my-desc {
         margin-top: 0rem !important;
         font-size: 1rem !important;
         margin-bottom: 1rem !important;
     }
 
-    .my-name{
-        margin: 0rem !important; 
+    .my-name {
+        margin: 0rem !important;
         margin-bottom: 0.5rem;
         padding: 0rem !important;
         font-size: 1.25rem !important;
     }
 
-    .seen{
+    .seen {
         top: 30% !important;
     }
 
-    .columns .is-vcentered{
+    .columns .is-vcentered {
         margin: 0rem !important;
         padding: 0rem !important;
 
     }
 
-    .back-button{
+    .back-button {
         top: 85%;
     }
 }
 
 @media screen and (max-height: 450px) {
-    .back-button{
+    .back-button {
         top: 80%;
     }
 }
