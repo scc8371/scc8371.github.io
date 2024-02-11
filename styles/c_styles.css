@@ -342,10 +342,6 @@
         scroll-margin-top: 250px;
     }
 
-    .card {
-        width: 50vw;
-    }
-
     .seen {
         top: 23% !important;
         height: 83% !important;
@@ -427,10 +423,6 @@
     .left {
         grid-area: project;
         margin: 0rem;
-    }
-
-    .card {
-        width: 80vw;
     }
 
     .fa-5x {
