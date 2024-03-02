@@ -493,7 +493,14 @@
     }
 
     .resumeBtn {
-        width: 250px;
+        width: 250px !important;
+    }
+}
+
+@media (max-width: 300px){
+    .resumeBtn {
+        width: 200px !important;
+        font-size: 1rem !important;
     }
 }
 
@@ -700,4 +707,5 @@ iframe {
     .back-button {
         top: 80%;
     }
+
 }

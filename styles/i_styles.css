@@ -150,8 +150,14 @@
 
 #project-desc-section p {
     grid-area: desc;
-    margin-top: 0rem !important;
-    padding: 0.6rem;
+    margin: 1rem !important;
+    margin-top: 1rem !important;
+    padding: 0rem !important;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 20px !important;
+
+
 }
 
 #project-desc-section .imgWrapper img {
@@ -175,6 +181,8 @@
 #project-desc-section .resButtonWrapper {
     grid-area: btn;
     margin: 0rem !important;
+    width: 300px;
+    justify-self: center;
 }
 
 
@@ -183,12 +191,14 @@
     display: grid;
     grid-template-areas: "header btn"
         "video desc"
-        ". desc"
         "img img";
 
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.35fr 1fr 0.1fr;
+    grid-template-rows: 0.fr 1fr 0.1fr;
+    align-items: center !important;
 }
+
+
 
 #project-desc-section button {
     margin: 1rem;
@@ -206,10 +216,14 @@
     grid-area: img;
 
     display: grid;
-    grid-template-columns: repeat(auto-fill, 500px);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 10px;
+    align-items: center !important;
+    justify-content: center !important;
+}
 
-    align-items: center;
-    justify-content: center;
+#project-desc-section .imgSection img{
+    justify-self: center;
 }
 
 #project-desc-section .imgSection * {
@@ -369,6 +383,19 @@
     justify-self: left;
 }
 
+
+@media screen and (max-width: 700px){
+    #project-desc-section .title{
+        font-size: 2rem !important;
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    #project-desc-section button{
+        width: 250px !important;
+    }
+}
+
 @media (min-width: 950px) {
     body {
         display: grid;
@@ -377,3 +404,4 @@
             "footer";
     }
 }
+

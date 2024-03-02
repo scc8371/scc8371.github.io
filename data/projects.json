@@ -1,10 +1,22 @@
 {
     "projects": [
         {
+            "name": "[WIP] Ninjas on Trampolines",
+            "description" : "A Platform Fighter that relies on physics-based trampolines.",
+            "coverImage": "media/ninjas/ninjas.gif",
+            "trailerEmbed": "https://www.youtube.com/embed/zA0I3a7yrLU?autoplay=1",
+            "role": "Ninjas on Trampoline is a multiplayer platform fighter made in Unity. Players connect with their friends and fight to gain the most of their own paint on the back wall, giving them the victory. With matches only lasting 90 seconds, Ninjas on Trampolines excels at fast and chaotic gameplay, giving it a ton of replay value for players. During the years 2023 and 2024, I worked as the <lead-programmer></lead-programmer> of the project, designing and implementing most of the physics and backend systems of the game. Features such as the trampolines, player physics/movement, scoring calculations, and multiplayer/network systems were created by me.<br><br>Ninjas on Trampolines is a game funded by the Magic Maker program at the Rochester Institute of Technology.",
+            "link": "https://ifaicgu.itch.io/ninjas-on-trampolines",
+            "photoGallery": [
+                "media/ninjas/ninjas_logo.png",
+                "media/ninjas/ninjas_screenshot.png"
+            ]
+        },
+        {
             "name": "Icarus VR",
             "description" : "A Virtual Reality archery simulator with realistic gameplay elements.",
             "coverImage": "media/icarus/icarus.gif",
-            "trailerEmbed": "https://www.youtube.com/embed/gQI9dTzCXXo?autoplay=1",
+            "trailerEmbed": "https://www.youtube.com/embed/RV0TUgQLj-Y?autoplay=1",
             "role": "Icarus VR is a virtual reality game that has fast-paced gun shooting and skill-based bow and arrow mechanics. Players compete in sky islands, each with its own unique features and challenges. The game offers a variety of game modes, such as Target Frenzy, Quick Draw, and Archery, each having a server-side leaderboard. Developed in Unity.<br><br>During the Spring of 2023, I worked as a <game-developer></game-developer> and <ui-designer></ui-designer> on this project, implementing core gameplay mechanics and backend systems that manage server-side storage of player data.",
             "link": "https://sciencedoge.itch.io/icarus-vr",
             "photoGallery": [
@@ -27,6 +39,33 @@
             ]
         },
         {
+            "name": "Liftin n' Giftin",
+            "description" : "A Christmas survival game!",
+            "coverImage": "media/liftin/liftin.gif",
+            "trailerEmbed": "https://www.youtube.com/embed/hiMK1tYQ82w?autoplay=1",
+            "role": "Changeling is a VR mystery, first-person 3D platformer game built upon the idea of magical realism and a sense of unease and wonder. You play as Aurelia, a dream-walker who has the ability to see through the eyes of anyone she touches. You are tasked with helping this family figure out what is wrong with their child, and as you contact each member, you see through the lens of their hopes and fears of what the child is.<br><br> During the Summer of 2023, I worked as a <ui-designer></ui-designer> to improve team workflow and general functionality of core gameplay mechanics. Notable inclusions that I worked on are the player's physics-based hands and the teleportation system. I also assisted with various needs from all of the development teams, and was responsible for building the executable at the end of development sprints.",
+            "link": "https://www.changelingvr.com/",
+            "photoGallery": [
+                "media/changeling/changeling1.png",
+                "media/changeling/changeling2.png",
+                "media/changeling/changeling5.png",
+                "media/changeling/changeling6.png"
+            ]
+        },
+        {
+            "name": "Dark Matter",
+            "description" : "A 1-Bit Space Shooter taking inspiration from classic arcade games.",
+            "coverImage": "media/darkmatter/darkmatter.gif",
+            "trailerEmbed": "https://www.youtube.com/embed/OlgM1a4RoXk?autoplay=1",
+            "role": "Dark Matter is a 1-bit space shooter game made in a week for the <b>1-BIT 2023 Game Jam.</b> The project is made primarily in C++ and uses the raylib library for development support. Dark Matter garnered much attention during the period of the jam, garnering over 60 ratings and being the fourth most rated game.<br><br>During the Summer of 2023, I was a <game-developer></game-developer> for this project, devoting a week of my time to make the gameplay feel and function the best that it can. This paid off, as Dark Matter was one of the highest rated games in terms of gameplay.",
+            "link": "https://prestosilver.itch.io/dark-matter",
+            "photoGallery": [  
+                "media/darkmatter/darkmatter1.png",
+                "media/darkmatter/darkmatter2.png",
+                "media/darkmatter/darkmatter3.png"
+            ]
+        },
+        {
             "name": "Doodle Day",
             "description" : "🏆<b>3rd Place Winner at Wolfjam 2023</b>🏆<br>Made in under 24 hours.",
             "coverImage": "media/doodleday/doodleday.gif",
@@ -38,19 +77,6 @@
                 "media/doodleday/doodleday-2.png",
                 "media/doodleday/doodleday-3.png",
                 "media/doodleday/doodleday-4.png"
-            ]
-        },
-        {
-            "name": "Dark Matter",
-            "description" : "A 1-Bit Space Shooter taking inspiration from classic arcade games.",
-            "coverImage": "media/darkmatter/darkmatter.gif",
-            "trailerEmbed": "https://www.youtube.com/embed/OlgM1a4RoXk?autoplay=1",
-            "role": "Dark Matter is a 1-bit space shooter game made in a week for the <b>1-BIT 2023 Game Jam.</b> The project is made primarily in C++ and uses the raylib library for development support. Dark Matter garnered much attention during the period of the jam, garnering over 60 ratings and being the fourth most rated game.<br><br>During the Summer of 2023, I acted as a <game-developer></game-developer> for this project, devoting a week of my time to make the gameplay feel and function the best that it can. This paid off, as Dark Matter was one of the highest rated games in terms of gameplay.",
-            "link": "https://prestosilver.itch.io/dark-matter",
-            "photoGallery": [  
-                "media/darkmatter/darkmatter1.png",
-                "media/darkmatter/darkmatter2.png",
-                "media/darkmatter/darkmatter3.png"
             ]
         },
         {
@@ -106,7 +132,7 @@
             "coverImage": "media/karnissascastle/karnissa.gif",
             "trailerEmbed": "https://www.youtube.com/embed/ZeVq3YvQDkc?autoplay=1",
             "role": "Karnissa's Castle is a 3D puzzle game created in Unity, inspired by the World of Ethshar book series. The fundamental mechanics of the game revolve around switching between two characters to solve one puzzle.<br><br>During the Fall of 2022, I worked as a <game-developer></game-developer>, programming most of the puzzle mechanics and logic.",
-            "link": "bottle-knights/index.html",
+            "link": "https://sciencedoge.itch.io/karnissas-castle",
             "photoGallery": [  
                 "media/karnissascastle/karnissa1.png",
                 "media/karnissascastle/karnissa2.png",
