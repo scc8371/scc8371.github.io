@@ -38,20 +38,7 @@
                 "media/changeling/changeling6.png"
             ]
         },
-        {
-            "name": "Liftin n' Giftin",
-            "description" : "A Christmas survival game!",
-            "coverImage": "media/liftin/liftin.gif",
-            "trailerEmbed": "https://www.youtube.com/embed/hiMK1tYQ82w?autoplay=1",
-            "role": "Changeling is a VR mystery, first-person 3D platformer game built upon the idea of magical realism and a sense of unease and wonder. You play as Aurelia, a dream-walker who has the ability to see through the eyes of anyone she touches. You are tasked with helping this family figure out what is wrong with their child, and as you contact each member, you see through the lens of their hopes and fears of what the child is.<br><br> During the Summer of 2023, I worked as a <ui-designer></ui-designer> to improve team workflow and general functionality of core gameplay mechanics. Notable inclusions that I worked on are the player's physics-based hands and the teleportation system. I also assisted with various needs from all of the development teams, and was responsible for building the executable at the end of development sprints.",
-            "link": "https://www.changelingvr.com/",
-            "photoGallery": [
-                "media/changeling/changeling1.png",
-                "media/changeling/changeling2.png",
-                "media/changeling/changeling5.png",
-                "media/changeling/changeling6.png"
-            ]
-        },
+        
         {
             "name": "Dark Matter",
             "description" : "A 1-Bit Space Shooter taking inspiration from classic arcade games.",
@@ -63,6 +50,17 @@
                 "media/darkmatter/darkmatter1.png",
                 "media/darkmatter/darkmatter2.png",
                 "media/darkmatter/darkmatter3.png"
+            ]
+        },
+        {
+            "name": "Liftin n' Giftin",
+            "description" : "A Christmas survival game!",
+            "coverImage": "media/liftin/liftin.gif",
+            "trailerEmbed": "https://www.youtube.com/embed/hiMK1tYQ82w?autoplay=1",
+            "role": "Liftin n' Giftin is a survival game revolving around lifting a heavy anvil-barbell to make gifts for Christmas. The game was made in the Godot game engine for the Jam Game 2023 Winter Game Jam. I worked as a <game-developer></game-developer> in a group of 2, programming the physics of the barbell and the logic for the gifts and elves.",
+            "link": "https://prestosilver.itch.io/liftin",
+            "photoGallery": [
+                "media/liftin/liftin.png"
             ]
         },
         {
