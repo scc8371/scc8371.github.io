@@ -497,7 +497,7 @@
     }
 }
 
-@media (max-width: 300px){
+@media (max-width: 300px) {
     .resumeBtn {
         width: 200px !important;
         font-size: 1rem !important;
@@ -703,9 +703,14 @@ iframe {
     }
 }
 
-@media screen and (max-height: 450px) {
+@media screen and (max-height: 700px) {
     .back-button {
         top: 80%;
+    }
+
+    .pfp {
+        height: 75% !important;
+        width: 75% !important;
     }
 
 }
