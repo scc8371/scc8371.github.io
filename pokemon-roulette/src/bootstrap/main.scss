@@ -1,0 +1,320 @@
+//override any bootstrap variables here....
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+@keyframes ldio-63ep56f3c1h {
+    0% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+.ldio-63ep56f3c1h div {
+    left: 94px;
+    top: 48px;
+    position: absolute;
+    animation: ldio-63ep56f3c1h linear 1s infinite;
+    background: red;
+    width: 12px;
+    height: 24px;
+    border-radius: 6px / 12px;
+    transform-origin: 6px 52px;
+}
+
+.ldio-63ep56f3c1h div:nth-child(1) {
+    transform: rotate(0deg);
+    animation-delay: -0.9166666666666666s;
+    background: red;
+}
+
+.ldio-63ep56f3c1h div:nth-child(2) {
+    transform: rotate(30deg);
+    animation-delay: -0.8333333333333334s;
+    background: red;
+}
+
+.ldio-63ep56f3c1h div:nth-child(3) {
+    transform: rotate(60deg);
+    animation-delay: -0.75s;
+    background: red;
+}
+
+.ldio-63ep56f3c1h div:nth-child(4) {
+    transform: rotate(90deg);
+    animation-delay: -0.6666666666666666s;
+    background: red;
+}
+
+.ldio-63ep56f3c1h div:nth-child(5) {
+    transform: rotate(120deg);
+    animation-delay: -0.5833333333333334s;
+    background: red;
+}
+
+.ldio-63ep56f3c1h div:nth-child(6) {
+    transform: rotate(150deg);
+    animation-delay: -0.5s;
+    background: red;
+}
+
+.ldio-63ep56f3c1h div:nth-child(7) {
+    transform: rotate(180deg);
+    animation-delay: -0.4166666666666667s;
+    background: red;
+}
+
+.ldio-63ep56f3c1h div:nth-child(8) {
+    transform: rotate(210deg);
+    animation-delay: -0.3333333333333333s;
+    background: red;
+}
+
+.ldio-63ep56f3c1h div:nth-child(9) {
+    transform: rotate(240deg);
+    animation-delay: -0.25s;
+    background: red;
+}
+
+.ldio-63ep56f3c1h div:nth-child(10) {
+    transform: rotate(270deg);
+    animation-delay: -0.16666666666666666s;
+    background: red;
+}
+
+.ldio-63ep56f3c1h div:nth-child(11) {
+    transform: rotate(300deg);
+    animation-delay: -0.08333333333333333s;
+    background: red;
+}
+
+.ldio-63ep56f3c1h div:nth-child(12) {
+    transform: rotate(330deg);
+    animation-delay: 0s;
+    background: red;
+}
+
+.loadingio-spinner-spinner-gal95fta48o {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    overflow: hidden;
+    position: absolute;
+}
+
+.ldio-63ep56f3c1h {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0;
+}
+
+.ldio-63ep56f3c1h div {
+    box-sizing: content-box;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: .5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+
+    background-color: #630101;
+
+    min-height: 170px;
+    min-width: 170px;
+    max-width: 170px;
+    max-height: 170px;
+
+    border: 5px solid #460000;
+    border-radius: 10px;
+
+    transition: all .1s ease-in-out;
+}
+
+.col:hover {
+    animation: sway 1s ease infinite;
+    cursor: pointer;
+}
+
+body {
+    background-color: black !important;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../resources/pokedex.webp");
+    background-size: 100% 100%;
+}
+
+@keyframes sway {
+
+    0% {
+        transform: scale(1.00);
+    }
+
+    25% {
+        transform: scale(1.025);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    75% {
+        transform: scale(1.025);
+    }
+
+    100% {
+        transform: scale(1.00);
+    }
+}
+
+.pkmnImg {
+    max-width: 110px !important;
+    min-width: 110px !important;
+
+    transition: all .2s ease;
+}
+
+#hero {
+    height: 100vh;
+
+    display: grid;
+    grid-template-areas: "card";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    border: 25px solid red;
+    border-radius: 20px;
+    background-color: darkred;
+    flex-direction: column;
+}
+
+#pokemon-card {
+    max-width: 800px;
+    min-width: 800px;
+
+    min-height: 800px;
+    max-height: 800px;
+
+    height: auto;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pokeRow {
+    visibility: hidden;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    width: 475px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+
+    position: absolute !important;
+    z-index: 10;
+    opacity: 0.90;
+}
+
+.tooltiptext p {
+    margin: 0.5rem;
+}
+
+.tooltiptext img {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.tooltiptext hr {
+    padding: 0rem;
+    margin: 0.25rem;
+}
+
+.tooltiptext img {
+    padding: 0.1rem;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.col:hover .tooltiptext {
+    visibility: visible;
+}
+
+#dexNum {
+    text-align: left;
+}
+
+#pokemonGenHeight,
+#pokemonGenWeight,
+#pokemonGenTypes {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+
+#pokemonGenTypes {
+    justify-content: center;
+}
+
+#pokemonGenTypes img {
+    margin-left: 0.25rem !important;
+    margin-right: 0.25rem !important;
+}
+
+.progressBarInner {
+    height: 20px;
+    background-color: #04AA6D;
+    text-align: center;
+    line-height: 18px;
+    color: black;
+    width: 10%;
+    text-align: center;
+    border: 1px solid gray;
+
+}
+
+/* Add specific styles for each stat */
+#attack,
+#health,
+#spattack,
+#spdefense,
+#defense,
+#speed {
+    background-color: lightgray;
+    border: 1px solid gray;
+}
+
+
+.progressBarOuter {
+    width: 80%;
+    background-color: #ddd;
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+}
+
+.statDisplay {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+.label {
+    min-width: 4rem;
+    padding-right: 1rem;
+}
