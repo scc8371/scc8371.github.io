@@ -3,6 +3,7 @@ import * as webFooter from "./footer.js";
 import * as loader from './loader.js';
 import * as sectionHeader from "./sectionHeader.js"
 import * as popoutWords from "./popoutWords.js"
+import * as particles from "./particles.js"
 
 //load project panels and display in the project section
 let isLeft = true;

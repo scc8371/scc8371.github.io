@@ -287,6 +287,7 @@
 .modP {
     position: relative;
     top: -2%;
+    text-align: left !important;
 }
 
 .centered-div {

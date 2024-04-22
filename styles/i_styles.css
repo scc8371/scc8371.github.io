@@ -1,3 +1,19 @@
+#particleCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    background: radial-gradient(#353535AA, #222222);
+    z-index: 0;
+
+}
+
+body {
+    height: 100% !important;
+
+}
+
 #showcase h2 {
     font-size: 2rem;
     color: #fff;
@@ -210,6 +226,7 @@
 #footer {
     scroll-margin-top: 100px;
     width: 66.7%;
+    z-index: 2;
 }
 
 #project-desc-section .imgSection {
@@ -222,7 +239,7 @@
     justify-content: center !important;
 }
 
-#project-desc-section .imgSection img{
+#project-desc-section .imgSection img {
     justify-self: center;
 }
 
@@ -384,14 +401,14 @@
 }
 
 
-@media screen and (max-width: 700px){
-    #project-desc-section .title{
+@media screen and (max-width: 700px) {
+    #project-desc-section .title {
         font-size: 2rem !important;
         margin-top: 1rem !important;
         margin-bottom: 1rem !important;
     }
 
-    #project-desc-section button{
+    #project-desc-section button {
         width: 250px !important;
     }
 }
@@ -404,4 +421,3 @@
             "footer";
     }
 }
-

@@ -5,8 +5,7 @@
             "description" : "A Platform Fighter that relies on physics-based trampolines.",
             "coverImage": "media/ninjas/ninjas.gif",
             "trailerEmbed": "https://www.youtube.com/embed/zA0I3a7yrLU?autoplay=1",
-            "role": "Ninjas on Trampoline is a multiplayer platform fighter made in Unity. Players connect with their friends and fight to gain the most of their own paint on the back wall, giving them the victory. With matches only lasting 90 seconds, Ninjas on Trampolines excels at fast and chaotic gameplay, giving it a ton of replay value for players. During the years 2023 and 2024, I worked as the <lead-programmer></lead-programmer> of the project, designing and implementing most of the physics and backend systems of the game. Features such as the trampolines, player physics/movement, scoring calculations, and multiplayer/network systems were created by me.<br><br>Ninjas on Trampolines is a game funded by the Magic Maker program at the Rochester Institute of Technology.",
-            "link": "https://ifaicgu.itch.io/ninjas-on-trampolines",
+            "role": "Roles: <lead-programmer></lead-programmer> / <systems-designer>",
             "photoGallery": [
                 "media/ninjas/ninjas_logo.png",
                 "media/ninjas/ninjas_screenshot.png"
