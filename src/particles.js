@@ -37,7 +37,7 @@ window.addEventListener('scroll', (e) => {
 
     let diff = prevY - scrollY;
     console.log(diff);
-    scrollVel += diff / 200;
+    scrollVel += diff / 500;
     scrolling = true;
 
     prevY = scrollY;
@@ -133,15 +133,15 @@ class Particle {
 function init() {
     particles = [];
 
-    let numParticles = (canvas.height * canvas.width) / 3500;
+    let numParticles = (canvas.height * canvas.width) / 5000;
 
     for (let i = 0; i < numParticles; i++) {
         let size = (Math.random() * 5) + 1;
         let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
         let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
 
-        let directionX = (Math.random() * 2) - 1;
-        let directionY = (Math.random() * 2) - 1;
+        let directionX = (Math.random() * 1) - .5;
+        let directionY = (Math.random() * 1) - .5;
 
         let color = '#000000';
 
