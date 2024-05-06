@@ -135,6 +135,9 @@ function init() {
 
     let numParticles = (canvas.height * canvas.width) / 5000;
 
+    //caps the num of particles to prevent lag at larger resolutions. 
+    numParticles = Math.min(numParticles, 1000);
+
     for (let i = 0; i < numParticles; i++) {
         let size = (Math.random() * 5) + 1;
         let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
@@ -183,14 +186,6 @@ function connect() {
         }
     }
 }
-
-// function lerpParticles() {
-//     for (let particle of particles) {
-//         particle.x += (particle.originalX - particle.x) * 0.1;
-//         particle.y += (particle.originalY - particle.y) * 0.1;
-//     }
-// }
-
 
 init();
 anim();
