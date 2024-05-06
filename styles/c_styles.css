@@ -552,6 +552,12 @@
 
 .card-img-top {
     max-height: 350px !important;
+    z-index: 10;
+}
+
+.card-title,
+.resButtonWrapper {
+    z-index: 10;
 }
 
 .card-body {
@@ -574,16 +580,27 @@
     transition: filter 0.5s ease, background-color 0.5s ease, color 0.5s ease;
 }
 
-.card:hover .card-body {
-    filter: invert(1);
-    background-color: black;
-    color: #343434;
+
+.card-decor {
+    width: 100%;
+    position: absolute;
 }
 
-.card:not(:hover) .card-body {
-    filter: invert(0);
-    background-color: #343434;
-    color: white;
+.card:hover .card-decor {
+    z-index: 2;
+    animation: scaleDecor .05s ease-in-out forwards;
+
+    background-color: rgba(255, 255, 255, .1);
+}
+
+@keyframes scaleDecor {
+    0% {
+        height: 0%;
+    }
+
+    100% {
+        height: 100%;
+    }
 }
 
 
@@ -609,6 +626,7 @@
 
 .card-text {
     font-size: 1.2rem;
+    z-index: 10;
 }
 
 .my-name {
