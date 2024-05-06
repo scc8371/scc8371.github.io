@@ -12,40 +12,40 @@ let projectSection = document.querySelector('.projectSection')
 window.onload = () => {
     let projectDescSection = document.querySelector("#project-desc-section");
 
-    if(projectDescSection){
+    if (projectDescSection) {
         //load info into section based on clicked panel/local storage
-        
+
         let name = window.localStorage.getItem("scc8371-name");
         let link = window.localStorage.getItem("scc8371-activeLink");
         let trailer = window.localStorage.getItem("scc8371-activeTrailer");
         let role = window.localStorage.getItem("scc8371-activeRole");
         let images = window.localStorage.getItem("scc8371-activeImages").split(',');
 
-        if(name != null) document.querySelector(".modTitle").innerHTML = name;
+        if (name != null) document.querySelector(".modTitle").innerHTML = name;
         else document.querySelector(".modTitle").innerHTML = "Dark Matter";
 
-        if(name != null){
+        if (name != null) {
             document.querySelector('.modButton').setAttribute("href", link);
-        } 
+        }
         else document.querySelector(".modButton").setAttribute("href", "https://prestosilver.itch.io/dark-matter");
 
-        if(trailer != null) document.querySelector(".modFrame").setAttribute("src", trailer);
+        if (trailer != null) document.querySelector(".modFrame").setAttribute("src", trailer);
         else document.querySelector(".modFrame").setAttribute("src", "https://www.youtube.com/embed/OlgM1a4RoXk");
 
-        if(role != null) document.querySelector(".modP").innerHTML = role;
+        if (role != null) document.querySelector(".modP").innerHTML = role;
         else document.querySelector(".modP").innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus praesentium, nesciunt animi recusandae consequatur hic quasi. Perspiciatis, asperiores a? Voluptatum rem ex debitis vero possimus corrupti modi laborum consequatur exercitationem similique dolore harum minus est quisquam in voluptatem quasi consectetur labore, fuga obcaecati. Quisquam pariatur vel debitis error, nobis, illum nesciunt quis recusandae voluptate corporis non blanditiis adipisci veniam aliquam quod sint modi nihil totam tenetur ducimus? Inventore nobis eos expedita possimus modi maiores officia, voluptas iusto hic temporibus similique, amet tenetur impedit ab non laboriosam fugit architecto commodi. Ipsa, dignissimos tempora inventore provident culpa hic aliquam? Earum, animi delectus?";
 
         let imageSection = document.querySelector(".imgSection");
 
-        if(images != null){
-            for(let image of images){
+        if (images != null) {
+            for (let image of images) {
                 let img = document.createElement("img");
                 img.setAttribute("src", image);
                 img.classList.add("procImg");
-                imageSection.appendChild(img);            
+                imageSection.appendChild(img);
             }
         }
-        else{
+        else {
             let notice = document.createElement("p");
             p.innerHTML = "No images for this project!"
             imageSection.appendChild(notice);
@@ -58,6 +58,10 @@ function loadProjectPreviewData() {
     loader.projectData.projects.forEach(project => {
         let panel = new projectPanel.ProjectPanel(project.name, project.shortDescription, project.description, project.coverImage, project.trailerEmbed, project.role, project.link, project.photoGallery);
         projectSection.appendChild(panel);
+
+        panel.addEventListener("mousemove", (e) => {
+            rotateElement(e, panel);
+        })
     });
 }
 
@@ -65,7 +69,7 @@ function loadProjectPreviewData() {
 let scrollToTopButton = document.querySelector(".back-button");
 let backToProjectsButton = document.querySelector(".backToProjectsButton");
 
-if(backToProjectsButton && window.innerWidth <= 950){
+if (backToProjectsButton && window.innerWidth <= 950) {
     backToProjectsButton.classList.add("hidden");
     backToProjectsButton.style.left = "-100%";
 }
@@ -73,13 +77,13 @@ if(backToProjectsButton && window.innerWidth <= 950){
 
 
 window.onresize = () => {
-    if(!backToProjectsButton) return;
+    if (!backToProjectsButton) return;
 
-    if(window.innerWidth > 950){
+    if (window.innerWidth > 950) {
         backToProjectsButton.classList.add("shown");
         backToProjectsButton.classList.remove("hidden");
     }
-    else{
+    else {
         backToProjectsButton.classList.remove("shown");
         backToProjectsButton.classList.add("hidden");
     }
@@ -104,8 +108,8 @@ window.onscroll = () => {
         scrollToTopButton.classList.remove("hidden");
         scrollToTopButton.classList.add("shown");
 
-        if(backToProjectsButton){
-            if(window.innerWidth <= 950){
+        if (backToProjectsButton) {
+            if (window.innerWidth <= 950) {
                 backToProjectsButton.classList.remove("hidden");
                 backToProjectsButton.classList.add("shown");
             }
@@ -115,9 +119,9 @@ window.onscroll = () => {
         scrollToTopButton.classList.add("hidden");
         scrollToTopButton.classList.remove("shown");
 
-        if(backToProjectsButton){
+        if (backToProjectsButton) {
             console.log(window.innerWidth);
-            if(window.innerWidth <= 950){
+            if (window.innerWidth <= 950) {
                 backToProjectsButton.classList.add("hidden");
                 backToProjectsButton.classList.remove("shown");
             }
@@ -125,6 +129,38 @@ window.onscroll = () => {
     }
 }
 
+function rotateElement(event, element) {
+    //get mouse position
+    const x = event.clientX + window.scrollX;
+    const y = event.clientY + window.scrollY;
 
-export {loadProjectPreviewData};
+    const elementPos = getOffset(element);
+
+    const middleX = elementPos.x + (elementPos.width / 2);
+    const middleY = elementPos.y + (elementPos.height / 2);
+
+    //console.log(middleX, middleY + " Mouse position: " + x, y);
+
+    const offsetX = ((x - middleX) / elementPos.width) * 25;
+    const offsetY = ((y - middleY) / elementPos.width) * 25;
+
+    console.log(offsetX, offsetY);
+
+    element.style.setProperty("--rotateX", -1 * offsetY + "deg");
+    element.style.setProperty("--rotateY", offsetX + "deg");
+
+}
+
+function getOffset(el) {
+    const rect = el.getBoundingClientRect();
+    return {
+        x: rect.left + window.scrollX,
+        y: rect.top + window.scrollY,
+        width: rect.width,
+        height: rect.height
+    };
+}
+
+
+export { loadProjectPreviewData };
 

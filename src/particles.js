@@ -36,7 +36,6 @@ window.addEventListener('scroll', (e) => {
     let scrollY = window.scrollY;
 
     let diff = prevY - scrollY;
-    console.log(diff);
     scrollVel += diff / 500;
     scrolling = true;
 
@@ -154,9 +153,6 @@ function init() {
 
 function anim() {
     requestAnimationFrame(anim);
-
-    console.log(scrolling);
-
     ctx.clearRect(0, 0, innerWidth, innerHeight);
     for (let i = 0; i < particles.length; i++) {
         particles[i].update();

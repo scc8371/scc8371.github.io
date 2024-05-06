@@ -92,6 +92,8 @@
     left: -10%;
 
     opacity: 70%;
+
+    z-index: 100 !important; 
 }
 
 .back-button i {
@@ -174,7 +176,8 @@
 }
 
 .card:hover {
-    transform: scale(1.025);
+    transform: scale(1.025) rotateY(var(--rotateY)) rotateX(var(--rotateX));
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 .projectSection {
@@ -588,9 +591,9 @@
 
 .card:hover .card-decor {
     z-index: 2;
-    animation: scaleDecor .05s ease-in-out forwards;
+    animation: scaleDecor .15s ease-in-out forwards;
 
-    background-color: rgba(255, 255, 255, .1);
+    background-color: rgba(255, 255, 255, .2);
 }
 
 @keyframes scaleDecor {
