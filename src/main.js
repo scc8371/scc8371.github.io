@@ -16,39 +16,73 @@ window.onload = () => {
         //load info into section based on clicked panel/local storage
 
         let name = window.localStorage.getItem("scc8371-name");
-        let link = window.localStorage.getItem("scc8371-activeLink");
-        let trailer = window.localStorage.getItem("scc8371-activeTrailer");
-        let role = window.localStorage.getItem("scc8371-activeRole");
-        let images = window.localStorage.getItem("scc8371-activeImages").split(',');
+        let link = window.localStorage.getItem("scc8371-link");
+        let trailer = window.localStorage.getItem("scc8371-trailer");
+        let role = window.localStorage.getItem("scc8371-role");
+        let images = JSON.parse(window.localStorage.getItem("scc8371-images").split(','));
+        let teamSize = window.localStorage.getItem("scc8371-teamSize");
+        let engine = window.localStorage.getItem("scc8371-engine");
+        let tools = window.localStorage.getItem("scc8371-tools");
+        let duration = window.localStorage.getItem("scc8371-duration");
+        let docs = window.localStorage.getItem("scc8371-docs");
+        let overview = window.localStorage.getItem("scc8371-overview");
+        let goals = window.localStorage.getItem("scc8371-goals").split(',');
+        let responsibilities = window.localStorage.getItem("scc8371-responsibilities");
 
+        //header + trailer embeds
         if (name != null) document.querySelector(".modTitle").innerHTML = name;
-        else document.querySelector(".modTitle").innerHTML = "Dark Matter";
-
-        if (name != null) {
-            document.querySelector('.modButton').setAttribute("href", link);
-        }
-        else document.querySelector(".modButton").setAttribute("href", "https://prestosilver.itch.io/dark-matter");
-
+        if (link != null) document.querySelector('.modButton').setAttribute("href", link);
         if (trailer != null) document.querySelector(".modFrame").setAttribute("src", trailer);
-        else document.querySelector(".modFrame").setAttribute("src", "https://www.youtube.com/embed/OlgM1a4RoXk");
 
-        if (role != null) document.querySelector(".modP").innerHTML = role;
-        else document.querySelector(".modP").innerHTML = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus praesentium, nesciunt animi recusandae consequatur hic quasi. Perspiciatis, asperiores a? Voluptatum rem ex debitis vero possimus corrupti modi laborum consequatur exercitationem similique dolore harum minus est quisquam in voluptatem quasi consectetur labore, fuga obcaecati. Quisquam pariatur vel debitis error, nobis, illum nesciunt quis recusandae voluptate corporis non blanditiis adipisci veniam aliquam quod sint modi nihil totam tenetur ducimus? Inventore nobis eos expedita possimus modi maiores officia, voluptas iusto hic temporibus similique, amet tenetur impedit ab non laboriosam fugit architecto commodi. Ipsa, dignissimos tempora inventore provident culpa hic aliquam? Earum, animi delectus?";
+
+        let modP = document.querySelector(".modP");
+        
+        //game description.
+        if (role != "undefined") modP.innerHTML = `Role: ${role}`;
+        if(teamSize != "undefined") modP.innerHTML += `<br>Team Size: <b>${teamSize}</b>`;
+        if(engine != "undefined") modP.innerHTML += `<br>Engine: <b>${engine}</b>`;
+        if(tools != "undefined") modP.innerHTML += `<br>Tools Used: <b>${tools}</b>`;
+        if(duration != "undefined") modP.innerHTML += `<br>Time Spent on Project: <b>${duration}</b>`;
+        if(overview != "undefined") modP.innerHTML += `<hr>Overview: <br>&emsp;<b>${overview}</b>`;
+        if(goals != "undefined"){
+            modP.innerHTML += `<br><br>Goals: <ul>`;
+
+            for(let goal of goals){
+                modP.innerHTML += `<li><b>${goal}</b></li>`;
+            }
+
+            modP.innerHTML += `</ul>`;
+        } 
+
+        if(responsibilities != "undefined") modP.innerHTML += `<hr>Responsibilities: <br>&emsp;<b>${responsibilities}</b>`;
+
+        if(docs != "undefined") modP.innerHTML += `<br><br><a href=${docs}>Click Here to View Project Documentation</a>`
 
         let imageSection = document.querySelector(".imgSection");
 
         if (images != null) {
             for (let image of images) {
+                console.log(image);
+                let container = document.createElement("div");
+
+
                 let img = document.createElement("img");
-                img.setAttribute("src", image);
+                img.setAttribute("src", image.url);
                 img.classList.add("procImg");
-                imageSection.appendChild(img);
+
+                let subtitle = document.createElement("span");
+                subtitle.innerHTML = image.subtitle;
+
+                container.appendChild(img);
+                container.appendChild(subtitle);
+                imageSection.appendChild(container);
+
+                img.addEventListener("mousemove", (e) => {
+                    rotateElement(e, img);
+                });
+
+                container.classList.add("imageContainer");
             }
-        }
-        else {
-            let notice = document.createElement("p");
-            p.innerHTML = "No images for this project!"
-            imageSection.appendChild(notice);
         }
     }
 }
@@ -56,7 +90,7 @@ window.onload = () => {
 
 function loadProjectPreviewData() {
     loader.projectData.projects.forEach(project => {
-        let panel = new projectPanel.ProjectPanel(project.name, project.shortDescription, project.description, project.coverImage, project.trailerEmbed, project.role, project.link, project.photoGallery);
+        let panel = new projectPanel.ProjectPanel(project.name, project.shortDescription, project.description, project.coverImage, project.trailerEmbed, project.role, project.link, project.photoGallery, project.teamSize, project.engine, project.tools, project.duration, project.docs, project.overview, project.goals, project.responsibilities);
         projectSection.appendChild(panel);
 
         panel.addEventListener("mousemove", (e) => {
@@ -120,7 +154,6 @@ window.onscroll = () => {
         scrollToTopButton.classList.remove("shown");
 
         if (backToProjectsButton) {
-            console.log(window.innerWidth);
             if (window.innerWidth <= 950) {
                 backToProjectsButton.classList.add("hidden");
                 backToProjectsButton.classList.remove("shown");
@@ -139,12 +172,8 @@ function rotateElement(event, element) {
     const middleX = elementPos.x + (elementPos.width / 2);
     const middleY = elementPos.y + (elementPos.height / 2);
 
-    //console.log(middleX, middleY + " Mouse position: " + x, y);
-
     const offsetX = ((x - middleX) / elementPos.width) * 25;
     const offsetY = ((y - middleY) / elementPos.width) * 25;
-
-    console.log(offsetX, offsetY);
 
     element.style.setProperty("--rotateX", -1 * offsetY + "deg");
     element.style.setProperty("--rotateY", offsetX + "deg");

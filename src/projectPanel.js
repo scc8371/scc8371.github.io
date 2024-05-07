@@ -27,7 +27,7 @@ const template = `
 `
 
 class ProjectPanel extends HTMLElement {
-    constructor(name, shortDescription, description, image, trailer, role, projectLink, images) {
+    constructor(name, shortDescription, description, image, trailer, role, projectLink, images, teamSize, engine, tools, duration, docs, overview, goals, responsibilities) {
         super();
 
         this.name = name;
@@ -39,7 +39,14 @@ class ProjectPanel extends HTMLElement {
         this.link = "project.html#project-desc-section";
         this.projectLink = projectLink;
         this.images = images;
-
+        this.teamSize = teamSize;
+        this.engine = engine;
+        this.tools = tools;
+        this.duration = duration;
+        this.docs = docs;
+        this.overview = overview;
+        this.goals = goals;
+        this.responsibilities = responsibilities;
 
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.innerHTML = template;
@@ -54,10 +61,18 @@ class ProjectPanel extends HTMLElement {
             location.href = this.link;
             //set in local storage
             window.localStorage.setItem("scc8371-name", this.name);
-            window.localStorage.setItem("scc8371-activeLink", this.projectLink);
-            window.localStorage.setItem("scc8371-activeTrailer", this.trailer);
-            window.localStorage.setItem("scc8371-activeRole", this.role);
-            window.localStorage.setItem("scc8371-activeImages", this.images);
+            window.localStorage.setItem("scc8371-link", this.projectLink);
+            window.localStorage.setItem("scc8371-trailer", this.trailer);
+            window.localStorage.setItem("scc8371-role", this.role);
+            window.localStorage.setItem("scc8371-images", JSON.stringify(this.images));
+            window.localStorage.setItem("scc8371-teamSize", this.teamSize);
+            window.localStorage.setItem("scc8371-engine", this.engine);
+            window.localStorage.setItem("scc8371-tools", this.tools);
+            window.localStorage.setItem("scc8371-duration", this.duration);
+            window.localStorage.setItem("scc8371-docs", this.docs);
+            window.localStorage.setItem("scc8371-overview", this.overview);
+            window.localStorage.setItem("scc8371-goals", this.goals);
+            window.localStorage.setItem("scc8371-responsibilities", this.responsibilities);
         }
 
         let learnMoreButton = this.shadowRoot.querySelector(".nextBtn");
@@ -65,10 +80,18 @@ class ProjectPanel extends HTMLElement {
             location.href = this.link;
             //set in local storage
             window.localStorage.setItem("scc8371-name", this.name);
-            window.localStorage.setItem("scc8371-activeLink", this.projectLink);
-            window.localStorage.setItem("scc8371-activeTrailer", this.trailer);
-            window.localStorage.setItem("scc8371-activeRole", this.role);
-            window.localStorage.setItem("scc8371-activeImages", this.images);
+            window.localStorage.setItem("scc8371-link", this.projectLink);
+            window.localStorage.setItem("scc8371-trailer", this.trailer);
+            window.localStorage.setItem("scc8371-role", this.role);
+            window.localStorage.setItem("scc8371-images", JSON.stringify(this.images));
+            window.localStorage.setItem("scc8371-teamSize", this.teamSize);
+            window.localStorage.setItem("scc8371-engine", this.engine);
+            window.localStorage.setItem("scc8371-tools", this.tools);
+            window.localStorage.setItem("scc8371-duration", this.duration);
+            window.localStorage.setItem("scc8371-docs", this.docs);
+            window.localStorage.setItem("scc8371-overview", this.overview);
+            window.localStorage.setItem("scc8371-goals", this.goals);
+            window.localStorage.setItem("scc8371-responsibilities", this.responsibilities);
         }
 
 

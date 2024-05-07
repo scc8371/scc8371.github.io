@@ -1,14 +1,32 @@
 {
     "projects": [
         {
-            "name": "[WIP] Ninjas on Trampolines",
-            "description" : "A Platform Fighter that relies on physics-based trampolines.",
+            "name": "Ninjas on Trampolines",
+            "description" : "🏆<b>Best Experimental Game at RIT EDGE</b>🏆<br>A Platform Fighter that relies on physics-based trampolines.",
             "coverImage": "media/ninjas/ninjas.gif",
             "trailerEmbed": "https://www.youtube.com/embed/zA0I3a7yrLU?autoplay=1",
-            "role": "Roles: <lead-programmer></lead-programmer> / <systems-designer>",
+            "role": "<lead-programmer></lead-programmer> / <systems-designer>",
+            "teamSize": "7",
+            "engine": "Unity",
+            "tools": "C#, Python, Git, Gimp, Unity Profiling",
+            "duration": "1 Year",
+            "docs": "Link to any doc...",
+            "overview": "brief overview of what ninjas is...",
+            "goals": [
+                "goal1",
+                "goal2"
+            ],
+            "responsibilities": "an overview of my responsibilities for Ninjas...",
             "photoGallery": [
-                "media/ninjas/ninjas_logo.png",
-                "media/ninjas/ninjas_screenshot.png"
+                {
+                    "url": "media/ninjas/ninjas_logo.png",
+                    "subtitle": "Logo for Ninjas on Trampolines"
+                },
+                {
+                    "url": "media/ninjas/ninjas_screenshot.png",
+                    "subtitle": "Typical Gameplay"
+                }
+                
             ]
         },
         {
@@ -35,6 +53,19 @@
                 "media/changeling/changeling2.png",
                 "media/changeling/changeling5.png",
                 "media/changeling/changeling6.png"
+            ]
+        },
+        {
+            "name": "**[TODO]** Helpless",
+            "description" : "A 1-Bit Space Shooter taking inspiration from classic arcade games.",
+            "coverImage": "media/02.png",
+            "trailerEmbed": "https://www.youtube.com/embed/OlgM1a4RoXk?autoplay=1",
+            "role": "Dark Matter is a 1-bit space shooter game made in a week for the <b>1-BIT 2023 Game Jam.</b> The project is made primarily in C++ and uses the raylib library for development support. Dark Matter garnered much attention during the period of the jam, garnering over 60 ratings and being the fourth most rated game.<br><br>During the Summer of 2023, I was a <game-developer></game-developer> for this project, devoting a week of my time to make the gameplay feel and function the best that it can. This paid off, as Dark Matter was one of the highest rated games in terms of gameplay.",
+            "link": "https://prestosilver.itch.io/dark-matter",
+            "photoGallery": [  
+                "media/darkmatter/darkmatter1.png",
+                "media/darkmatter/darkmatter2.png",
+                "media/darkmatter/darkmatter3.png"
             ]
         },
         
@@ -87,7 +118,7 @@
             ]
         },
         {
-            "name": "Audio Visualizer Application",
+            "name": "Audio Visualizer",
             "description" : "A Web Application that visualizes audio frequencies. ",
             "coverImage": "media/visualizer/visualizer.gif",
             "trailerEmbed": "https://www.youtube.com/embed/bI0-IUr1g7M?autoplay=1",

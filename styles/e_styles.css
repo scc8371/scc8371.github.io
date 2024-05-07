@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -25,7 +25,6 @@ h5 {
 
 a {
     color: #d5d6d5;
-    font-size: 1.5rem;
 }
 
 
@@ -48,6 +47,12 @@ header button {
     margin-right: 1rem;
 }
 
+li {
+    margin-left: 30px !important;
+    list-style-type: circle;
+    overflow-x: visible !important;
+}
+
 body {
 
 
@@ -64,13 +69,13 @@ body {
     height: 100%;
 }
 
-ul{
+ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, 100px);
     justify-content: center !important;
 }
 
-li{
+li {
     margin: 0.5rem;
 }
 
@@ -91,12 +96,13 @@ i {
     height: 25%;
 }
 
-body{
+body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
-html{
+
+html {
 
     background:
         linear-gradient(135deg, #0000 20.5%, #e7e7e7 0 29.5%, #0000 0) 0 40px,
@@ -107,12 +113,14 @@ html{
     background-size: 160px 160px;
 }
 
-@media screen and (max-width: 450px){
-    html, body{
+@media screen and (max-width: 450px) {
+
+    html,
+    body {
         max-width: 100vw;
     }
 }
 
-*{
+* {
     overflow-x: clip;
 }
