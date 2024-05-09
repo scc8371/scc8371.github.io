@@ -134,15 +134,19 @@
     color: black;
 }
 
-.imageContainer{
+.imageContainer {
     display: flex;
     flex-direction: column;
+
+    border-bottom: 3px solid rgb(104, 104, 104, .7);
 }
 
-.imageContainer span{
+.imageContainer span {
     text-align: center;
     padding: 1rem;
     padding-top: 0rem;
+
+
 }
 
 
@@ -299,8 +303,6 @@
 }
 
 .modP {
-    position: relative;
-    top: -2%;
     text-align: left !important;
 }
 
@@ -337,7 +339,7 @@
 .embed-responsive {
     max-width: 80%;
     max-height: auto;
-    justify-self: center; border: 5px solid red;
+    justify-self: center;
 }
 
 
@@ -558,9 +560,11 @@
     font-size: 3rem !important;
 }
 
-.imgSection{
+.imgSection {
     background-color: rgba(0, 0, 0, 0.5);
     margin-bottom: 1rem;
+
+    align-self: first baseline;
 }
 
 .procImg {

@@ -5,18 +5,21 @@
             "description" : "🏆<b>Best Experimental Game at RIT EDGE</b>🏆<br>A Platform Fighter that relies on physics-based trampolines.",
             "coverImage": "media/ninjas/ninjas.gif",
             "trailerEmbed": "https://www.youtube.com/embed/zA0I3a7yrLU?autoplay=1",
-            "role": "<lead-programmer></lead-programmer> / <systems-designer>",
+            "role": "<lead-programmer></lead-programmer> / <systems-designer></systems-designer>",
             "teamSize": "7",
             "engine": "Unity",
             "tools": "C#, Python, Git, Gimp, Unity Profiling",
             "duration": "1 Year",
-            "docs": "Link to any doc...",
-            "overview": "brief overview of what ninjas is...",
+            "docs": "https://docs.google.com/document/d/1VzbaXHNuhw9445c2Qm5PXf4R0Jn5yNRlm7IDgVhKtI4/edit#heading=h.qyxnk3d3ngnk",
+            "overview": "Ninjas on Trampolines is a physics-based platform fighter, where players play as Ninjas that can paint their own colors on the wall. The objective of the game is to have the most of your own color on the back wall by the end of a match, which can be done by smacking other players, or using a spray can to graffiti the background.<br>&emsp;The game features three different gamemodes: Free-for-All, Spray King, and Paintball. Each gamemode takes a twist on the simple, yet extremely captivating game loop of Free-for-All by introducing new objectives for players. Paintball has players chase a soccer ball-like object, while Spray King has players chase another player holding an item that gives them an advantage.",
             "goals": [
-                "goal1",
-                "goal2"
+                "To create a simple and captivating game loop.",
+                "Improve my knowledge of implementing physics in games.",
+                "Optimize our codebase and shaders to minimize latency.",
+                "To experiment with multiplayer backends and networking solutions.",
+                "Have a game that I am proud to publish on a digital store."
             ],
-            "responsibilities": "an overview of my responsibilities for Ninjas...",
+            "responsibilities": "During the first few months of development, my main priorities were in the area of developing systems for the game, including player mechanics, trampoline physics, paint score calculations, and creating data structures to store player data.<br>&emsp;For player phhysics, I ended up utilizing Unity's in-built rigidbodies and heavily modified their physics to create fast-paced, yet still controllable, movement. This was done by introducing a dozen or so parameters housed in two C# scripts, which would tweak various aspects of how the player moved and how they would react to physics events. I spent a few weeks tweaking these scripts to get players moving exactly how our team wanted them to.",
             "photoGallery": [
                 {
                     "url": "media/ninjas/ninjas_logo.png",

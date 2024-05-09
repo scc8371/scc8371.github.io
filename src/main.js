@@ -6,7 +6,6 @@ import * as popoutWords from "./popoutWords.js"
 import * as particles from "./particles.js"
 
 //load project panels and display in the project section
-let isLeft = true;
 let projectSection = document.querySelector('.projectSection')
 
 window.onload = () => {
@@ -36,27 +35,27 @@ window.onload = () => {
 
 
         let modP = document.querySelector(".modP");
-        
-        //game description.
-        if (role != "undefined") modP.innerHTML = `Role: ${role}`;
-        if(teamSize != "undefined") modP.innerHTML += `<br>Team Size: <b>${teamSize}</b>`;
-        if(engine != "undefined") modP.innerHTML += `<br>Engine: <b>${engine}</b>`;
-        if(tools != "undefined") modP.innerHTML += `<br>Tools Used: <b>${tools}</b>`;
-        if(duration != "undefined") modP.innerHTML += `<br>Time Spent on Project: <b>${duration}</b>`;
-        if(overview != "undefined") modP.innerHTML += `<hr>Overview: <br>&emsp;<b>${overview}</b>`;
-        if(goals != "undefined"){
-            modP.innerHTML += `<br><br>Goals: <ul>`;
 
-            for(let goal of goals){
+        //game description.
+        if (role != "undefined") modP.innerHTML = `<u>Role</u>: ${role}`;
+        if (teamSize != "undefined") modP.innerHTML += `<br><u>Team Size</u>: <b>${teamSize}</b>`;
+        if (engine != "undefined") modP.innerHTML += `<br><u>Engine</u>: <b>${engine}</b>`;
+        if (tools != "undefined") modP.innerHTML += `<br><u>Tools Used</u>: <b>${tools}</b>`;
+        if (duration != "undefined") modP.innerHTML += `<br><u>Time Spent on Project</u>: <b>${duration}</b>`;
+        if (overview != "undefined") modP.innerHTML += `<hr><u>Overview</u>: <br>&emsp;<b>${overview}</b>`;
+        if (goals != "undefined") {
+            modP.innerHTML += `<br><br><u>My Goals With This Project</u>: <ul>`;
+
+            for (let goal of goals) {
                 modP.innerHTML += `<li><b>${goal}</b></li>`;
             }
 
             modP.innerHTML += `</ul>`;
-        } 
+        }
 
-        if(responsibilities != "undefined") modP.innerHTML += `<hr>Responsibilities: <br>&emsp;<b>${responsibilities}</b>`;
+        if (responsibilities != "undefined") modP.innerHTML += `<hr><u>Responsibilities</u>: <br>&emsp;<b>${responsibilities}</b>`;
 
-        if(docs != "undefined") modP.innerHTML += `<br><br><a href=${docs}>Click Here to View Project Documentation</a>`
+        if (docs != "undefined") modP.innerHTML += `<br><br><a href=${docs}>Click Here to View Project Documentation</a>`
 
         let imageSection = document.querySelector(".imgSection");
 
