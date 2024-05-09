@@ -304,6 +304,9 @@
 
 .modP {
     text-align: left !important;
+
+    grid-area: desc !important;
+    align-self:first baseline !important;
 }
 
 .centered-div {

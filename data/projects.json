@@ -19,7 +19,8 @@
                 "To experiment with multiplayer backends and networking solutions.",
                 "Have a game that I am proud to publish on a digital store."
             ],
-            "responsibilities": "During the first few months of development, my main priorities were in the area of developing systems for the game, including player mechanics, trampoline physics, paint score calculations, and creating data structures to store player data.<br>&emsp;For player phhysics, I ended up utilizing Unity's in-built rigidbodies and heavily modified their physics to create fast-paced, yet still controllable, movement. This was done by introducing a dozen or so parameters housed in two C# scripts, which would tweak various aspects of how the player moved and how they would react to physics events. I spent a few weeks tweaking these scripts to get players moving exactly how our team wanted them to.",
+            "responsibilities": "During the first few months of development, my main priorities were in the area of developing systems for the game, including player mechanics, trampoline physics, paint score calculations, and creating data structures to store player data.<br>&emsp;For player phhysics, I ended up utilizing Unity's in-built rigidbodies and heavily modified their physics to create fast-paced, yet still controllable, movement. This was done by introducing a dozen or so parameters housed in two C# scripts, which would tweak various aspects of how the player moved and how they would react to physics events. I spent a few weeks tweaking these scripts to get players moving exactly how our team wanted them to. <br>&emsp;I further incorporated physics into the project by working on trampoline physics, which use a combination of forces and joints to simulate the contour of a real trampoline. The trampolines have gone through multiple code refactors and design changes, mostly due to technical constraints imposed by how they were constructed. At first, I utilized a grid of box colliders, stacked vertically, that would contour downwards if a player stepped on one of them, and spring back when the player steps off of it. This had a few major technical faults: <br><ol><li>Diagonal contstruction was not possible due to Unity's inability to freeze local physics constraints.+</li><li>Trampolines were not contouring correctly; only a small portion of the whole trampoline was being simulated.</li><li>The trampolines were unoptimized and required unnecessary physics checks due to the colliders not acting as a complete system. </li></ol>&emsp;Our current trampolines have colliders that are conjoined to each other, and have several optimizations to reduce the amount of physics checks that it endures. For one, if no entities are near the trampoline, it will completely ignore any checks. Along with this, I cut down the number of required box colliders to <b>half or lower</b> of what it was before, as the colliders now work in unison using joints.<br>&emsp;Other than players and trampolines, I worked on data structures to allow local multiplayer functionality, with the ability to store unique player IDs and colors that can be transferred between scenes. This is derived from a player select menu, which registers player input devices when they press a button on a peripheral.<br>&emsp;I also worked on paint scoring, which is done through a paint shader programmed in HLSL, <a href='https://en.wikibooks.org/wiki/Cg_Programming/Unity/Computing_Color_Histograms'>deriving from a histogram algorithm that tracks red/green/blue levels of color in a given texture.</a> <br><br>&emsp;This led us to an MVP (Minimum Viable Product) of the project, which we submitted to RIT's MAGIC Maker program and got accepted into.<br>&emsp;During the MAGIC Maker program, I was tasked to work on more backend systems for the game, as well as integrate networking functionality to allow for online play. During this time, I also made several optimizations to shader functionality, improving the frame rate of the game by 3 times (from ~100FPS to a steady 300FPS)",
+            "link": "https://www.steampowered.com/",
             "photoGallery": [
                 {
                     "url": "media/ninjas/ninjas_logo.png",
@@ -28,7 +29,16 @@
                 {
                     "url": "media/ninjas/ninjas_screenshot.png",
                     "subtitle": "Typical Gameplay"
+                },
+                {
+                    "url": "media/ninjas/trampoline-old.gif",
+                    "subtitle": "Demonstration of Old Trampolines"
+                },
+                {
+                    "url": "media/ninjas/trampoline-new.gif",
+                    "subtitle": "Demonstration of New Trampolines"
                 }
+
                 
             ]
         },

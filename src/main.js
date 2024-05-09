@@ -8,94 +8,93 @@ import * as particles from "./particles.js"
 //load project panels and display in the project section
 let projectSection = document.querySelector('.projectSection')
 
-window.onload = () => {
-    let projectDescSection = document.querySelector("#project-desc-section");
-
-    if (projectDescSection) {
-        //load info into section based on clicked panel/local storage
-
-        let name = window.localStorage.getItem("scc8371-name");
-        let link = window.localStorage.getItem("scc8371-link");
-        let trailer = window.localStorage.getItem("scc8371-trailer");
-        let role = window.localStorage.getItem("scc8371-role");
-        let images = JSON.parse(window.localStorage.getItem("scc8371-images").split(','));
-        let teamSize = window.localStorage.getItem("scc8371-teamSize");
-        let engine = window.localStorage.getItem("scc8371-engine");
-        let tools = window.localStorage.getItem("scc8371-tools");
-        let duration = window.localStorage.getItem("scc8371-duration");
-        let docs = window.localStorage.getItem("scc8371-docs");
-        let overview = window.localStorage.getItem("scc8371-overview");
-        let goals = window.localStorage.getItem("scc8371-goals").split(',');
-        let responsibilities = window.localStorage.getItem("scc8371-responsibilities");
-
-        //header + trailer embeds
-        if (name != null) document.querySelector(".modTitle").innerHTML = name;
-        if (link != null) document.querySelector('.modButton').setAttribute("href", link);
-        if (trailer != null) document.querySelector(".modFrame").setAttribute("src", trailer);
-
-
-        let modP = document.querySelector(".modP");
-
-        //game description.
-        if (role != "undefined") modP.innerHTML = `<u>Role</u>: ${role}`;
-        if (teamSize != "undefined") modP.innerHTML += `<br><u>Team Size</u>: <b>${teamSize}</b>`;
-        if (engine != "undefined") modP.innerHTML += `<br><u>Engine</u>: <b>${engine}</b>`;
-        if (tools != "undefined") modP.innerHTML += `<br><u>Tools Used</u>: <b>${tools}</b>`;
-        if (duration != "undefined") modP.innerHTML += `<br><u>Time Spent on Project</u>: <b>${duration}</b>`;
-        if (overview != "undefined") modP.innerHTML += `<hr><u>Overview</u>: <br>&emsp;<b>${overview}</b>`;
-        if (goals != "undefined") {
-            modP.innerHTML += `<br><br><u>My Goals With This Project</u>: <ul>`;
-
-            for (let goal of goals) {
-                modP.innerHTML += `<li><b>${goal}</b></li>`;
-            }
-
-            modP.innerHTML += `</ul>`;
-        }
-
-        if (responsibilities != "undefined") modP.innerHTML += `<hr><u>Responsibilities</u>: <br>&emsp;<b>${responsibilities}</b>`;
-
-        if (docs != "undefined") modP.innerHTML += `<br><br><a href=${docs}>Click Here to View Project Documentation</a>`
-
-        let imageSection = document.querySelector(".imgSection");
-
-        if (images != null) {
-            for (let image of images) {
-                console.log(image);
-                let container = document.createElement("div");
-
-
-                let img = document.createElement("img");
-                img.setAttribute("src", image.url);
-                img.classList.add("procImg");
-
-                let subtitle = document.createElement("span");
-                subtitle.innerHTML = image.subtitle;
-
-                container.appendChild(img);
-                container.appendChild(subtitle);
-                imageSection.appendChild(container);
-
-                img.addEventListener("mousemove", (e) => {
-                    rotateElement(e, img);
-                });
-
-                container.classList.add("imageContainer");
-            }
-        }
-    }
-}
-
-
 function loadProjectPreviewData() {
     loader.projectData.projects.forEach(project => {
-        let panel = new projectPanel.ProjectPanel(project.name, project.shortDescription, project.description, project.coverImage, project.trailerEmbed, project.role, project.link, project.photoGallery, project.teamSize, project.engine, project.tools, project.duration, project.docs, project.overview, project.goals, project.responsibilities);
+        let panel = new projectPanel.ProjectPanel(project.name, project.shortDescription, project.description, project.coverImage, loader.projectData.projects.indexOf(project));
         projectSection.appendChild(panel);
 
         panel.addEventListener("mousemove", (e) => {
             rotateElement(e, panel);
         })
     });
+}
+
+function loadProjectData() {
+    //load info into section based on clicked panel/local storage
+
+    let index = window.localStorage.getItem("scc8371-projectIndex");
+    let project = loader.projectData.projects[index];
+    console.log(project);
+
+    let name = project.name;
+    console.log(name);
+    let link = project.link;
+    let trailer = project.trailerEmbed;
+    let role = project.role;
+    let images = project.photoGallery;
+    let teamSize = project.teamSize;
+    let engine = project.engine;
+    let tools = project.tools;
+    let duration = project.duration;
+    let docs = project.docs;
+    let overview = project.overview;
+    let goals = project.goals;
+    let responsibilities = project.responsibilities;
+
+    //header + trailer embeds
+    if (name != null) document.querySelector(".modTitle").innerHTML = name;
+    if (link != null) document.querySelector('.modButton').setAttribute("href", link);
+    if (trailer != null) document.querySelector(".modFrame").setAttribute("src", trailer);
+
+
+    let modP = document.querySelector(".modP");
+
+    //game description.
+    if (role) modP.innerHTML = `<u>Role</u>: ${role}`;
+    if (teamSize) modP.innerHTML += `<br><u>Team Size</u>: <b>${teamSize}</b>`;
+    if (engine) modP.innerHTML += `<br><u>Engine</u>: <b>${engine}</b>`;
+    if (tools) modP.innerHTML += `<br><u>Tools Used</u>: <b>${tools}</b>`;
+    if (duration) modP.innerHTML += `<br><u>Time Spent on Project</u>: <b>${duration}</b>`;
+    if (docs) modP.innerHTML += `<br><br><a href=${docs}>Click Here to View Project Documentation</a>`
+    if (overview) modP.innerHTML += `<hr><u>Overview</u>: <br>&emsp;<b>${overview}</b>`;
+    if (goals) {
+        modP.innerHTML += `<br><br><u>My Goals With This Project</u>: <ul>`;
+
+        for (let goal of goals) {
+            modP.innerHTML += `<li><b>${goal}</b></li>`;
+        }
+
+        modP.innerHTML += `</ul>`;
+    }
+
+    if (responsibilities) modP.innerHTML += `<hr><u>Responsibilities</u>: <br>&emsp;<b>${responsibilities}</b>`;
+
+    let imageSection = document.querySelector(".imgSection");
+
+    if (images) {
+        for (let image of images) {
+            console.log(image);
+            let container = document.createElement("div");
+
+
+            let img = document.createElement("img");
+            img.setAttribute("src", image.url);
+            img.classList.add("procImg");
+
+            let subtitle = document.createElement("span");
+            subtitle.innerHTML = image.subtitle;
+
+            container.appendChild(img);
+            container.appendChild(subtitle);
+            imageSection.appendChild(container);
+
+            img.addEventListener("mousemove", (e) => {
+                rotateElement(e, img);
+            });
+
+            container.classList.add("imageContainer");
+        }
+    }
 }
 
 
@@ -190,5 +189,5 @@ function getOffset(el) {
 }
 
 
-export { loadProjectPreviewData };
+export { loadProjectPreviewData, loadProjectData };
 
