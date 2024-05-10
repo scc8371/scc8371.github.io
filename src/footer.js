@@ -1,6 +1,6 @@
 const template = `<div>
     <p>Made by Sami Chamberlain</p>
-    <p>Last Updated: 5/6/2024</p>  
+    <p>Last Updated: 5/9/2024</p>  
 </div>
 
 <style>
