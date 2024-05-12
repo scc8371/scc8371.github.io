@@ -74,6 +74,21 @@ let template5 = `
 </style>
 `
 
+let template6 = `
+<span class='programmer'>Programmer</span>
+
+<style>
+    .programmer{
+        color: #e9e9e9;
+        font-size: 1.35rem;
+
+        font-family: 'Lalezar', cursive;
+            text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+        1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+    }
+</style>
+`
+
 class GameDeveloper extends HTMLElement {
     constructor() {
         super();
@@ -119,10 +134,20 @@ class SystemsDesigner extends HTMLElement {
     }
 }
 
+class Programmer extends HTMLElement {
+    constructor() {
+        super();
+
+        this.attachShadow({ mode: "open" });
+        this.shadowRoot.innerHTML = template6;
+    }
+}
+
 customElements.define("game-developer", GameDeveloper);
 customElements.define("software-developer", SoftwareDeveloper);
 customElements.define("ui-designer", UIDeveloper);
 customElements.define("lead-programmer", LeadProgrammer);
 customElements.define("systems-designer", SystemsDesigner);
+customElements.define("reg-programmer", Programmer);
 
-export { GameDeveloper, SoftwareDeveloper, UIDeveloper, LeadProgrammer, SystemsDesigner };
+export { GameDeveloper, SoftwareDeveloper, UIDeveloper, LeadProgrammer, SystemsDesigner, Programmer };
