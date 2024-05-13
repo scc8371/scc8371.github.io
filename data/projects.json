@@ -215,24 +215,38 @@
             "role": "<reg-programmer> </reg-programmer> / <game-developer></game-developer>",
             "teamSize": "2",
             "engine": "N/A", 
-            "tools": "C++, raylib, gdb, Aseprite",
-            "overview": "Dark Matter is a 1-bit space shooter game made in a week for the <a href='https://itch.io/jam/1-bit-jam-wow'>1-BIT 2023 Game Jam</a>. The project is made primarily in C++ and uses the raylib library for development support. Dark Matter garnered much attention during the period of the jam, garnering over 60 ratings and being the fourth most rated game.<br><br>During the Summer of 2023, I was a <game-developer></game-developer> for this project, devoting a week of my time to make the gameplay feel and function the best that it can. This paid off, as Dark Matter was one of the highest rated games in terms of gameplay.",
+            "tools": "C++, raylib, gdb, Git, Aseprite, .bat files",
+            "duration": "August 2023",
+            "overview": "Dark Matter is a 1-bit space shooter game made in a week for the <a href='https://itch.io/jam/1-bit-jam-wow'>1-BIT 2023 Game Jam</a>. The project is made primarily in C++ and uses the raylib library for development support. The game is a simple 'shoot-em-up' game, where you control a spaceship that can use light to defeat oncoming enemies. However, whenever the player shoots, some of their light is sacrificed. When the player has no more light, it is game over. Dark Matter garnered much attention during the period of the jam, having over 60 ratings and being the fourth most rated game.",
+            "goals": [
+                "To create a game from scratch in C++",
+                "To challenge my design senses by only allowing two colors at once",
+                "To improve my C++ / stdlib knowledge"
+            ],
+            "responsibilities": "During the two week period of the jam, my main responsibilities were to implement player and enemy mechanics. I first started with the player, and implemented a simple update/draw loop to register player movement and draw the player every frame.<br><n-tab></n-tab>I then created functionality for the player shooting their 'light beams' by creating a projectile class (which is a parent class for both player and enemy bullets). The projectiles are pooled by pre-spawning them, and are moved to the player's shoot position whenever the 'shoot' action is called. The projectiles use similar velocity code to the player, and are not destroyed from memory until after the game ends. I then created simple player information, such as health points, which is connnected to the player's projectiles (health will proportionately fall based on number of projectiles shot, and will increase based on health pickups gathered). <br><n-tab></n-tab>After all of the player functionality was complete, I realized how many entities would need to be kept track of in the game, so I created a centralized list data structure that holds all entities in the game, as every spawnable object is derived from the same parent class. This ultimately helped me with spawn pooling and keeping track of entity memory when debugging.<br><n-tab></n-tab> After this, I started working on enemies and their spawning patterns. Due to the time limits of the game jam, I decided to only make one kind of enemy, however, I could customize this one enemy with different bullet patterns, trajectory paths, and speeds. I created a system that allowed us to procedurally generate different enemy paths based on number of enemies, spacing of enemies, number of loops the enemies would take, where enemies would start and end, etc. Because of this, every playthrough of Dark Matter is unique in terms of how enemies spawn.<br><n-tab></n-tab>One of the biggest design considerations I had to deal with for players and enemies were the colors of their projectiles. At first, I treated the projectiles of the players and enemies the same, visually and mechanically, however, it quickly became harder to differentiate which projectiles could hurt the player as more filled the screen. To circumvent this, I created a new sprite for enemy bullets, and removed their VFX to make them look more discernible.<br><n-tab></n-tab>After completing player and enemy mechanics, I worked on the UI for the main menu, main game state, and pause menu. These were relatively easy to construct, with the only major problem being canvas scaling (which was completed with a bit of math). I wanted to have the UI resemble classic space shooters, so I employed a two column approach, having the game on one side of the screen and game statistics on the other.<br></n-tab>For debugging purposes, I used gdb in the console whenever I encountered a crash in the executable. This, usually, helped me determine exactly where in the code a fault was happening, which saved a ton of development time. ",
+            "retrospect": "If I had the chance to redo this project, I would have expanded more upon the 'light health' mechanic. Currently, the only purpose of the light is a visual indicator of player and enemy HP, with the twist that shooting takes away a bit of light from the player. I wish this mechanic played a more pivotal role; potentially affecting the vision of the player or affecting the projectiles of the enemies the same way our black hole does. Along with this, I wish I documented my code a bit more than I did. Going back through the repository to write this retrospective made it clear that I didn't take much care to comment my code (mostly due to the time constraints). This ultimately made it difficult for me to understand the thought processes I had during this time period.",
             "link": "https://prestosilver.itch.io/dark-matter",
             "photoGallery": [  
-                "media/darkmatter/darkmatter1.png",
-                "media/darkmatter/darkmatter2.png",
-                "media/darkmatter/darkmatter3.png"
-            ]
-        },
-        {
-            "name": "Liftin n' Giftin",
-            "description" : "A Christmas survival game!",
-            "coverImage": "media/liftin/liftin.gif",
-            "trailerEmbed": "https://www.youtube.com/embed/hiMK1tYQ82w?autoplay=1",
-            "role": "Liftin n' Giftin is a survival game revolving around lifting a heavy anvil-barbell to make gifts for Christmas. The game was made in the Godot game engine for the Jam Game 2023 Winter Game Jam. I worked as a <game-developer></game-developer> in a group of 2, programming the physics of the barbell and the logic for the gifts and elves.",
-            "link": "https://prestosilver.itch.io/liftin",
-            "photoGallery": [
-                "media/liftin/liftin.png"
+                {
+                    "url": "media/darkmatter/darkmatter_title.png",
+                    "subtitle": "Dark Matter Title Screen"
+                },
+                {
+                    "url": "media/darkmatter/darkmatter1.png",
+                    "subtitle": "Dark Matter Gameplay" 
+                },
+                {
+                    "url": "media/darkmatter/darkmatter3.png",
+                    "subtitle": "Light Beam"
+                },
+                {
+                    "url": "media/darkmatter/darkmatter2.png",
+                    "subtitle": "Dark Matter Boss Fight"
+                },
+                {
+                    "url": "media/darkmatter/darkmatter_pause.png",
+                    "subtitle": "Dark Matter Pause Screen"
+                }
             ]
         },
         {
