@@ -2,7 +2,7 @@
     "projects": [
         {
             "name": "Ninjas on Trampolines",
-            "description" : "🏆<b>Best Experimental Game at RIT EDGE</b>🏆<br>A Platform Fighter that relies on physics-based trampolines.",
+            "description" : "🏆<b>Best Experimental Game at RIT EDGE</b>🏆<br>A Platform Fighter That Relies on Physics-Based Trampolines.",
             "coverImage": "media/ninjas/ninjas.gif",
             "trailerEmbed": "https://www.youtube.com/embed/zA0I3a7yrLU?autoplay=1",
             "role": "<lead-programmer></lead-programmer> / <systems-designer></systems-designer>",
@@ -20,6 +20,7 @@
                 "Have a game that I am proud to publish on a digital store."
             ],
             "responsibilities": "During the first few months of development, my main priorities were in the area of developing systems for the game, including player mechanics, trampoline physics, paint score calculations, and creating data structures to store player data.<br>&emsp;For player physics, I ended up utilizing Unity's in-built rigidbodies and heavily modifying their physics to create fast-paced, yet still controllable, movement. This was done by introducing a dozen or so parameters housed in two C# scripts, which would tweak various aspects of how the player moved and how they would react to physics events. I spent a few weeks tweaking these scripts to get players moving exactly how our team wanted them to. <br>&emsp;I further incorporated physics into the project by working on trampoline physics, which uses a combination of forces and joints to simulate the contour of a real trampoline. The trampolines have gone through multiple code refactors and design changes, mostly due to technical constraints imposed by how they were constructed. At first, I utilized a grid of box colliders, stacked vertically, that would contour downward if a player stepped on one of them, and spring back when the player stepped off of it. This had a few major technical faults: <br><ol><li>Diagonal construction was not possible due to Unity's inability to freeze local physics constraints.</li><li>Trampolines were not contouring correctly; only a small portion of the whole trampoline was being simulated.</li><li>The trampolines were unoptimized and required unnecessary physics checks due to the colliders not acting as a complete system. </li></ol>&emsp;Our current trampolines have colliders that are conjoined to each other, and have several optimizations to reduce the amount of physics checks that they endure. For one, if no entities are near the trampoline, it will completely ignore any checks. Along with this, I cut down the number of required box colliders to <b>half or lower</b> of what it was before, as the colliders now work in unison using joints.<br>&emsp;Other than players and trampolines, I worked on data structures to allow local multiplayer functionality, with the ability to store unique player IDs and colors that can be transferred between scenes. This is derived from a player select menu, which registers player input devices when they press a button on a peripheral.<br>&emsp;I also worked on paint scoring, which is done through a paint shader programmed in HLSL, <a href='https://en.wikibooks.org/wiki/Cg_Programming/Unity/Computing_Color_Histograms'>deriving from a histogram algorithm that tracks red/green/blue levels of color in a given texture.</a> <br><br>&emsp;This led us to an MVP (Minimum Viable Product) of the project, which we submitted to RIT's MAGIC Maker program and got accepted into.<br>&emsp;During the MAGIC Maker program, I was tasked to work on more backend systems for the game as well as integrating networking functionality to allow for online play. During this time, I also made several optimizations to shader functionality, improving the frame rate of the game by around 2.5 times (from ~80FPS with stutters to a steady 250FPS). I also wrote a Python script that was used for player telemetry, generating heatmaps based on position data that would be used to optimize our level design.<br>&emsp;For the majority of the program, I was in charge of converting our local multiplayer systems to ones that are able to be networked through Steam. I ended up choosing Mirror as our networking solution, mainly because it provided solutions for server authoritative functionality. Most of the game, as it is networked currently, sends all logic to a centralized server for it to be processed. However, I had to stray away from developing our movement system to be server authoritative for a few reasons: <br><ol><li>Server authoritative movement, without a prediction algorithm, has a lot of latency.</li><li>Our game, being reliant on Unity's 2D physics engine, did not have an easy way to implement a <a href='https://www.gabrielgambetta.com/client-side-prediction-server-reconciliation.html'>client-side prediction (CSP)</a> algorithm without us needing to completely rewrite all physics.</li></ol>&emsp;I ended up rewriting our movement logic to work with client authority in mind, as needing to completely rewrite my physics system was out of scope. This poses some minor issues with syncing positions between clients, but it shouldn't be too egregious unless the game is running at high latency. <br>&emsp;Currently, Ninjas on Trampolines can be played online through Steam in the free-for-all game mode, with other game modes and items being worked on as development progresses. Networking will be my final large task until the game releases to Steam, which I am actively working on to provide the best experience possible.<br><br>&emsp;My contributions to Ninjas on Trampolines have garnered us an award, Best Experimental Game at RIT's EDGE Student Showcase, and several nominations at RPI's GameFest for Best Design and Stupid Fun.",
+            "retrospect": "If I were to do this project again, I would write my own physics engine in Unity, both to allow for smoother networking and to have more control over the trampoline physics. These are the two biggest issues that I have dealt with, which took weeks of development time to find solutions for. With more control over my physics, I feel as if these areas of development would be smoother. Along with this, I would employ better programming standards to myself and my team. Although I remained good at documenting my code through comments, there was confusion with snippets of code that were used universally within the project. Some outside documentation would have helped drastically to solve this issue.",
             "link": "https://www.steampowered.com/",
             "photoGallery": [
                 {
@@ -29,6 +30,10 @@
                 {
                     "url": "media/ninjas/ninjas_screenshot.png",
                     "subtitle": "Typical Gameplay"
+                },
+                {
+                    "url": "media/ninjas/trampoline_prototype.gif",
+                    "subtitle": "First Prototype of Trampolines"
                 },
                 {
                     "url": "media/ninjas/trampoline-old.gif",
@@ -64,7 +69,7 @@
         },
         {
             "name": "Icarus VR",
-            "description" : "A Virtual Reality archery simulator with realistic motions",
+            "description" : "A Virtual Reality Archery Simulator with Realistic Motions",
             "coverImage": "media/icarus/icarus.gif",
             "trailerEmbed": "https://www.youtube.com/embed/RV0TUgQLj-Y?autoplay=1",
             "role": "<reg-programmer></reg-programmer> / <game-developer></game-developer>",
@@ -72,31 +77,92 @@
             "engine": "Unity",
             "tools": "C#, Git, XR dev library, Meta Quest Development Tools, Android Studio, APK Packaging",
             "duration": "January 2023 - May 2023",
-            "overview": "Icarus VR is a virtual reality game that has fast-paced gun shooting and skill-based bow and arrow mechanics. Players compete in sky islands, each with its own unique features and challenges. The game offers a variety of game modes, such as Target Frenzy, Quick Draw, Archery, and Flight Archery, each having a leaderboard that stores player data server-side. Icarus offers an immersive exercise experience in virtual reality.",
+            "overview": "Icarus VR is a virtual reality game that has fast-paced gun shooting and skill-based bow and arrow mechanics. Players compete in sky islands, each with its own unique features and challenges. The game offers a variety of game modes, such as Target Frenzy, Quick Draw, Archery, and Flight Archery, each having a leaderboard that stores player data server-side. Icarus offers an immersive exercise experience in virtual reality.<br><n-tab></n-tab>Icarus VR was an exhibit at <a href='https://www.rit.edu/spotlights/world-sports-vr'>RIT's Student Showcase 2023</a> and Imagine RIT 2023.",
             "goals": [
                 "To make very immersive controls in virtual reality.",
                 "To learn about XR and what it is capable of achieving.",
                 "To learn how to build and deploy applications on android devices.",
                 "To experiment with storing player data server-side."
             ],
+            "responsibilities": "During the development of Icarus VR, my priorities started with developing basic XR interactions, such as picking up objects using the Meta Quest motion-tracking controllers and throwing/letting go of said objects. At first, Icarus was pitched to be a collection of sporting events, including events such as Discus and Javelin Throwing. As such, I developed the throwing physics for Discus and Javelin. This was expedited using the XR Unity library, as well as a Unity plugin that helped visualize the trajectory path of an airborne object. I also implemented math functions that simulate the torque of a discus flying through the air. <br><n-tab></n-tab>Both Discus and Javelin were functionally complete, however, we ultimately decided to scrap them after we saw more engagement from playtesters with our archery game mode. Although my throwing code is no longer used, this gave me a solid understanding of how XR interactions work, which helped me immensely when developing under Xana Ad Hoc Studio for <a href='project.html'  class='project-redir' data-name=`Changeling%VR`>Changeling VR</a>.<n-tab></n-tab> After pivoting to only have an archery game mode, my priorities changed to be focused on scoring, and the storage of player data. I utilized a Unity library for this, allowing me to easily store player scores on a database hosted by the library's owner. I interfaced the database into our Unity project, storing UIDs (Unique Identification Numbers) and metadata for the time that the game was played and how long the game took. I also developed the UI/UX of the leaderboard, allowing users the option to submit their score if they are satisfied with it. I also allowed players to input their names, and utilized a regex algorithm to censor inappropriate words on the leaderboards.<br><n-tab></n-tab>After I finished these tasks with archery, I started working on a new projectile-based game mode, known as Quickshooting. I developed the functionalities of the gun, and a holster that you grab the gun from, which is located on the waist. This ended up being a challenging problem, as I needed to take height differences in players into account when positioning the holster. Thankfully, the Unity XR library had built-in functions that allowed me to measure the height of the player and offset the position of the holster based on the height. After all functionality was complete, I also hooked up the leaderboard functionality to the gamemode, which was relatively simple due to my setting up a flexible system for the archery gamemode.<n-tab></n-tab>Finally, I was tasked to work on one more game mode - an extension of our archery gamemode that allowed the player to fly while shooting their bow. This game mode was supposed to be a new direction for our game in case we were accepted into the MAGIC Maker Program for the Summer of 2023. I worked on gesture recognition, allowing players to fly if they flapped their arms like a bird or held their arms outwards as if they were gliding. To make firing the bow easier in the air, I slowed down tick speed for a short amount of time if the player drew their bow mid-air. Ultimately, this ended up being a technical demo as we were not accepted into the MAGIC Maker Program, however, it was shown off once at Imagine RIT 2023.<br><n-tab></n-tab>Throughout the entire development period of Icarus, I was in charge of building and deploying our builds to the Meta Quest devices, which run Android. I had to learn how to use android studio in conjunction with Unity to create .apk files.",
             "link": "https://sciencedoge.itch.io/icarus-vr",
+            "retrospect": "If I were to redo this project, I would make my own database to store player data. Our team was short on time for the leaderboards to be completed, so I was forced to utilize a database created by another individual. Although this database still works, there is no guarantee that it will continue to work into the distant future, and I would have no control if it stopped working. If doing this again today, I would host my own database, store information using SQL, and interface the data with Unity similarly as I do currently.",
             "photoGallery": [
-                "media/icarus/icarus1.jpg",
-                "media/icarus/icarus2.jpg"
+                {
+                    "url": "media/icarus/bow.gif",
+                    "subtitle": "Archery Gameplay"
+                },
+                {
+                    "url": "media/icarus/gun.gif",
+                    "subtitle": "Quickshooting Gameplay"
+                },
+                {
+                    "url": "media/icarus/leaderboard.png",
+                    "subtitle": "Leaderboard Display"
+                },
+                {
+                    "url": "media/icarus/flying.gif",
+                    "subtitle": "Flight Archery Demo"
+                },
+                {
+                    "url": "media/icarus/javelin-debug.gif",
+                    "subtitle": "Debug Example of Javelin Throwing"
+                },
+                {
+                    "url": "media/icarus/discus-physics.gif",
+                    "subtitle": "Discus Physics Example"
+                }
             ]
         },
         {
             "name": "Changeling VR",
-            "description" : "A Virtual Reality Mystery experience.",
+            "description" : "A Virtual Reality Narrative Mystery Experience.",
             "coverImage": "media/changeling/changeling.gif",
             "trailerEmbed": "https://www.youtube.com/embed/nZGJtnUvC2I?autoplay=1",
-            "role": "Changeling is a VR mystery, first-person 3D platformer game built upon the idea of magical realism and a sense of unease and wonder. You play as Aurelia, a dream-walker who has the ability to see through the eyes of anyone she touches. You are tasked with helping this family figure out what is wrong with their child, and as you contact each member, you see through the lens of their hopes and fears of what the child is.<br><br> During the Summer of 2023, I worked as a <ui-designer></ui-designer> to improve team workflow and general functionality of core gameplay mechanics. Notable inclusions that I worked on are the player's physics-based hands and the teleportation system. I also assisted with various needs from all of the development teams, and was responsible for building the executable at the end of development sprints.",
+            "role": "<reg-programmer></reg-programmer> / <ui-designer></ui-designer>",
+            "teamSize": "~80",
+            "engine": "Unreal Engine 4",
+            "tools": "Google Sheets, Google Forms, Perforce, Unreal Engine Blueprints, Android Studio",
+            "overview": "Changeling is a VR mystery, first-person 3D platformer game built upon the idea of magical realism and a sense of unease and wonder. You play as Aurelia, a dream-walker who has the ability to see through the eyes of anyone she touches. You are tasked with helping this family figure out what is wrong with their child, and as you contact each member, you see through the lens of their hopes and fears of what the child is. Changeling is developed under Xana Ad Hoc Studio, a studio in Rochester, NY.",
+            "goals": [
+                "To assist development teams and production leads with technical tasks.",
+                "To facilitate building and deploying project builds.",
+                "To improve XR interactions."
+            ],
+            "responsibilities": "I worked to improve team workflow and general functionality of core gameplay mechanics. Notable inclusions that I worked on are the player's physics-based hands and the teleportation system. I also cleaned and optimized many of the files in the project's repository, helped other development teams with their various needs, and facilitated building for crucial project deadlines. <br><n-tab></n-tab>My first responsibility for the project was to rework the teleportation system, as it was barely functional when I entered the project. The portal destination point was incredibly inaccurate, and the line leading from the player to the teleportation circle was jagged and barely readable. To fix this, I simulated the path of a projectile from the player's location to the direction they pointed outwards. Using the points generated, I made a spline and attached meshes to generate a smooth arc. This also made the teleportation more precise, as I could determine the exact point in which the fake projectile would collide with the ground.<br><n-tab></n-tab>One major problem I had with this system, however, was held objects or close-by objects blocking the teleportation spline. This was easily solvable by excluding everything held in the player's hand, and ignoring objects that were too close to the player via distance checks.<br><n-tab></n-tab>My second major responsibility was to improve XR interactions with the player's hands. Before my improvements, the player's hands would phase through objects as if they were intangible. To make the player's hands feel more real, I opted to follow the interaction design of a game like 'Half Life Alyx', where they allow players to physically touch almost everything they are able to see. To do this, I simulated two separate layers for hands: one that represented the real-world location of a player's hand and another to represent the player's physics hand in-game. The physics hand is connected with physics constraints and joints to the real-world location of the player. This is needed because accurate tracking of player hands cannot be done if the object storing the data is also simulating physics. To circumvent this, we simulate physics on another object that is connected to it. <br><n-tab></n-tab>I went to GDC (Game Developer's Conference) in 2024, and heard a <a href='https://schedule.gdconf.com/session/future-realities-summit-using-physics-constraints-to-make-intuitive-vr-interactions/901636'>great talk from Antony Stevens about this topic</a>, which covers the process of how I implemented this.<br><n-tab></n-tab>Implementing these physics-based hands was not a straight forward process, however. One of the biggest design considerations I had to worry about was teleportating next to a wall; the player's hands immediately teleport to the player's new location. If one of the hands happens to be through a wall, there would be no way to retrieve it back because it now interacts with the environment. To solve this issue, I created a raytracing system that would scan the area in front of the player whenever they are teleporting. If a wall or obstacle is detected, the physics hand will get the normal vector of the surface the raycast collides with, and teleport right snug against that surface. In practice, this took many attempts to perfect due to how many different kinds of surfaces were in the game, however, I eventually figured out a system that worked universally.<br><n-tab></n-tab>Aside from these bigger tasks, I was responsible for taking requests made by other development teams and trying to fix their problems to the best of my ability. Because of our moderately large development team (around 80 people), I needed to respond to around 2 or 3 different smaller tasks per day. This would require me to talk with the leads of these development teams to access their needs, and I would generally respond with a solution within a few hours. <br><n-tab></n-tab>The most pressing task I was given during my employment happened near the end of my time at Xana Ad Hoc, when we were preparing for the final project build. When I ran said build, it would crash almost immediately, giving a very vague error message. This happened one day before our deadline to submit a final build, which caused some panic amongst the development team. Thankfully, I quickly learned how to use Unreal Engine's build debugging tools, and found that the crash was coming from functions that handled baked lighting. After disabling all of the baked lighting, the build worked perfectly. Because of my efforts, we were able to get a working final build submitted to the higher-ups within the time we had left.",
+            "retrospect": "If I were to redo my time on this project, I would try to spend more time trying to unravel some of the older blueprints made by previous teams. The few blueprints that I was able to work on improved drastically, however, there were many that I did not have the time to improve, which will continue to serve as technical debt unless fixed.",
             "link": "https://www.changelingvr.com/",
             "photoGallery": [
-                "media/changeling/changeling1.png",
-                "media/changeling/changeling2.png",
-                "media/changeling/changeling5.png",
-                "media/changeling/changeling6.png"
+                {
+                    "url": "media/changeling/box.gif",
+                    "subtitle": "Physics-based XR Interactions Demo"
+                },
+                {
+                    "url": "media/changeling/oldTP.png",
+                    "subtitle": "Teleportation Code Before My Cleanup and Optimizations"
+                },
+                {
+                    "url": "media/changeling/newTP.png",
+                    "subtitle": "Teleportation Code After My Cleanup and Optimizations"
+                },
+                {
+                    "url": "media/changeling/spline.png",
+                    "subtitle": "Teleportation Spline and Portal"
+                }
+            ]
+        },
+        {
+            "name": "Doodle Day",
+            "description" : "🏆<b>3rd Place Winner at Wolfjam 2023</b>🏆<br>Hackathon Project Made in Under 24 Hours.",
+            "coverImage": "media/doodleday/doodleday.gif",
+            "trailerEmbed": "https://www.youtube.com/embed/_gJh6aqzuP8?autoplay=1",
+            "role": "Doodle Day is a simulation made in 24 hours for the Wolfjam Hackathon 2023. The primary goal of the game is to use a rubber mallet to defeat aliens that appear on your screen, which look cartoon-ish and make cartoon sound effects. However, there is also a news tab that reveals a darker side of what you are doing, which is affecting life beside you negatively. The game ends as you destroy your own planet.<br><br>During the Fall of 2023, I worked as a <game-developer></game-developer> and <software-developer></software-developer>, implementing much of the core functionality of the experience. The project recieved 3rd place out of 18 teams that participated in the hackathon.",
+            "link": "https://prestosilver.itch.io/d-day",
+            "photoGallery": [
+                "media/doodleday/doodleday-1.png",
+                "media/doodleday/doodleday-2.png",
+                "media/doodleday/doodleday-3.png",
+                "media/doodleday/doodleday-4.png"
             ]
         },
         {
@@ -135,20 +201,6 @@
             "link": "https://prestosilver.itch.io/liftin",
             "photoGallery": [
                 "media/liftin/liftin.png"
-            ]
-        },
-        {
-            "name": "Doodle Day",
-            "description" : "🏆<b>3rd Place Winner at Wolfjam 2023</b>🏆<br>Made in under 24 hours.",
-            "coverImage": "media/doodleday/doodleday.gif",
-            "trailerEmbed": "https://www.youtube.com/embed/_gJh6aqzuP8?autoplay=1",
-            "role": "Doodle Day is a simulation made in 24 hours for the Wolfjam Hackathon 2023. The primary goal of the game is to use a rubber mallet to defeat aliens that appear on your screen, which look cartoon-ish and make cartoon sound effects. However, there is also a news tab that reveals a darker side of what you are doing, which is affecting life beside you negatively. The game ends as you destroy your own planet.<br><br>During the Fall of 2023, I worked as a <game-developer></game-developer> and <software-developer></software-developer>, implementing much of the core functionality of the experience. The project recieved 3rd place out of 18 teams that participated in the hackathon.",
-            "link": "https://prestosilver.itch.io/d-day",
-            "photoGallery": [
-                "media/doodleday/doodleday-1.png",
-                "media/doodleday/doodleday-2.png",
-                "media/doodleday/doodleday-3.png",
-                "media/doodleday/doodleday-4.png"
             ]
         },
         {

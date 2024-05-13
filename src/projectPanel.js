@@ -50,6 +50,7 @@ class ProjectPanel extends HTMLElement {
             location.href = "project.html";
             
             window.localStorage.setItem("scc8371-projectIndex", this.index);
+            window.localStorage.setItem("scc8371-previousProjectIndex", "-1");
             
             //set in local storage
             // window.localStorage.setItem("scc8371-name", this.name);

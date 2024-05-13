@@ -89,6 +89,10 @@ let template6 = `
 </style>
 `
 
+let template7 = `
+<span><br>&emsp;</span>
+`
+
 class GameDeveloper extends HTMLElement {
     constructor() {
         super();
@@ -143,11 +147,21 @@ class Programmer extends HTMLElement {
     }
 }
 
+class Tab extends HTMLElement {
+    constructor() {
+        super();
+
+        this.attachShadow({ mode: "open" });
+        this.shadowRoot.innerHTML = template7;
+    }
+}
+
 customElements.define("game-developer", GameDeveloper);
 customElements.define("software-developer", SoftwareDeveloper);
 customElements.define("ui-designer", UIDeveloper);
 customElements.define("lead-programmer", LeadProgrammer);
 customElements.define("systems-designer", SystemsDesigner);
 customElements.define("reg-programmer", Programmer);
+customElements.define("n-tab", Tab);
 
-export { GameDeveloper, SoftwareDeveloper, UIDeveloper, LeadProgrammer, SystemsDesigner, Programmer };
+export { GameDeveloper, SoftwareDeveloper, UIDeveloper, LeadProgrammer, SystemsDesigner, Programmer, Tab };

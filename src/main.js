@@ -23,11 +23,16 @@ function loadProjectData() {
     //load info into section based on clicked panel/local storage
 
     let index = window.localStorage.getItem("scc8371-projectIndex");
+    let previousIndex = window.localStorage.getItem("scc8371-previousProjectIndex");
+
+    if (previousIndex != "-1") {
+        window.localStorage.setItem("scc8371-projectIndex", previousIndex);
+        window.localStorage.setItem("scc8371-previousProjectIndex", "-1");
+    }
+    
     let project = loader.projectData.projects[index];
-    console.log(project);
 
     let name = project.name;
-    console.log(name);
     let link = project.link;
     let trailer = project.trailerEmbed;
     let role = project.role;
@@ -40,6 +45,7 @@ function loadProjectData() {
     let overview = project.overview;
     let goals = project.goals;
     let responsibilities = project.responsibilities;
+    let retrospect = project.retrospect;
 
     //header + trailer embeds
     if (name != null) document.querySelector(".modTitle").innerHTML = name;
@@ -68,12 +74,34 @@ function loadProjectData() {
     }
 
     if (responsibilities) modP.innerHTML += `<hr><u>Responsibilities</u>: <br>&emsp;<b>${responsibilities}</b>`;
+    if (retrospect) modP.innerHTML += `<hr><u>What I Would Have Done Differently</u>: <br>&emsp;<b>${retrospect}</b>`;
+
+    let externalLinks = modP.querySelectorAll('.project-redir');
+
+    externalLinks.forEach(link => {
+        let projectName = link.dataset.name.split("%").join(" ").trim().replace('`', '').replace('`', "");
+
+        let new_index = 0;
+        let foundProject = false;
+
+        loader.projectData.projects.forEach(project => {
+            if (project.name == projectName) {
+                foundProject = true;
+            }
+            else if (!foundProject) new_index++;
+        });
+
+        link.addEventListener("click", () => {
+            console.log("here");
+            window.localStorage.setItem("scc8371-projectIndex", new_index);
+            window.localStorage.setItem("scc8371-previousProjectIndex", index);
+        });
+    });
 
     let imageSection = document.querySelector(".imgSection");
 
     if (images) {
         for (let image of images) {
-            console.log(image);
             let container = document.createElement("div");
 
 
