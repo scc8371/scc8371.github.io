@@ -251,12 +251,26 @@
         },
         {
             "name": "Myne Graphics Engine",
-            "description" : "A 2D Graphics, Audio, and Physics Engine using C++ and OpenGL.",
+            "description" : "A 2D/3D Graphics, Audio, and Physics Engine using C++ and OpenGL.",
             "coverImage": "media/myne/myne.gif",
             "trailerEmbed": "https://www.youtube.com/embed/mnMgia8DV6g?autoplay=1",
-            "role": "Myne Graphics Engine is a game engine that fully supports rendering 2D bitmaps and glyphs, playing back .wav files, and performing physics calculations between objects via the built-in math functions.<br><br>For multiple years, I have worked on this project as a <software-developer></software-developer>, iterating upon it to improve the engine's speed and user-friendliness. This was created from scratch using C++ and OpenGL to test my programming and computer graphics knowledge. ",
+            "role": "<reg-programmer> </reg-programmer>",
+            "duration": "2022 - Present",
+            "teamSize": 1,
+            "tools": "C++, gdb, Git, OpenAL, FreeType, OpenGL, GLFW, GLM, imGUI, RenderDoc",
+            "overview": "Myne Graphics Engine is a game engine that fully supports rendering 2D bitmaps and glyphs, 3D models with lighting, playing back .wav files, and performing physics calculations between objects via the built-in math functions. It is programmed in pure C++, using OpenGL and OpenAL for visual and auditory functionalities. Myne has been a personal project of mine, with the hopes of someday using the engine to make a game.",
+            "goals":[
+                "To improve my knowledge of C++ and graphics programming",
+                "To create an engine that I have full freedom over"
+            ],
+            "responsibilities": "I was the sole developer of this project, meaning I programmed everything that is available in this engine. I referenced other public repositories and <a href='https://learnopengl.com/'>this helpful OpenGL tutorial series</a> when constructing the engine. The current iteration of Myne on my github is actually a rewrite of <a href='https://github.com/scc8371/Myne-Engine'>my first engine</a>, which had many bugs and code that needed to be reworked.<br><n-tab></n-tab>When I first started the engine, I created simple 2D rendering functionality, using basic GLFW setup code and a fragment/vertex shader. This allowed me to render basic triangles/squares to the screen. From there, I added functionality from OpenGL to parse textures, which was passed into the shaders during draw calls. I often utilize a piece of software called <a href='https://renderdoc.org/'>RenderDoc</a> to help debug texture and UV issues.<br><n-tab></n-tab>After finishing basic texture rendering, I created sprite batching functionality, which sends texture data through a <a href='https://en.wikipedia.org/wiki/Fletcher%27s_checksum'>Fletcher-16 checksum function</a>. The data is consequently sent to a queue data structure, where it houses the data and sends all texture information to the GPU in a single call. This significantly reduced the number of GPU calls when rendering textures, optimizing the process.",
+
             "link": "https://github.com/scc8371/DiMyne-Engine",
             "photoGallery": [  
+                {
+                    "url": "media/myne/cube.gif",
+                    "subtitle": "Myne 3D Functionality Demo"
+                }
             ]
         },
         {
