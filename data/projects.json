@@ -166,7 +166,7 @@
             "engine": "Unity",
             "tools": "C#, Git",
             "duration": "November 3rd, 2023 - November 4th, 2023",
-            "overview": "Doodle Day is a simulation made in 24 hours for the Wolfjam Hackathon 2023. The primary goal of the experience is to use a rubber mallet to defeat aliens that appear on your screen, which look cartoon-ish and make cartoon sound effects. However, there is also a news tab that reveals a darker side of what you are doing, which is affecting life beside you negatively. The game ends as you destroy your own planet, Earth.<br><n-tab></n-tab><a href='https://wolfjam.devpost.com/project-gallery'>The project recieved 3rd place out of 18 teams that participated in the hackathon.</a>",
+            "overview": "Doodle Day is a simulation made in 24 hours for the Wolfjam Hackathon 2023. The primary goal of the experience is to use a rubber mallet to defeat aliens that appear on your screen, which look cartoon-ish and make cartoon sound effects. However, there is also a news tab that reveals a darker side of what you are doing, which is affecting life beside you negatively. The game ends as you destroy your own planet, Earth.<br><n-tab></n-tab><a href='https://wolfjam.devpost.com/project-gallery'>The project recieved 3rd place out of 18 teams (14 of which submitted) that participated in the hackathon.</a>",
             "goals" : [
                 "To complete a successful project in under 24 hours",
                 "To communicate effectively with my team and minimize any room for error"
@@ -209,7 +209,7 @@
         
         {
             "name": "Dark Matter",
-            "description" : "A 1-Bit Space Shooter taking inspiration from classic arcade games.",
+            "description" : "A 1-Bit Space Shooter Taking Inspiration From Classic Arcade Games.",
             "coverImage": "media/darkmatter/darkmatter.gif",
             "trailerEmbed": "https://www.youtube.com/embed/OlgM1a4RoXk?autoplay=1",
             "role": "<reg-programmer> </reg-programmer> / <game-developer></game-developer>",
@@ -251,7 +251,7 @@
         },
         {
             "name": "Myne Graphics Engine",
-            "description" : "A 2D/3D Graphics, Audio, and Physics Engine using C++ and OpenGL.",
+            "description" : "A 2D/3D Graphics, Audio, and Physics Engine Using C++ and OpenGL.",
             "coverImage": "media/myne/myne.gif",
             "trailerEmbed": "https://www.youtube.com/embed/mnMgia8DV6g?autoplay=1",
             "role": "<reg-programmer> </reg-programmer>",
@@ -263,7 +263,7 @@
                 "To improve my knowledge of C++ and graphics programming",
                 "To create an engine that I have full freedom over"
             ],
-            "responsibilities": "I was the sole developer of this project, meaning I programmed everything that is available in this engine. I referenced other public repositories and <a href='https://learnopengl.com/'>this helpful OpenGL tutorial series</a> when constructing the engine. The current iteration of Myne on my github is actually a rewrite of <a href='https://github.com/scc8371/Myne-Engine'>my first engine</a>, which had many bugs and code that needed to be reworked.<br><n-tab></n-tab>When I first started the engine, I created simple 2D rendering functionality, using basic GLFW setup code and a fragment/vertex shader. This allowed me to render basic triangles/squares to the screen. From there, I added functionality from OpenGL to parse textures, which was passed into the shaders during draw calls. I often utilize a piece of software called <a href='https://renderdoc.org/'>RenderDoc</a> to help debug texture and UV issues.<br><n-tab></n-tab>After finishing basic texture rendering, I created sprite batching functionality, which sends texture data through a <a href='https://en.wikipedia.org/wiki/Fletcher%27s_checksum'>Fletcher-16 checksum function</a>. The data is consequently sent to a queue data structure, where it houses the data and sends all texture information to the GPU in a single call. This significantly reduced the number of GPU calls when rendering textures, optimizing the process.",
+            "responsibilities": "I was the sole developer of this project, meaning I programmed everything that is available in this engine. I referenced other public repositories and <a href='https://learnopengl.com/'>this helpful OpenGL tutorial series</a> when constructing the engine. The current iteration of Myne on my github is actually a rewrite of <a href='https://github.com/scc8371/Myne-Engine'>my first engine</a>, which had many bugs and code that needed to be reworked.<br><n-tab></n-tab>When I first started the engine, I created simple 2D rendering functionality, using basic GLFW setup code and a fragment/vertex shader. This allowed me to render basic triangles/squares to the screen. From there, I added functionality from OpenGL to parse textures, which was passed into the shaders during draw calls. I often utilize a piece of software called <a href='https://renderdoc.org/'>RenderDoc</a> to help debug texture and UV issues.<br><n-tab></n-tab>After finishing basic texture rendering, I created sprite batching functionality, which sends texture data through a <a href='https://en.wikipedia.org/wiki/Fletcher%27s_checksum'>Fletcher-16 checksum function</a>. The data is consequently sent to a queue data structure, where it houses the data and sends all texture information to the GPU in a single call. This significantly reduced the number of GPU calls when rendering textures, optimizing the process.<br><n-tab></n-tab>When I wrapped up 2D rendering, I started work on audio using OpenAL. This was likely the hardest part of creating the engine for me, as I remember having so many errors from OpenAL when trying to read in audio. I created my own WAV parser which would read in chunks of bytes from a WAV file, in hopes to find sections of data that the engine can play back. I eventually nailed the chunk order of WAV files, however, it took at least a week for everything to work properly. When audio playback started to work, I added functionality to loop audio tracks, and start audio loops from a certain loop point in the song. Along with this, I added various pitch and volume settings that can be controled using variables.<br><n-tab></n-tab>After this was complete, I worked on glyph parsing using FreeType to allow for fonts to be rendered. I had to make a separate fragment shader for fonts, as the fragment colors for the font files were in a different format. Reading in font files with FreeType was similar to reading in .wav files, as i had to read in chunks that held information about the font. To display font, I allow users to call a 'draw' function that requires a character array, a location on screen, and a color. Each character in the array is looped through and given a glyph value from the parser, which is stitched together and given appropriate UV colors. The text sprite is then given to my spritebatch, which is sent to the GPU at the next draw call.<br><n-tab></n-tab>The final feature I added for 2D was a custom math library that supported vectors, vector math, simple bounding colliders, color definitions, and axis definitions. These are to be used instead of glm when constructing a game using the engine to simplify the process.<br><n-tab></n-tab>Recently, I have been trying to expand Myne to have 3D functionality. I have made simple mesh rendering capabilities, with the ability to load in .obj files and view a mesh with simple lighting. I plan to continue working on this, improving lighting and material capabilities. <br><n-tab></n-tab>Going forward, I am going to continue working on 3D functionality, expanding upon my math utilities by adding quaternions and 3D vectors, along with adding an entity component system (ECS) to make entities easier to manage. Along with this, I plan to write documentation that explains how to use the engine.",
 
             "link": "https://github.com/scc8371/DiMyne-Engine",
             "photoGallery": [  
@@ -275,25 +275,75 @@
         },
         {
             "name": "Audio Visualizer",
-            "description" : "A Web Application that visualizes audio frequencies. ",
+            "description" : "A Web Application That Visualizes Audio Frequencies. ",
             "coverImage": "media/visualizer/visualizer.gif",
             "trailerEmbed": "https://www.youtube.com/embed/bI0-IUr1g7M?autoplay=1",
-            "role": "An Audio Visualizer created using JavaScript's canvas and web audio APIs. The controls of the application were integrated through the datgui library. This project was created in hopes to give users as much customizability as possible, letting them customize how the visualizer works in several different aspects.<br><br>During the Spring of 2023, I was tasked as a <software-developer></software-developer> to create this for a class. I went above and beyond the expectations of this assignment, putting an excess of functionality that made this project shine over others.",
+            "role": "<reg-programmer></reg-programmer>",
+            "duration": "Spring 2023",
+            "tools": "HTML, CSS, JavaScript, datGUI, JavaScript canvas, JavaScript web audio",
+            "overview": "This is an audio visualizer I created using JavaScript's canvas and web audio APIs. The controls of the application were integrated through the datgui library. This project was created in hopes to give users as much customizability as possible, letting them customize how the visualizer works in several different aspects. It features a spinning sphere that is constructed from lines using the javascript canvas API. The sphere is distorted with a combination of perlin noise and audio wave frequencies whenever a song starts playing.",
+            "goals": [
+                "To improve my knowledge of web development",
+                "To challenge myself with implementing 3D math in a 2D canvas library",
+                "To learn more about manipulating audio data and displaying it visually"
+            ],
+            "responsibilities": "I was the sole developer of this project and developed every feature. Most of the 3D math that I used to produce the sphere came from a 3D math class I was taking at the time, so I referenced what I had done in C++ and converted it into JavaScript code. The sphere math calculates points that are projected about the user's perspective, given a radius and the number of segments to be generated horizontally and vertically. The point data is then stored in a cache and reused until the points need to be regenerated, which saves on some computational power. Since the javascript canvas is meant for 2D drawing, drawing a 3D sphere within it is not very fast, which is why I needed to store a cache and do other various optimizations to ensure a semi-smooth frame rate.<br><n-tab></n-tab>The GUI of the application holds every customization tool that users can use. Firstly, audio data of the visualizer can be visually changed between frequency and waveform data. Displaying frequency data is more stable in this simulation, as I could utilize different sections of the data (the treble, bass, etc.) to control specific parts of the sphere. Waveform data moreso represents the shape of the audio wave, and cannot be as easily manipulated. Along with audio data settings, I have various visual settings, including the ability to change the colors of the sphere and background. This data is stored and updated in draw calls when filling in the quads of the sphere (or the gradient in the background). Also, I have several filters that can invert, emboss, or ignore the fill draw calls on the sphere (wireframe mode). These filters are applied by manipulating the color values of each pixel on the canvas, running math functions on the RGB(A) values to change their values.",
+
+            "retrospect": "If I were to do this project again, I would use a JavaScript library that is more suited for rendering 3D models, like <a href='https://threejs.org/'>three.js</a>. Along with this, I would smooth the noise movement a bit, likely using linear interpolation, as I've gotten feedback that the jitteryness of the sphere makes it look uncanny.",
+            
+            
             "link": "visualizer/index.html",
             "photoGallery": [  
+                {
+                    "url": "media/visualizer/frequency.gif",
+                    "subtitle": "Frequency Data Visualizer"
+                },
+                {
+                    "url": "media/visualizer/waveform.gif",
+                    "subtitle": "Waveform Data Visualizer"
+                },
+                {
+                    "url": "media/visualizer/noise.gif",
+                    "subtitle": "High Perlin Noise Demonstration"
+                },
+                {
+                    "url": "media/visualizer/settings.gif",
+                    "subtitle": "Settings Demonstration"
+                }
             ]
         },
         {
             "name": "Roll Arena 64",
-            "description" : "A Dice Rolling Game made for the GMTK Game Jam 2022.",
+            "description" : "A Dice Rolling Puzzle Game Made For the GMTK Game Jam 2022.",
             "coverImage": "media/rollarena/rollarena.gif",
             "trailerEmbed": "https://www.youtube.com/embed/z6m6COi9G5M?autoplay=1",
-            "role": "A 3D Unity prototype created in the span of 2 days for the GMTK Game Jam 2022. Players control a blue dice and can roll onto different sides, each representing a pattern that is drawn on the floor. The objective of the game is to have the most of your color on the floor before the round counter reaches zero. This project garnered a successful rating during the jam, just missing a top 1000 placement out of over 6000 entries.<br><br>During the Summer of 2022, I worked as a <game-developer></game-developer> and implemented the functionality of AI opponents, as well as the logic of painting the ground.",
+            "role": "<reg-programmer> </reg-programmer> / <game-developer></game-developer>",
+            "teamSize": "2",
+            "duration": "Summer 2022 (2 days)",
+            "engine": "Unity",
+            "tools": "C#, Git, Blender",
+            "overview": "Roll Arena 64 is a 3D Unity prototype created in the span of 2 days for the GMTK Game Jam 2022. Players control a blue dice and can roll onto different sides, each representing a pattern that is drawn on the floor. The objective of the game is to have the most of your color on the floor before the round counter reaches zero. Roll Arena garnered a successful rating during the jam, just missing a top 1000 placement out of over 6000 entries.",
+            "goals": [
+                "To see how much I have improved as a developer since my previous submission in 2021",
+                "To improve my knowledge of Unity/C# development",
+                "To experiment with the puzzle game genre"
+            ],
+            "responsibilities": "During the short development of Roll Arena 64, I was tasked with implementing player movement, tile recognition, as well as the AI for opponents. <br><n-tab></n-tab>I started with setting up the grid, creating a 16x16 area where each node stored if it was being traversed on, as well as the color of it. This would be used later when calculating score, and determining where a player can move. After this, I set up a basic player object and programmed simple movement code for it. Then, after we set up logic that correlated a side of the player's die with a pattern, I wrote logic that would check said pattern and traverse the nodes on the ground to paint that pattern. The player was functionally complete at that point.<br><n-tab></n-tab>To complete the game loop, I then needed to work on enemies and their AI. Functionally, they would act the exact same as the player, so most of my code worked perfectly in that regard. However, I needed to figure out an algorithm that would allow the computer opponents to make their own moves. I came up with a solution of using a depth first search algorithm with weights. Empty nodes or nodes of another player's color would be given a higher weight than nodes of the moving opponent's color. This worked as expected, and opponents were able to make efficient moves.",
+            "retrospect":"If I did this project again, I would make the enemy AI less perfect. Currently, the enemies try to make the best possible moves with their logic. If I were to redo this AI, I would sometimes make the enemies take the second or third best move they can. Along with this, the movement of  computers are incredibly slow. I would half or quarter the amount time it takes to complete a computer turn.",
             "link": "https://prestosilver.itch.io/ra64",
             "photoGallery": [  
-                "media/rollarena/rollarena1.jpg",
-                "media/rollarena/rollarena2.jpg",
-                "media/rollarena/rollarena3.png"
+                {
+                    "url": "media/rollarena/rollarena1.jpg",
+                    "subtitle": "Player's turn"
+                },
+                {
+                    "url": "media/rollarena/rollarena2.jpg",
+                    "subtitle": "Title Screen"
+                },
+                {
+                    "url": "media/rollarena/rollarena3.png",
+                    "subtitle": "Complete Game Board"
+                }       
             ]
         },
         {
@@ -301,21 +351,50 @@
             "description" : "A 2D Web idle game made in JavaScript and pixi.JS",
             "coverImage": "media/bottleknights/bottleknights.gif",
             "trailerEmbed": "https://www.youtube.com/embed/WR9k8mJyouc?autoplay=1",
-            "role": "Bottle Knights is a 2D Web Idle game developed from scratch in JavaScript and the pixi.JS library. The player interacts with the game by pressing buttons located on the browser DOM to upgrade their character and gain bonuses that last until the end of the game.<br><br>During the Spring of 2021, I was tasked as a <game-developer></game-developer> to create this for a class after learning the essentials of web development.",
+            "role":"<reg-programmer> </reg-programmer> / <game-developer></game-developer>",
+            "teamSize": "1",
+            "tools": "HTML, CSS, JavaScript, pixi.js, Howler.js, JavaScript canvas",
+            "overview": "Bottle Knights is a 2D Web Idle game developed from scratch in JavaScript and the pixi.JS library. The player interacts with the game by pressing buttons located on the browser DOM to upgrade their character and gain bonuses that last until the end of the game.",
+            "duration": "Spring 2022 (around 2 weeks)",
+            "goals": [
+                "To create a web-based game using JavaScript, HTML, and CSS",
+                "To apply my knowledge of web development"
+            ],
+            "responsibilities": "This was a solo project, and one of the first applications that I made for the web. It utilizes the browser DOM and the JavaScript canvas to create an 'auto-battler' type game. I did not use an engine to create this game, only the pixi.js library to help with rendering graphics; all of the update/drawing loops were done manually by me.<br><n-tab></n-tab>I programmed all of the player and enemy mechanics by scratch using JavaScript classes, including statistics and powerups. Along with this, I created a 'shop' system to upgrade the player using a currency gained by killing enemies.<br><n-tab></n-tab>To top everything off, I created functionality for sprite animation, created UI for the players and enemies, and implemented a 'boss' that the player can fight to end the game. Everything done for this project was created in the span of about two weeks, submitted as the final project for my first web development university course.<br><n-tab></n-tab>This was my first larger project in web development, and although I've grown my skills much since, I am still proud of how much I was able to get done in a short amount of time.",
             "link": "bottle-knights/index.html",
             "photoGallery": [  
-                    "media/bottleknights/bottleknights1.png", 
-                    "media/bottleknights/bottleknights2.png",
-                    "media/bottleknights/bottleknights3.png",
-                    "media/bottleknights/bottleknights4.png"
-            ]
+                {
+                    "url": "media/bottleknights/playerCustomization.png",
+                    "subtitle": "Player Customization Menu"
+                },
+                {
+                    "url": "media/bottleknights/gameplay.png",
+                    "subtitle": "Bottle Knights Gameplay"
+                },
+                {
+                    "url": "media/bottleknights/boss.png",
+                    "subtitle": "Bottle Knights Boss Fight"
+                },
+                {
+                    "url": "media/bottleknights/victory.png",
+                    "subtitle": "Victory Screen!"
+                }                 
+            ],
+            "retrospect": "If I did this project again, I would store all entity data in a better format, likely in a conjoined list. Along with this, I liked the idea of having DOM elements as controls back then, however, it created more problems than what it was worth. I would likely have the entire game be canvas based, including controls."
         },
         {
             "name": "Karnissa's Castle",
-            "description" : "A 3D Puzzle game taking inspiration from the World of Ethshar.",
+            "description" : "A 3D Puzzle Game Taking Inspiration From the World of Ethshar.",
             "coverImage": "media/karnissascastle/karnissa.gif",
             "trailerEmbed": "https://www.youtube.com/embed/ZeVq3YvQDkc?autoplay=1",
-            "role": "Karnissa's Castle is a 3D puzzle game created in Unity, inspired by the World of Ethshar book series. The fundamental mechanics of the game revolve around switching between two characters to solve one puzzle.<br><br>During the Fall of 2022, I worked as a <game-developer></game-developer>, programming most of the puzzle mechanics and logic.",
+            "role":"<reg-programmer> </reg-programmer> / <game-developer></game-developer>",
+            "duration": "Fall 2022",
+            "engine": "Unity",
+            "teamSize": 5,
+            "tools": "C#, Git",
+            "docs": "https://docs.google.com/document/d/1P3KcDAdQa1v-NOjD_mr9sq251YVQHOqY4gmywvk-WpU/edit",
+            "overview": "Karnissa's Castle is a 3D puzzle game created in Unity, inspired by the World of Ethshar book series. The fundamental mechanics of the game revolve around switching between two characters to solve one puzzle. The game was inspired from the flash game series 'Fire Boy and Water Girl', taking a 3D twist on its core puzzle solving mechanics.",
+            "responsibilities": "I did most of the programming for Karnissa's Castle, including the puzzle mechanics and player interactions. I constructed several different puzzle components, such as levers, pressure-plates, cauldrons, potions, doors, and boulders.<br><n-tab></n-tab>Most of the puzzle components were straight forward - whenever a player would interact with it, it sends out an event to any of its listeners. If a condition is met, then the puzzle is solved. Most of the development time was spent on perfecting the cauldron/potion system. I ended up using a custom hash map data structure to hold all of the recipes and solutions to said recipes. This was a simple solution to this problem, giving us flexibility to add or destroy new potions in the matter of minutes.",
             "link": "https://sciencedoge.itch.io/karnissas-castle",
             "photoGallery": [  
                 "media/karnissascastle/karnissa1.png",

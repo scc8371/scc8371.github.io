@@ -43,7 +43,7 @@ window.addEventListener('scroll', (e) => {
 
     clearTimeout(window.isScrollingTimeout)
 
-    window.isScrollingTimeout = setTimeout(function() {
+    window.isScrollingTimeout = setTimeout(function () {
         scrolling = false;
     }, 1);
 })
@@ -63,7 +63,7 @@ class Particle {
 
     draw() {
         ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+        ctx.arc(this.x, this.y, this.size / 2, 0, Math.PI * 2, false);
         ctx.fillStyle = '#FFFFF0';
         ctx.fill();
         ctx.closePath();
@@ -120,7 +120,7 @@ class Particle {
                 this.x += (this.preScrollX - this.x) * 0.1;
                 this.y += (this.preScrollY - this.y) * 0.1;
             }
-            
+
 
         }
 
@@ -132,7 +132,7 @@ class Particle {
 function init() {
     particles = [];
 
-    let numParticles = (canvas.height * canvas.width) / 5000;
+    let numParticles = 50 + (canvas.height * canvas.width) / 5000;
 
     //caps the num of particles to prevent lag at larger resolutions. 
     numParticles = Math.min(numParticles, 1000);
@@ -176,11 +176,15 @@ function connect() {
                 ctx.beginPath();
                 ctx.moveTo(particles[i].x, particles[i].y);
                 ctx.lineTo(particles[j].x, particles[j].y);
-                ctx.stroke();
 
+
+
+                ctx.closePath();
+
+                ctx.stroke();
             }
         }
-    }
+    }  
 }
 
 init();

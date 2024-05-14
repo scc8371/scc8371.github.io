@@ -198,8 +198,8 @@ function rotateElement(event, element) {
     const middleX = elementPos.x + (elementPos.width / 2);
     const middleY = elementPos.y + (elementPos.height / 2);
 
-    const offsetX = ((x - middleX) / elementPos.width) * 25;
-    const offsetY = ((y - middleY) / elementPos.width) * 25;
+    const offsetX = ((x - middleX) / elementPos.width) * 35;
+    const offsetY = ((y - middleY) / elementPos.width) * 35;
 
     element.style.setProperty("--rotateX", -1 * offsetY + "deg");
     element.style.setProperty("--rotateY", offsetX + "deg");
