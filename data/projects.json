@@ -2,7 +2,7 @@
     "projects": [
         {
             "name": "Ninjas on Trampolines",
-            "description" : "🏆<b>Best Experimental Game at RIT EDGE</b>🏆<br>A Platform Fighter That Relies on Physics-Based Trampolines.",
+            "description": "🏆<b>Best Experimental Game at RIT EDGE</b>🏆<br>A Platform Fighter That Relies on Physics-Based Trampolines.",
             "coverImage": "media/ninjas/ninjas.gif",
             "trailerEmbed": "https://www.youtube.com/embed/zA0I3a7yrLU?autoplay=1",
             "role": "<lead-programmer></lead-programmer> / <systems-designer></systems-designer>",
@@ -67,13 +67,11 @@
                     "url": "media/ninjas/award.jpg",
                     "subtitle": "Best Experimental Game at RIT's EDGE Showcase"
                 }
-
-                
             ]
         },
         {
             "name": "Icarus VR",
-            "description" : "A Virtual Reality Archery Simulator with Realistic Motions",
+            "description": "A Virtual Reality Archery Simulator with Realistic Motions",
             "coverImage": "media/icarus/icarus.gif",
             "trailerEmbed": "https://www.youtube.com/embed/RV0TUgQLj-Y?autoplay=1",
             "role": "<reg-programmer></reg-programmer> / <game-developer></game-developer>",
@@ -120,7 +118,7 @@
         },
         {
             "name": "Changeling VR",
-            "description" : "A Virtual Reality Narrative Mystery Experience.",
+            "description": "A Virtual Reality Narrative Mystery Experience.",
             "coverImage": "media/changeling/changeling.gif",
             "trailerEmbed": "https://www.youtube.com/embed/nZGJtnUvC2I?autoplay=1",
             "role": "<reg-programmer></reg-programmer> / <ui-designer></ui-designer>",
@@ -158,7 +156,7 @@
         },
         {
             "name": "Doodle Day",
-            "description" : "🏆<b>3rd Place Winner at Wolfjam 2023</b>🏆<br>Hackathon Project Made in Under 24 Hours.",
+            "description": "🏆<b>3rd Place Winner at Wolfjam 2023</b>🏆<br>Hackathon Project Made in Under 24 Hours.",
             "coverImage": "media/doodleday/doodleday.gif",
             "role": "<reg-programmer></reg-programmer> / <game-developer></game-developer>",
             "trailerEmbed": "https://www.youtube.com/embed/_gJh6aqzuP8?autoplay=1",
@@ -167,11 +165,11 @@
             "tools": "C#, Git",
             "duration": "November 3rd, 2023 - November 4th, 2023",
             "overview": "Doodle Day is a simulation made in 24 hours for the Wolfjam Hackathon 2023. The primary goal of the experience is to use a rubber mallet to defeat aliens that appear on your screen, which look cartoon-ish and make cartoon sound effects. However, there is also a news tab that reveals a darker side of what you are doing, which is affecting life beside you negatively. The game ends as you destroy your own planet, Earth.<br><n-tab></n-tab><a href='https://wolfjam.devpost.com/project-gallery'>The project recieved 3rd place out of 18 teams (14 of which submitted) that participated in the hackathon.</a>",
-            "goals" : [
+            "goals": [
                 "To complete a successful project in under 24 hours",
                 "To communicate effectively with my team and minimize any room for error"
             ],
-            "responsibilities":"My main tasks in the 1 day we had to complete this project revolved around the mallet; getting its physics working, and allowing it to interact with entities. The physics of the mallet took most of the first day of development, which was around 4 hours of work. I utilized a spring joint that would attach the mallet to the position where the player clicks or taps the screen. Along with this, I apply torque to the head of the mallet whenever the player starts to drag their finger/mouse in a circular motion. I also allowed users to throw the hammer if they let go while it has a large amount of momentum. Finally, I add a strong force to the hammer (which can destroy entities) whenever the user presses the screen and the hammer isn't nearby. These four aspects, ultimately, made the hammer incredibly engaging to play around with.<br><n-tab></n-tab>The second day of development started with me figuring out how to handle collisions between the mallet and entities, which was not very difficult as I already separated the mallet's hitbox into two separate parts: one for the head and one for the stick. This only required very basic Unity collision checks and a check for velocity to make sure the hammer was moving when it hit an entity. Other than this, I implemented a simple credits sequence at the end of gameplay, which uses <a href='https://oneratgames.itch.io/easycredits'>an asset that I purchased on itch.io</a> to save time, as we only had a few hours left.",
+            "responsibilities": "My main tasks in the 1 day we had to complete this project revolved around the mallet; getting its physics working, and allowing it to interact with entities. The physics of the mallet took most of the first day of development, which was around 4 hours of work. I utilized a spring joint that would attach the mallet to the position where the player clicks or taps the screen. Along with this, I apply torque to the head of the mallet whenever the player starts to drag their finger/mouse in a circular motion. I also allowed users to throw the hammer if they let go while it has a large amount of momentum. Finally, I add a strong force to the hammer (which can destroy entities) whenever the user presses the screen and the hammer isn't nearby. These four aspects, ultimately, made the hammer incredibly engaging to play around with.<br><n-tab></n-tab>The second day of development started with me figuring out how to handle collisions between the mallet and entities, which was not very difficult as I already separated the mallet's hitbox into two separate parts: one for the head and one for the stick. This only required very basic Unity collision checks and a check for velocity to make sure the hammer was moving when it hit an entity. Other than this, I implemented a simple credits sequence at the end of gameplay, which uses <a href='https://oneratgames.itch.io/easycredits'>an asset that I purchased on itch.io</a> to save time, as we only had a few hours left.",
             "retrospect": "If I had another go at this project, I would have made the mallet physics a little bit easier to start up. Currently, it feels as if the mallet is incredibly heavy, which doesn't make too much sense given its toy appearance.",
             "link": "https://prestosilver.itch.io/d-day",
             "photoGallery": [
@@ -194,27 +192,13 @@
             ]
         },
         {
-            "name": "**[TODO]** Helpless",
-            "description" : "A 1-Bit Space Shooter taking inspiration from classic arcade games.",
-            "coverImage": "media/02.png",
-            "trailerEmbed": "https://www.youtube.com/embed/OlgM1a4RoXk?autoplay=1",
-            "role": "Dark Matter is a 1-bit space shooter game made in a week for the <b>1-BIT 2023 Game Jam.</b> The project is made primarily in C++ and uses the raylib library for development support. Dark Matter garnered much attention during the period of the jam, garnering over 60 ratings and being the fourth most rated game.<br><br>During the Summer of 2023, I was a <game-developer></game-developer> for this project, devoting a week of my time to make the gameplay feel and function the best that it can. This paid off, as Dark Matter was one of the highest rated games in terms of gameplay.",
-            "link": "https://prestosilver.itch.io/dark-matter",
-            "photoGallery": [  
-                "media/darkmatter/darkmatter1.png",
-                "media/darkmatter/darkmatter2.png",
-                "media/darkmatter/darkmatter3.png"
-            ]
-        },
-        
-        {
             "name": "Dark Matter",
-            "description" : "A 1-Bit Space Shooter Taking Inspiration From Classic Arcade Games.",
+            "description": "A 1-Bit Space Shooter Taking Inspiration From Classic Arcade Games.",
             "coverImage": "media/darkmatter/darkmatter.gif",
             "trailerEmbed": "https://www.youtube.com/embed/OlgM1a4RoXk?autoplay=1",
             "role": "<reg-programmer> </reg-programmer> / <game-developer></game-developer>",
             "teamSize": "2",
-            "engine": "N/A", 
+            "engine": "N/A",
             "tools": "C++, raylib, gdb, Git, Aseprite, .bat files",
             "duration": "August 2023",
             "overview": "Dark Matter is a 1-bit space shooter game made in a week for the <a href='https://itch.io/jam/1-bit-jam-wow'>1-BIT 2023 Game Jam</a>. The project is made primarily in C++ and uses the raylib library for development support. The game is a simple 'shoot-em-up' game, where you control a spaceship that can use light to defeat oncoming enemies. However, whenever the player shoots, some of their light is sacrificed. When the player has no more light, it is game over. Dark Matter garnered much attention during the period of the jam, having over 60 ratings and being the fourth most rated game.",
@@ -226,14 +210,14 @@
             "responsibilities": "During the two week period of the jam, my main responsibilities were to implement player and enemy mechanics. I first started with the player, and implemented a simple update/draw loop to register player movement and draw the player every frame.<br><n-tab></n-tab>I then created functionality for the player shooting their 'light beams' by creating a projectile class (which is a parent class for both player and enemy bullets). The projectiles are pooled by pre-spawning them, and are moved to the player's shoot position whenever the 'shoot' action is called. The projectiles use similar velocity code to the player, and are not destroyed from memory until after the game ends. I then created simple player information, such as health points, which is connnected to the player's projectiles (health will proportionately fall based on number of projectiles shot, and will increase based on health pickups gathered). <br><n-tab></n-tab>After all of the player functionality was complete, I realized how many entities would need to be kept track of in the game, so I created a centralized list data structure that holds all entities in the game, as every spawnable object is derived from the same parent class. This ultimately helped me with spawn pooling and keeping track of entity memory when debugging.<br><n-tab></n-tab> After this, I started working on enemies and their spawning patterns. Due to the time limits of the game jam, I decided to only make one kind of enemy, however, I could customize this one enemy with different bullet patterns, trajectory paths, and speeds. I created a system that allowed us to procedurally generate different enemy paths based on number of enemies, spacing of enemies, number of loops the enemies would take, where enemies would start and end, etc. Because of this, every playthrough of Dark Matter is unique in terms of how enemies spawn.<br><n-tab></n-tab>One of the biggest design considerations I had to deal with for players and enemies were the colors of their projectiles. At first, I treated the projectiles of the players and enemies the same, visually and mechanically, however, it quickly became harder to differentiate which projectiles could hurt the player as more filled the screen. To circumvent this, I created a new sprite for enemy bullets, and removed their VFX to make them look more discernible.<br><n-tab></n-tab>After completing player and enemy mechanics, I worked on the UI for the main menu, main game state, and pause menu. These were relatively easy to construct, with the only major problem being canvas scaling (which was completed with a bit of math). I wanted to have the UI resemble classic space shooters, so I employed a two column approach, having the game on one side of the screen and game statistics on the other.<br></n-tab>For debugging purposes, I used gdb in the console whenever I encountered a crash in the executable. This, usually, helped me determine exactly where in the code a fault was happening, which saved a ton of development time. ",
             "retrospect": "If I had the chance to redo this project, I would have expanded more upon the 'light health' mechanic. Currently, the only purpose of the light is a visual indicator of player and enemy HP, with the twist that shooting takes away a bit of light from the player. I wish this mechanic played a more pivotal role; potentially affecting the vision of the player or affecting the projectiles of the enemies the same way our black hole does. Along with this, I wish I documented my code a bit more than I did. Going back through the repository to write this retrospective made it clear that I didn't take much care to comment my code (mostly due to the time constraints). This ultimately made it difficult for me to understand the thought processes I had during this time period.",
             "link": "https://prestosilver.itch.io/dark-matter",
-            "photoGallery": [  
+            "photoGallery": [
                 {
                     "url": "media/darkmatter/darkmatter_title.png",
                     "subtitle": "Dark Matter Title Screen"
                 },
                 {
                     "url": "media/darkmatter/darkmatter1.png",
-                    "subtitle": "Dark Matter Gameplay" 
+                    "subtitle": "Dark Matter Gameplay"
                 },
                 {
                     "url": "media/darkmatter/darkmatter3.png",
@@ -250,8 +234,46 @@
             ]
         },
         {
+            "name": "Helpless",
+            "description": "A Game Tribute to the Art Piece 'Can't Help Myself'.<br>Made in under 2 weeks for the Pirate Software Jam 2024.",
+            "coverImage": "media/helpless/helpless.gif",
+            "trailerEmbed": "https://www.youtube.com/embed/K0Y8g-00aNE?autoplay=1",
+            "role": "<reg-programmer></reg-programmer> / <game-developer></game-developer>",
+            "duration": "Winter 2024 (2 weeks)",
+            "engine": "Unity",
+            "teamSize": "5",
+            "tools": "C#, Unity, Git, Blender, Unity Shader Graph",
+            "overview": "Helpless is a gamified representation of the 'Can't Help Myself' artpiece at the Guggenheim in New York City. It was created for the Pirate Software Winter Game Jam 2024, with the theme being 'It Spreads'. The player plays as a robot with one objective - to keep all of its oil within itself. The oil seeps out of the robot constantly, and the only way to regain it is to scoop it back in manually. When the player runs out of oil, the game ends.",
+            "docs": "https://docs.google.com/document/d/18OGNfsIwT99Oo75fd28T4Td8Qt6gd3dOsU3-HkybI4U/edit",
+            "goals": [
+                "To get our development team's name some recognition",
+                "To challenge myself with a side project while focusing mostly on <a href='project.html'  class='project-redir' data-name=`Ninjas%on%Trampolines`>Ninjas on Trampolines</a>"
+            ],
+            "responsibilities": "During the two weeks I had to work on the game, most of the development time was spend during weekends, and right before submissions were due. This is because I was working full-time on <a href='project.html'  class='project-redir' data-name=`Ninjas%on%Trampolines`>Ninjas on Trampolines</a>, and had no time to spare during the weekdays.<br><n-tab></n-tab> That being said, I was tasked to work on the fluid physics and interactions, including spawning, spreading, and pushing in the machine's oil. The oil is comprised out of many sphere colliders that have a shader attached to them to make them look as if they are blending together. A separate render texture is used to achieve this effect, masking out the area of the oil and applying the shader effect to it.<br><n-tab></n-tab>Getting the oil to scoop back into the machine was a simple process - I just needed to increase the linear drag of each particle to ensure they couldn't slip past the machine's claw. I attached a large collider to the tip of the player's machine that only collides with oil particles, which worked perfectly.<br><n-tab></n-tab>After getting the oil fluids working, I was tasked to work on some background assets for the scene to help the load of work given to our artist. I constructed the plants and the golden museum blockers in the 3D modelling software Blender.<br><n-tab></n-tab>Then, I was tasked to create a 'litter' system in the game, in which the museum guests would throw trash into the exhibit when they were not entertained. The throwing logic was the toughest step in this, as I needed to use some trigonometry with a starting velocity to accurately predict the trajectory for the trash to meet its destination.<br><n-tab></n-tab>Finally, I worked on the tutorial logic at the beginning of the game, constructing a dialogue system using a list of structs. I also created logic for the players to skip through text, in case they have seen the tutorial before. ",
+            "retrospect": "If I had the time to revisit this project, I would add more realistic physics to the oil. I hadn't thought to experiment with variables such as viscosity when creating the oil, which I feel would have added an extra sense of realism.",
+            "link": "https://ifaicgu.itch.io/helpless",
+            "photoGallery": [
+                {
+                    "url": "media/helpless/helpless-menu.png",
+                    "subtitle": "Helpless Main Menu"
+                },
+                {
+                    "url": "media/helpless/helpless-tutorial.png",
+                    "subtitle": "Helpless Tutorial"
+                },
+                {
+                    "url": "media/helpless/helpless-game.png",
+                    "subtitle": "Helpless Gameplay"
+                },
+                {
+                    "url": "media/helpless/helpless-gameover.png",
+                    "subtitle": "Helpless Game Over"
+                }
+            ]
+        },
+        {
             "name": "Myne Graphics Engine",
-            "description" : "A 2D/3D Graphics, Audio, and Physics Engine Using C++ and OpenGL.",
+            "description": "A 2D/3D Graphics, Audio, and Physics Engine Using C++ and OpenGL.",
             "coverImage": "media/myne/myne.gif",
             "trailerEmbed": "https://www.youtube.com/embed/mnMgia8DV6g?autoplay=1",
             "role": "<reg-programmer> </reg-programmer>",
@@ -259,14 +281,13 @@
             "teamSize": 1,
             "tools": "C++, gdb, Git, OpenAL, FreeType, OpenGL, GLFW, GLM, imGUI, RenderDoc",
             "overview": "Myne Graphics Engine is a game engine that fully supports rendering 2D bitmaps and glyphs, 3D models with lighting, playing back .wav files, and performing physics calculations between objects via the built-in math functions. It is programmed in pure C++, using OpenGL and OpenAL for visual and auditory functionalities. Myne has been a personal project of mine, with the hopes of someday using the engine to make a game.",
-            "goals":[
+            "goals": [
                 "To improve my knowledge of C++ and graphics programming",
                 "To create an engine that I have full freedom over"
             ],
-            "responsibilities": "I was the sole developer of this project, meaning I programmed everything that is available in this engine. I referenced other public repositories and <a href='https://learnopengl.com/'>this helpful OpenGL tutorial series</a> when constructing the engine. The current iteration of Myne on my github is actually a rewrite of <a href='https://github.com/scc8371/Myne-Engine'>my first engine</a>, which had many bugs and code that needed to be reworked.<br><n-tab></n-tab>When I first started the engine, I created simple 2D rendering functionality, using basic GLFW setup code and a fragment/vertex shader. This allowed me to render basic triangles/squares to the screen. From there, I added functionality from OpenGL to parse textures, which was passed into the shaders during draw calls. I often utilize a piece of software called <a href='https://renderdoc.org/'>RenderDoc</a> to help debug texture and UV issues.<br><n-tab></n-tab>After finishing basic texture rendering, I created sprite batching functionality, which sends texture data through a <a href='https://en.wikipedia.org/wiki/Fletcher%27s_checksum'>Fletcher-16 checksum function</a>. The data is consequently sent to a queue data structure, where it houses the data and sends all texture information to the GPU in a single call. This significantly reduced the number of GPU calls when rendering textures, optimizing the process.<br><n-tab></n-tab>When I wrapped up 2D rendering, I started work on audio using OpenAL. This was likely the hardest part of creating the engine for me, as I remember having so many errors from OpenAL when trying to read in audio. I created my own WAV parser which would read in chunks of bytes from a WAV file, in hopes to find sections of data that the engine can play back. I eventually nailed the chunk order of WAV files, however, it took at least a week for everything to work properly. When audio playback started to work, I added functionality to loop audio tracks, and start audio loops from a certain loop point in the song. Along with this, I added various pitch and volume settings that can be controled using variables.<br><n-tab></n-tab>After this was complete, I worked on glyph parsing using FreeType to allow for fonts to be rendered. I had to make a separate fragment shader for fonts, as the fragment colors for the font files were in a different format. Reading in font files with FreeType was similar to reading in .wav files, as i had to read in chunks that held information about the font. To display font, I allow users to call a 'draw' function that requires a character array, a location on screen, and a color. Each character in the array is looped through and given a glyph value from the parser, which is stitched together and given appropriate UV colors. The text sprite is then given to my spritebatch, which is sent to the GPU at the next draw call.<br><n-tab></n-tab>The final feature I added for 2D was a custom math library that supported vectors, vector math, simple bounding colliders, color definitions, and axis definitions. These are to be used instead of glm when constructing a game using the engine to simplify the process.<br><n-tab></n-tab>Recently, I have been trying to expand Myne to have 3D functionality. I have made simple mesh rendering capabilities, with the ability to load in .obj files and view a mesh with simple lighting. I plan to continue working on this, improving lighting and material capabilities. <br><n-tab></n-tab>Going forward, I am going to continue working on 3D functionality, expanding upon my math utilities by adding quaternions and 3D vectors, along with adding an entity component system (ECS) to make entities easier to manage. Along with this, I plan to write documentation that explains how to use the engine.",
-
+            "responsibilities": "I was the sole developer of this project, meaning I programmed everything that is available in this engine. I referenced other public repositories and <a href='https://learnopengl.com/'>this helpful OpenGL tutorial series</a> when constructing the engine. The current iteration of Myne on my github is actually a rewrite of <a href='https://github.com/scc8371/Myne-Engine'>my first engine</a>, which had many bugs and code that needed to be reworked.<br><n-tab></n-tab>When I first started the engine, I created simple 2D rendering functionality, using basic GLFW setup code and a fragment/vertex shader. This allowed me to render basic triangles/squares to the screen. From there, I added functionality from OpenGL to parse textures, which was passed into the shaders during draw calls. I often utilize a piece of software called <a href='https://renderdoc.org/'>RenderDoc</a> to help debug texture and UV issues.<br><n-tab></n-tab>After finishing basic texture rendering, I created sprite batching functionality, which sends texture data through a <a href='https://en.wikipedia.org/wiki/Fletcher%27s_checksum'>Fletcher-16 checksum function</a>. The data is consequently sent to a queue data structure, where it houses the data and sends all texture information to the GPU in a single call. This significantly reduced the number of GPU calls when rendering textures, optimizing the process.<br><n-tab></n-tab>When I wrapped up 2D rendering, I started work on audio using OpenAL. This was likely the hardest part of creating the engine for me, as I remember having so many errors from OpenAL when trying to read in audio. I created my own WAV parser which would read in chunks of bytes from a WAV file, in hopes to find sections of data that the engine can play back. I eventually nailed the chunk order of WAV files, however, it took at least a week for everything to work properly. When audio playback started to work, I added functionality to loop audio tracks, and start audio loops from a certain loop point in the song. Along with this, I added various pitch and volume settings that can be controlled using variables.<br><n-tab></n-tab>After this was complete, I worked on glyph parsing using FreeType to allow for fonts to be rendered. I had to make a separate fragment shader for fonts, as the fragment colors for the font files were in a different format. Reading in font files with FreeType was similar to reading in .wav files, as i had to read in chunks that held information about the font. To display font, I allow users to call a 'draw' function that requires a character array, a location on screen, and a color. Each character in the array is looped through and given a glyph value from the parser, which is stitched together and given appropriate UV colors. The text sprite is then given to my spritebatch, which is sent to the GPU at the next draw call.<br><n-tab></n-tab>The final feature I added for 2D was a custom math library that supported vectors, vector math, simple bounding colliders, color definitions, and axis definitions. These are to be used instead of glm when constructing a game using the engine to simplify the process.<br><n-tab></n-tab>Recently, I have been trying to expand Myne to have 3D functionality. I have made simple mesh rendering capabilities, with the ability to load in .obj files and view a mesh with simple lighting. I plan to continue working on this, improving lighting and material capabilities. <br><n-tab></n-tab>Going forward, I am going to continue working on 3D functionality, expanding upon my math utilities by adding quaternions and 3D vectors, along with adding an entity component system (ECS) to make entities easier to manage. Along with this, I plan to write documentation that explains how to use the engine.",
             "link": "https://github.com/scc8371/DiMyne-Engine",
-            "photoGallery": [  
+            "photoGallery": [
                 {
                     "url": "media/myne/cube.gif",
                     "subtitle": "Myne 3D Functionality Demo"
@@ -275,25 +296,22 @@
         },
         {
             "name": "Audio Visualizer",
-            "description" : "A Web Application That Visualizes Audio Frequencies. ",
+            "description": "A Web Application That Visualizes Audio Frequencies. ",
             "coverImage": "media/visualizer/visualizer.gif",
             "trailerEmbed": "https://www.youtube.com/embed/bI0-IUr1g7M?autoplay=1",
             "role": "<reg-programmer></reg-programmer>",
             "duration": "Spring 2023",
             "tools": "HTML, CSS, JavaScript, datGUI, JavaScript canvas, JavaScript web audio",
-            "overview": "This is an audio visualizer I created using JavaScript's canvas and web audio APIs. The controls of the application were integrated through the datgui library. This project was created in hopes to give users as much customizability as possible, letting them customize how the visualizer works in several different aspects. It features a spinning sphere that is constructed from lines using the javascript canvas API. The sphere is distorted with a combination of perlin noise and audio wave frequencies whenever a song starts playing.",
+            "overview": "This is an audio visualizer I created using JavaScript's canvas and web audio APIs. The controls of the application were integrated through the datgui library. This project was created in hopes to give users as much freedom as possible, letting them customize how the visualizer works in several different aspects. It features a spinning sphere that is constructed from lines using the javascript canvas API. The sphere is distorted with a combination of perlin noise and audio wave frequencies whenever a song starts playing.",
             "goals": [
                 "To improve my knowledge of web development",
                 "To challenge myself with implementing 3D math in a 2D canvas library",
                 "To learn more about manipulating audio data and displaying it visually"
             ],
-            "responsibilities": "I was the sole developer of this project and developed every feature. Most of the 3D math that I used to produce the sphere came from a 3D math class I was taking at the time, so I referenced what I had done in C++ and converted it into JavaScript code. The sphere math calculates points that are projected about the user's perspective, given a radius and the number of segments to be generated horizontally and vertically. The point data is then stored in a cache and reused until the points need to be regenerated, which saves on some computational power. Since the javascript canvas is meant for 2D drawing, drawing a 3D sphere within it is not very fast, which is why I needed to store a cache and do other various optimizations to ensure a semi-smooth frame rate.<br><n-tab></n-tab>The GUI of the application holds every customization tool that users can use. Firstly, audio data of the visualizer can be visually changed between frequency and waveform data. Displaying frequency data is more stable in this simulation, as I could utilize different sections of the data (the treble, bass, etc.) to control specific parts of the sphere. Waveform data moreso represents the shape of the audio wave, and cannot be as easily manipulated. Along with audio data settings, I have various visual settings, including the ability to change the colors of the sphere and background. This data is stored and updated in draw calls when filling in the quads of the sphere (or the gradient in the background). Also, I have several filters that can invert, emboss, or ignore the fill draw calls on the sphere (wireframe mode). These filters are applied by manipulating the color values of each pixel on the canvas, running math functions on the RGB(A) values to change their values.",
-
+            "responsibilities": "I was the sole developer of this project and developed every feature. Most of the 3D math that I used to produce the sphere came from a 3D math class I was taking at the time, so I referenced what I had done in C++ and converted it into JavaScript code. The sphere math calculates points that are projected about the user's perspective, given a radius and the number of segments to be generated horizontally and vertically. The point data is then stored in a cache and reused until the points need to be regenerated, which saves on some computational power. Since the javascript canvas is meant for 2D drawing, drawing a 3D sphere within it is not very fast, which is why I needed to store a cache and do other various optimizations to ensure a semi-smooth frame rate.<br><n-tab></n-tab>The GUI of the application holds every customization tool that users can use. Firstly, audio data of the visualizer can be visually changed between frequency and waveform data. Displaying frequency data is more stable in this simulation, as I could utilize different sections of the data (the treble, bass, etc.) to control specific parts of the sphere. Waveform data more so represents the shape of the audio wave, and cannot be as easily manipulated. Along with audio data settings, I have various visual settings, including the ability to change the colors of the sphere and background. This data is stored and updated in draw calls when filling in the quads of the sphere (or the gradient in the background). Also, I have several filters that can invert, emboss, or ignore the fill draw calls on the sphere (wire frame mode). These filters are applied by manipulating the color values of each pixel on the canvas, running math functions on the RGB(A) values to change their values.",
             "retrospect": "If I were to do this project again, I would use a JavaScript library that is more suited for rendering 3D models, like <a href='https://threejs.org/'>three.js</a>. Along with this, I would smooth the noise movement a bit, likely using linear interpolation, as I've gotten feedback that the jitteryness of the sphere makes it look uncanny.",
-            
-            
             "link": "visualizer/index.html",
-            "photoGallery": [  
+            "photoGallery": [
                 {
                     "url": "media/visualizer/frequency.gif",
                     "subtitle": "Frequency Data Visualizer"
@@ -314,7 +332,7 @@
         },
         {
             "name": "Roll Arena 64",
-            "description" : "A Dice Rolling Puzzle Game Made For the GMTK Game Jam 2022.",
+            "description": "A Dice Rolling Puzzle Game Made For the GMTK Game Jam 2022.",
             "coverImage": "media/rollarena/rollarena.gif",
             "trailerEmbed": "https://www.youtube.com/embed/z6m6COi9G5M?autoplay=1",
             "role": "<reg-programmer> </reg-programmer> / <game-developer></game-developer>",
@@ -329,9 +347,9 @@
                 "To experiment with the puzzle game genre"
             ],
             "responsibilities": "During the short development of Roll Arena 64, I was tasked with implementing player movement, tile recognition, as well as the AI for opponents. <br><n-tab></n-tab>I started with setting up the grid, creating a 16x16 area where each node stored if it was being traversed on, as well as the color of it. This would be used later when calculating score, and determining where a player can move. After this, I set up a basic player object and programmed simple movement code for it. Then, after we set up logic that correlated a side of the player's die with a pattern, I wrote logic that would check said pattern and traverse the nodes on the ground to paint that pattern. The player was functionally complete at that point.<br><n-tab></n-tab>To complete the game loop, I then needed to work on enemies and their AI. Functionally, they would act the exact same as the player, so most of my code worked perfectly in that regard. However, I needed to figure out an algorithm that would allow the computer opponents to make their own moves. I came up with a solution of using a depth first search algorithm with weights. Empty nodes or nodes of another player's color would be given a higher weight than nodes of the moving opponent's color. This worked as expected, and opponents were able to make efficient moves.",
-            "retrospect":"If I did this project again, I would make the enemy AI less perfect. Currently, the enemies try to make the best possible moves with their logic. If I were to redo this AI, I would sometimes make the enemies take the second or third best move they can. Along with this, the movement of  computers are incredibly slow. I would half or quarter the amount time it takes to complete a computer turn.",
+            "retrospect": "If I did this project again, I would make the enemy AI less perfect. Currently, the enemies try to make the best possible moves with their logic. If I were to redo this AI, I would sometimes make the enemies take the second or third best move they can. Along with this, the movement of computers are incredibly slow. I would half or quarter the amount time it takes to complete a computer turn.",
             "link": "https://prestosilver.itch.io/ra64",
-            "photoGallery": [  
+            "photoGallery": [
                 {
                     "url": "media/rollarena/rollarena1.jpg",
                     "subtitle": "Player's turn"
@@ -343,15 +361,15 @@
                 {
                     "url": "media/rollarena/rollarena3.png",
                     "subtitle": "Complete Game Board"
-                }       
+                }
             ]
         },
         {
             "name": "Bottle Knights!",
-            "description" : "A 2D Web idle game made in JavaScript and pixi.JS",
+            "description": "A 2D Web idle game made in JavaScript and pixi.JS",
             "coverImage": "media/bottleknights/bottleknights.gif",
             "trailerEmbed": "https://www.youtube.com/embed/WR9k8mJyouc?autoplay=1",
-            "role":"<reg-programmer> </reg-programmer> / <game-developer></game-developer>",
+            "role": "<reg-programmer> </reg-programmer> / <game-developer></game-developer>",
             "teamSize": "1",
             "tools": "HTML, CSS, JavaScript, pixi.js, Howler.js, JavaScript canvas",
             "overview": "Bottle Knights is a 2D Web Idle game developed from scratch in JavaScript and the pixi.JS library. The player interacts with the game by pressing buttons located on the browser DOM to upgrade their character and gain bonuses that last until the end of the game.",
@@ -362,7 +380,7 @@
             ],
             "responsibilities": "This was a solo project, and one of the first applications that I made for the web. It utilizes the browser DOM and the JavaScript canvas to create an 'auto-battler' type game. I did not use an engine to create this game, only the pixi.js library to help with rendering graphics; all of the update/drawing loops were done manually by me.<br><n-tab></n-tab>I programmed all of the player and enemy mechanics by scratch using JavaScript classes, including statistics and powerups. Along with this, I created a 'shop' system to upgrade the player using a currency gained by killing enemies.<br><n-tab></n-tab>To top everything off, I created functionality for sprite animation, created UI for the players and enemies, and implemented a 'boss' that the player can fight to end the game. Everything done for this project was created in the span of about two weeks, submitted as the final project for my first web development university course.<br><n-tab></n-tab>This was my first larger project in web development, and although I've grown my skills much since, I am still proud of how much I was able to get done in a short amount of time.",
             "link": "bottle-knights/index.html",
-            "photoGallery": [  
+            "photoGallery": [
                 {
                     "url": "media/bottleknights/playerCustomization.png",
                     "subtitle": "Player Customization Menu"
@@ -378,28 +396,42 @@
                 {
                     "url": "media/bottleknights/victory.png",
                     "subtitle": "Victory Screen!"
-                }                 
+                }
             ],
             "retrospect": "If I did this project again, I would store all entity data in a better format, likely in a conjoined list. Along with this, I liked the idea of having DOM elements as controls back then, however, it created more problems than what it was worth. I would likely have the entire game be canvas based, including controls."
         },
         {
             "name": "Karnissa's Castle",
-            "description" : "A 3D Puzzle Game Taking Inspiration From the World of Ethshar.",
+            "description": "A 3D Puzzle Game Taking Inspiration From the World of Ethshar.",
             "coverImage": "media/karnissascastle/karnissa.gif",
             "trailerEmbed": "https://www.youtube.com/embed/ZeVq3YvQDkc?autoplay=1",
-            "role":"<reg-programmer> </reg-programmer> / <game-developer></game-developer>",
+            "role": "<reg-programmer> </reg-programmer> / <game-developer></game-developer>",
             "duration": "Fall 2022",
             "engine": "Unity",
             "teamSize": 5,
             "tools": "C#, Git",
             "docs": "https://docs.google.com/document/d/1P3KcDAdQa1v-NOjD_mr9sq251YVQHOqY4gmywvk-WpU/edit",
             "overview": "Karnissa's Castle is a 3D puzzle game created in Unity, inspired by the World of Ethshar book series. The fundamental mechanics of the game revolve around switching between two characters to solve one puzzle. The game was inspired from the flash game series 'Fire Boy and Water Girl', taking a 3D twist on its core puzzle solving mechanics.",
-            "responsibilities": "I did most of the programming for Karnissa's Castle, including the puzzle mechanics and player interactions. I constructed several different puzzle components, such as levers, pressure-plates, cauldrons, potions, doors, and boulders.<br><n-tab></n-tab>Most of the puzzle components were straight forward - whenever a player would interact with it, it sends out an event to any of its listeners. If a condition is met, then the puzzle is solved. Most of the development time was spent on perfecting the cauldron/potion system. I ended up using a custom hash map data structure to hold all of the recipes and solutions to said recipes. This was a simple solution to this problem, giving us flexibility to add or destroy new potions in the matter of minutes.",
+            "goals": [
+                "To make a larger-scale project in Unity",
+                "To get used to working in a team-based setting"
+            ],
+            "responsibilities": "I did most of the programming for Karnissa's Castle, including the puzzle mechanics and player interactions. I constructed several different puzzle components, such as levers, pressure-plates, cauldrons, potions, doors, and boulders.<br><n-tab></n-tab>Most of the puzzle components were straight forward - whenever a player would interact with it, it sends out an event to any of its listeners. If a condition is met, then the puzzle is solved. Most of the development time was spent on perfecting the cauldron/potion system. I ended up using a custom hash map data structure to hold all of the recipes and solutions to said recipes. This was a simple solution to this problem, giving us flexibility to add or destroy new potions in the matter of minutes.<br><n-tab></n-tab>Other than general puzzle mechanics, I designed and constructed the puzzles of the first two chambers in the game. These are designed to allow players to learn the basic puzzle mechanics before trying the more complex chambers.",
+            "retrospect": "This was my first bigger game that I made in Unity, and I am happy with how it turned out. However, if I did this project again, I would find a better way to store recipe and player save data. As it is constructed currently, each cauldron needed to be manually populated with each recipe. Nowadays, I would have likely created an external file (JSON) that held all of this information. Along with this, players need to restart the entire game if they return to the menu. I would have some sort of basic saving system that would save the level the player left on, in case they wanted to play again.",
             "link": "https://sciencedoge.itch.io/karnissas-castle",
-            "photoGallery": [  
-                "media/karnissascastle/karnissa1.png",
-                "media/karnissascastle/karnissa2.png",
-                "media/karnissascastle/karnissa3.png"
+            "photoGallery": [
+                {
+                    "url": "media/karnissascastle/karnissa1.png",
+                    "subtitle": "Level Ending"
+                },
+                {
+                    "url": "media/karnissascastle/karnissa2.png",
+                    "subtitle": "Puzzle Script"
+                },
+                {
+                    "url": "media/karnissascastle/karnissa3.png",
+                    "subtitle": "Lever Puzzle"
+                }
             ]
         }
     ]
