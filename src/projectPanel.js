@@ -19,7 +19,7 @@ const template = `
   <h5 class="card-title">Default</h5>
     <p class="card-text">Default</p>
     <div class="block resButtonWrapper">
-                            <a href="project.html" class="nextBtn"><button class="resumeBtn">Learn More</button></a>
+                            <a href="project.html#project-desc-section" class="nextBtn"><button class="resumeBtn">Learn More</button></a>
                         </div>
   </div>
 </div>
@@ -47,7 +47,7 @@ class ProjectPanel extends HTMLElement {
         this.shadowRoot.querySelector('.card-text').innerHTML = this.description;
 
         this.shadowRoot.querySelector('.card').onclick = () => {
-            location.href = "project.html";
+            location.href = "project.html#project-desc-section";
             
             window.localStorage.setItem("scc8371-projectIndex", this.index);
             window.localStorage.setItem("scc8371-previousProjectIndex", "-1");
