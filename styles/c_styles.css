@@ -306,7 +306,7 @@
     text-align: left !important;
 
     grid-area: desc !important;
-    align-self:first baseline !important;
+    align-self: first baseline !important;
 }
 
 .centered-div {
@@ -443,6 +443,13 @@
         height: 70% !important;
     }
 
+    .embed-responsive {
+        width: 100% !important;
+        max-height: auto;
+        justify-self: center;
+    }
+    
+
     .left {
         grid-area: project;
         margin: 0rem;
@@ -519,6 +526,12 @@
 
     .resumeBtn {
         width: 250px !important;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
+
+    .pfp {
+        width: 200px !important;
     }
 }
 
@@ -699,8 +712,8 @@ iframe {
 
 @media screen and (max-height: 815px) {
     .pfp {
-        height: 50% !important;
-        width: 50% !important;
+        height: 100% !important;
+        width: 100% !important;
     }
 }
 
@@ -709,6 +722,7 @@ iframe {
         margin: 0rem !important;
         padding: 0rem !important;
     }
+    
 
     .diffBtn {
         margin: 0.2rem !important;
