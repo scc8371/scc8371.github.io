@@ -8,6 +8,14 @@ import * as particles from "./particles.js"
 //load project panels and display in the project section
 let projectSection = document.querySelector('.projectSection')
 
+let url = window.location.href;
+let predefProject;
+
+if(url.includes("project=")){
+    let sstring = url.substring(url.indexOf("=") + 1);
+    predefProject = sstring.split("%").join(' '); 
+}
+
 function loadProjectPreviewData() {
     loader.projectData.projects.forEach(project => {
         let panel = new projectPanel.ProjectPanel(project.name, project.shortDescription, project.description, project.coverImage, loader.projectData.projects.indexOf(project));
@@ -25,7 +33,12 @@ function loadProjectData() {
     let index = window.localStorage.getItem("scc8371-projectIndex");
     let previousIndex = window.localStorage.getItem("scc8371-previousProjectIndex");
 
-    if (previousIndex != "-1") {
+    if(predefProject){
+        let newProject = loader.projectData.projects.find(project => project.name == predefProject);
+        index = loader.projectData.projects.indexOf(newProject);
+        window.localStorage.setItem("scc8371-projectIndex", index);
+    }
+    else if (previousIndex != "-1") {
         window.localStorage.setItem("scc8371-projectIndex", previousIndex);
         window.localStorage.setItem("scc8371-previousProjectIndex", "-1");
     }
