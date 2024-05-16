@@ -17,7 +17,7 @@
     content="You Know What Time It Is" />
     <script>
 
-        let rand = Math.rand(0, 1000);
+        let rand = Math.floor(Math.random() * 1000);
         let url = `https://github.com/PokeAPI/sprites/tree/master/sprites/pokemon/${rand}.png`;
         const metaTag = document.createElement("meta");
         metaTag.setAttribute("property", "og:image");
