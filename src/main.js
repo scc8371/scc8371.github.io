@@ -13,7 +13,7 @@ let predefProject;
 
 if(url.includes("project=")){
     let sstring = url.substring(url.indexOf("=") + 1);
-    predefProject = sstring.split("%").join(' '); 
+    predefProject = sstring.split("%20").join(' '); 
 }
 
 function loadProjectPreviewData() {
