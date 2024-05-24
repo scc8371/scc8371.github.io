@@ -168,6 +168,9 @@
     justify-content: center;
 
     box-shadow: 0 0 5px gray;
+
+    max-width: 350px;
+    max-height: 350px;
 }
 
 .card {
@@ -709,15 +712,15 @@ iframe {
 
 }
 
-
-@media screen and (max-height: 815px) {
+@media screen and (max-height: 1100px) {
     .pfp {
-        height: 100% !important;
-        width: 100% !important;
+        height: 33vh !important;
+        width: 33vh !important;
     }
 }
 
-@media screen and (max-height: 720px) {
+
+@media screen and (max-height: 800px) {
     #my-desc {
         margin: 0rem !important;
         padding: 0rem !important;
@@ -725,9 +728,9 @@ iframe {
     
 
     .diffBtn {
-        margin: 0.2rem !important;
+        margin: 0.5rem !important;
         padding: 0rem !important;
-        margin-bottom: 5rem;
+        margin-bottom: 1rem;
     }
 
     .block {
@@ -743,12 +746,12 @@ iframe {
     #my-desc {
         margin-top: 0rem !important;
         font-size: 1rem !important;
-        margin-bottom: 1rem !important;
+        margin-bottom: .5rem !important;
     }
 
     .my-name {
         margin: 0rem !important;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.5rem !important; 
         padding: 0rem !important;
         font-size: 1.25rem !important;
     }
@@ -773,9 +776,22 @@ iframe {
         top: 80%;
     }
 
-    .pfp {
-        height: 75% !important;
-        width: 75% !important;
+}
+@media screen and (max-height: 700px) {
+    .back-button {
+        top: 80%;
     }
 
+}
+
+@media screen and (max-height: 620px) {
+    .diffBtn{
+        padding: 0rem !important;
+    }
+
+    .pfp{
+        visibility: hidden;
+        position: absolute;
+        margin: .1rem !important;
+    }
 }

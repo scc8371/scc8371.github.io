@@ -380,12 +380,6 @@ body {
     height: 50%;
 }
 
-@media screen and (max-height: 620px) {
-    #no-move * {
-        margin: 0rem !important;
-    }
-}
-
 #footer {
     margin: 0rem;
     padding: 0rem;
