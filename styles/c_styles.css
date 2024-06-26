@@ -223,7 +223,7 @@
 .title {
     margin-top: 1rem;
     margin-left: 1rem;
-    font-size: 3rem;
+    font-size: 3vw;
 
     text-align: center;
 
@@ -398,7 +398,7 @@
 
     @media (max-width: 1300px) {
         .title {
-            font-size: 3rem;
+            font-size: 3vw !important;
             margin-left: 0;
             margin-right: 0;
             margin-top: 1rem;
@@ -423,7 +423,7 @@
     }
 
     .title {
-        font-size: 1.75rem;
+        font-size: 3vw;
         min-height: 75px;
     }
 
@@ -714,8 +714,8 @@ iframe {
 
 @media screen and (max-height: 1100px) {
     .pfp {
-        height: 33vh !important;
-        width: 33vh !important;
+        max-height: 33vh !important;
+        max-width: 33vh !important;
     }
 }
 

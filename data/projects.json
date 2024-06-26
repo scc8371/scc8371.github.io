@@ -70,8 +70,133 @@
             ]
         },
         {
+            "name": "Changeling VR",
+            "description": "A Virtual Reality Narrative Mystery Experience.",
+            "coverImage": "media/changeling/changeling.gif",
+            "trailerEmbed": "https://www.youtube.com/embed/nZGJtnUvC2I?autoplay=1",
+            "role": "<reg-programmer></reg-programmer> / <ui-designer></ui-designer>",
+            "teamSize": "~80",
+            "engine": "Unreal Engine 4",
+            "duration": "May 2023 - August 2023",
+            "tools": "Google Sheets, Google Forms, Perforce, Unreal Engine Blueprints, Android Studio",
+            "overview": "Changeling is a VR mystery, first-person 3D platformer game built upon the idea of magical realism and a sense of unease and wonder. You play as Aurelia, a dream-walker who has the ability to see through the eyes of anyone she touches. You are tasked with helping this family figure out what is wrong with their child, and as you contact each member, you see through the lens of their hopes and fears of what the child is. Changeling is developed under Xana Ad Hoc Studio, a studio in Rochester, NY.",
+            "goals": [
+                "To assist development teams and production leads with technical tasks.",
+                "To facilitate building and deploying project builds.",
+                "To improve XR interactions."
+            ],
+            "responsibilities": "I worked to improve team workflow and general functionality of core gameplay mechanics. Notable inclusions that I worked on are the player's physics-based hands and the teleportation system. I also cleaned and optimized many of the files in the project's repository, helped other development teams with their various needs, and facilitated building for crucial project deadlines. <br><n-tab></n-tab>My first responsibility for the project was to rework the teleportation system, as it was barely functional when I entered the project. The portal destination point was incredibly inaccurate, and the line leading from the player to the teleportation circle was jagged and barely readable. To fix this, I simulated the path of a projectile from the player's location to the direction they pointed outwards. Using the points generated, I made a spline and attached meshes to generate a smooth arc. This also made the teleportation more precise, as I could determine the exact point in which the fake projectile would collide with the ground.<br><n-tab></n-tab>One major problem I had with this system, however, was held objects or close-by objects blocking the teleportation spline. This was easily solvable by excluding everything held in the player's hand, and ignoring objects that were too close to the player via distance checks.<br><n-tab></n-tab>My second major responsibility was to improve XR interactions with the player's hands. Before my improvements, the player's hands would phase through objects as if they were intangible. To make the player's hands feel more real, I opted to follow the interaction design of a game like 'Half Life Alyx', where they allow players to physically touch almost everything they are able to see. To do this, I simulated two separate layers for hands: one that represented the real-world location of a player's hand and another to represent the player's physics hand in-game. The physics hand is connected with physics constraints and joints to the real-world location of the player. This is needed because accurate tracking of player hands cannot be done if the object storing the data is also simulating physics. To circumvent this, we simulate physics on another object that is connected to it. <br><n-tab></n-tab>I went to GDC (Game Developers Conference) in 2024, and heard a <a href='https://schedule.gdconf.com/session/future-realities-summit-using-physics-constraints-to-make-intuitive-vr-interactions/901636'>great talk from Antony Stevens about this topic</a>, which covers the process of how I implemented this.<br><n-tab></n-tab>Implementing these physics-based hands was not a straight forward process, however. One of the biggest design considerations I had to worry about was teleportating next to a wall; the player's hands immediately teleport to the player's new location. If one of the hands happens to be through a wall, there would be no way to retrieve it back because it now interacts with the environment. To solve this issue, I created a raytracing system that would scan the area in front of the player whenever they are teleporting. If a wall or obstacle is detected, the physics hand will get the normal vector of the surface the raycast collides with, and teleport right snug against that surface. In practice, this took many attempts to perfect due to how many different kinds of surfaces were in the game, however, I eventually figured out a system that worked universally.<br><n-tab></n-tab>Aside from these bigger tasks, I was responsible for taking requests made by other development teams and trying to fix their problems to the best of my ability. Because of our moderately large development team (around 80 people), I needed to respond to around 2 or 3 different smaller tasks per day. This would require me to talk with the leads of these development teams to access their needs, and I would generally respond with a solution within a few hours. <br><n-tab></n-tab>The most pressing task I was given during my employment happened near the end of my time at Xana Ad Hoc, when we were preparing for the final project build. When I ran said build, it would crash almost immediately, giving a very vague error message. This happened one day before our deadline to submit a final build, which caused some panic amongst the development team. Thankfully, I quickly learned how to use Unreal Engine's build debugging tools, and found that the crash was coming from functions that handled baked lighting. After disabling all of the baked lighting, the build worked perfectly. Because of my efforts, we were able to get a working final build submitted to the higher-ups within the time we had left.",
+            "retrospect": "If I were to redo my time on this project, I would try to spend more time trying to unravel some of the older blueprints made by previous teams. The few blueprints that I was able to work on improved drastically, however, there were many that I did not have the time to improve, which will continue to serve as technical debt unless fixed.",
+            "link": "https://www.changelingvr.com/",
+            "photoGallery": [
+                {
+                    "url": "media/changeling/box.gif",
+                    "subtitle": "Physics-based XR Interactions Demo"
+                },
+                {
+                    "url": "media/changeling/oldTP.png",
+                    "subtitle": "Teleportation Code Before My Cleanup and Optimizations"
+                },
+                {
+                    "url": "media/changeling/newTP.png",
+                    "subtitle": "Teleportation Code After My Cleanup and Optimizations"
+                },
+                {
+                    "url": "media/changeling/spline.png",
+                    "subtitle": "Teleportation Spline and Portal"
+                }
+            ]
+        },
+        {
+            "name": "Astronaut Health Project",
+            "description": "A VR/AR Game Made in Collaboration with NASA.",
+            "coverImage": "media/nasa/nasa_pushup.gif",
+            "trailerEmbed": "https://www.youtube.com/embed/RfQ9nksPhJs?autoplay=1",
+            "role": "<reg-programmer></reg-programmer>",
+            "teamSize": "~25",
+            "engine": "Unreal Engine 5",
+            "duration": "August 2023 - December 2023",
+            "tools": "Unreal Engine Blueprints, Google Workspace, Meta Quest API, Unreal Engine XR API",
+            "overview": "This project is funded as a collaboration between NASA and RIT students. It seeks to solve the problem of testing astronaut health in extreme conditions, such as on a different planet, while making the experience entertaining. This project is still ongoing, and does not have a formal name.",
+            "goals": [
+                "To implement a hand tracking system in Unreal Engine 5 using Meta Quest Devices",
+                "To develop a simple prototype of a push-up detection system using hand tracking"
+            ],
+            "responsibilities": "I was part of this team during the initial development phases, during the fall semester of the 2023 RIT school year. I collaborated with numerous different engineering students of different fields, pitched ideas, with the overall goal to produce a mockup gameplay system for the project.<br><n-tab></n-tab>At first, me and other software developers were tasked to create a 'pegboard' game where astronauts needed to hang from a wall. I created multiple documents and proposals for this idea and started working on a rough prototype of the ideas. <br><n-tab></n-tab>Unfortunately, this idea was cut around half way into my time on this project, mostly due to size constraints. I then had to make completely new development and design documents to show to the other engineers for the new, and current, 'push-up' system. After the ideas were approved by the engineers, and by those at NASA, I started work again on a rough prototype. All the planning for this project took the majority of the semester, and left me with two weeks to complete this prototype. ",
+            "link": "https://www.rit.edu/imagine/exhibits/integration-gamification-and-ideis-enable-crew-health-and-performance-mars",
+            "photoGallery": [
+                {
+                    "url": "media/nasa/nasa_pushup.gif",
+                    "subtitle": "Push up prototype in Unreal Engine 5 using hand tracking"
+                }
+            ],
+            "retrospect": "If I continued development on this project, newer technology to test, like the Meta Quest 3, would have saved me a lot of time. Hand tracking using the Meta Quest or Meta Quest 2 is very primitive, which caused some issues when initially setting up the push-up detection system."
+        },
+        {
+            "name": "Nebulicious",
+            "description": "A Cooking Simulator Made for Society of Play's Hexcode Jam 3 in Under 10 Days.",
+            "coverImage": "media/nebulicious/nebulicious.gif",
+            "trailerEmbed": "https://www.youtube.com/embed/CrXL9HJmBng?autoplay=1",
+            "role": "<reg-programmer></reg-programmer> / <game-developer></game-developer>",
+            "teamSize": "6",
+            "engine": "Unity",
+            "tools": "C#, Git, Gimp, Google Workspace",
+            "duration": "June 2024 (10 days)",
+            "overview": "Nebulicious is a prototype of a casual cooking game with the twist of using two separate movement options to gather ingredients and cook donuts. The project was made for the Society of Play's <a href='https://itch.io/jam/hexcode-jam-3'>Hexcode Jam 3</a>, which required us to use a specific color palette named 'Hot Panda'.",
+            "goals": [
+                "To learn more about efficient data management in C# and Unity.",
+                "To follow the guidelines of the challenge given and produce a high quality program.",
+                "To experiment with spherical math, akin to games like 'Mario Galaxy'."
+            ],
+            "responsibilities": "During the prototype development of Nebulicious, I was responsible for most of the programming in the game. This included player movement and physics, interactables, data structures to store recipes, and spherical math to simulate faux-gravity on a planet. I also contributed to the UI and UX design of the project after I finished my programming responsibilities.<br><n-tab></n-tab>One new trick I implemented in this project was the usage of scriptable objects in Unity. Before this project, I hadn't used this feature too much. I created multiple structs for this game, representing different resource types, machines, and recipes, which were compiled into a scriptable object that anyone could easily change without looking at code. This drastically helped with our game's balance, as other developers could easily change crucial values in only seconds. Using scripable objects has opened my eyes to the potential that they provide, and I will adapt my development habits to include these more often.<br><n-tab></n-tab>Along with this, I tried to keep a clean and flexible codebase for this project, which allowed us to implement multiple different cooking machines and recipes before the 10 day time limit was reached. I utilized inheritance and polymorphism for the cooking stations, which will allow us to easily add new cooking station objects in the future with minimal effort, just requiring us to modify the scriptable object mentioned earlier and attaching a script of the ICookingStation interface to the object. Overall, I am very happy with how the codebase is currently with this project, enough so to want to continue working on it out of a prototype state.<br><n-tab></n-tab>Depending on the reception from this game, I plan to continue working on it sometime in the future. I am very proud of how it turned out, and see the potential in continuing its development.",
+            "link": "https://willyjeon.itch.io/nebulicious",
+            "retrospect": "If I had another chance to make this game, I would have given myself more breaks. Our idea was very ambitious for a 10 day time limit, which caused me to work very hard on getting the core mechanics finished on time for the other developers. This led to me feeling burnt out near the end of the time limit, which slowed down my progress.",
+            "photoGallery": [
+                {
+                    "url": "media/nebulicious/neb_gameplay.png",
+                    "subtitle": "Nebulicious Gameplay"
+                },
+                {
+                    "url": "media/nebulicious/neb_title.png",
+                    "subtitle": "Menu UI Design"
+                },
+                {
+                    "url": "media/nebulicious/neb_scriptableObj.png",
+                    "subtitle": "Scriptable Object Data Storage"
+                },
+                {
+                    "url": "media/nebulicious/neb_sceneView.png",
+                    "subtitle": "Game Scene Setup"
+                }
+            ]
+        },
+        {
+            "name": "The Shed",
+            "description": "A Short Horror Game Made for Aesthetician Lab's 2024 Game Jam in Under 48 Hours.",
+            "coverImage": "media/shed/shed.gif",
+            "trailerEmbed": "https://www.youtube.com/embed/jucFt8QTxmQ?autoplay=1",
+            "role": "<reg-programmer></reg-programmer> / <game-developer></game-developer>",
+            "teamSize": "2",
+            "engine": "Unreal Engine 5",
+            "tools": "C++, Unreal Engine Blueprints, AWS, Perforce",
+            "duration": "June 2024 (2 days)",
+            "overview": "The Shed is a short horror game made for Aesthetician Lab's <a href='https://itch.io/jam/exprmt48-2024'>exprmt48 2024 game jam.</a>",
+            "goals": [
+                "To learn about using C++ in junction with Unreal Engine Blueprints",
+                "To create an effective horror game environment in a short time."
+            ],
+            "responsibilities": "Before the two day development period of The Shed, I prepared a Perforce version control server using Amazon's AWS. Because of this, I can now easily set up new Perforce server instances for future projects without much trouble.<br><n-tab></n-tab>During the game's development, I was in charge of most of the programming and blueprinting. I created a custom C++ first person player script, which limited the player's camera vertical arm movement, allowing for vertical arm movement instead. Along with this, I programmed a custom C++ parent script for all of the interactable objects in the game, giving them destructible properties using Unreal Engine's fracture meshes and various variables to define how loud and durable the objects are. After all player and environmental features were implemented, I created a short tutorial to teach the player the mechanics of the game.",
+            "link": "https://ifaicgu.itch.io/the-shed",
+            "photoGallery": [
+                {
+                    "url": "media/shed/shed_gameplay.png",
+                    "subtitle": "The Shed Gameplay"
+                }
+            ]
+        },
+        {
             "name": "Icarus VR",
-            "description": "A Virtual Reality Archery Simulator with Realistic Motions",
+            "description": "A Virtual Reality Archery Simulator with Realistic Motions.",
             "coverImage": "media/icarus/icarus.gif",
             "trailerEmbed": "https://www.youtube.com/embed/RV0TUgQLj-Y?autoplay=1",
             "role": "<reg-programmer></reg-programmer> / <game-developer></game-developer>",
@@ -113,44 +238,6 @@
                 {
                     "url": "media/icarus/discus-physics.gif",
                     "subtitle": "Discus Physics Example"
-                }
-            ]
-        },
-        {
-            "name": "Changeling VR",
-            "description": "A Virtual Reality Narrative Mystery Experience.",
-            "coverImage": "media/changeling/changeling.gif",
-            "trailerEmbed": "https://www.youtube.com/embed/nZGJtnUvC2I?autoplay=1",
-            "role": "<reg-programmer></reg-programmer> / <ui-designer></ui-designer>",
-            "teamSize": "~80",
-            "engine": "Unreal Engine 4",
-            "duration": "May 2023 - August 2023",
-            "tools": "Google Sheets, Google Forms, Perforce, Unreal Engine Blueprints, Android Studio",
-            "overview": "Changeling is a VR mystery, first-person 3D platformer game built upon the idea of magical realism and a sense of unease and wonder. You play as Aurelia, a dream-walker who has the ability to see through the eyes of anyone she touches. You are tasked with helping this family figure out what is wrong with their child, and as you contact each member, you see through the lens of their hopes and fears of what the child is. Changeling is developed under Xana Ad Hoc Studio, a studio in Rochester, NY.",
-            "goals": [
-                "To assist development teams and production leads with technical tasks.",
-                "To facilitate building and deploying project builds.",
-                "To improve XR interactions."
-            ],
-            "responsibilities": "I worked to improve team workflow and general functionality of core gameplay mechanics. Notable inclusions that I worked on are the player's physics-based hands and the teleportation system. I also cleaned and optimized many of the files in the project's repository, helped other development teams with their various needs, and facilitated building for crucial project deadlines. <br><n-tab></n-tab>My first responsibility for the project was to rework the teleportation system, as it was barely functional when I entered the project. The portal destination point was incredibly inaccurate, and the line leading from the player to the teleportation circle was jagged and barely readable. To fix this, I simulated the path of a projectile from the player's location to the direction they pointed outwards. Using the points generated, I made a spline and attached meshes to generate a smooth arc. This also made the teleportation more precise, as I could determine the exact point in which the fake projectile would collide with the ground.<br><n-tab></n-tab>One major problem I had with this system, however, was held objects or close-by objects blocking the teleportation spline. This was easily solvable by excluding everything held in the player's hand, and ignoring objects that were too close to the player via distance checks.<br><n-tab></n-tab>My second major responsibility was to improve XR interactions with the player's hands. Before my improvements, the player's hands would phase through objects as if they were intangible. To make the player's hands feel more real, I opted to follow the interaction design of a game like 'Half Life Alyx', where they allow players to physically touch almost everything they are able to see. To do this, I simulated two separate layers for hands: one that represented the real-world location of a player's hand and another to represent the player's physics hand in-game. The physics hand is connected with physics constraints and joints to the real-world location of the player. This is needed because accurate tracking of player hands cannot be done if the object storing the data is also simulating physics. To circumvent this, we simulate physics on another object that is connected to it. <br><n-tab></n-tab>I went to GDC (Game Developers Conference) in 2024, and heard a <a href='https://schedule.gdconf.com/session/future-realities-summit-using-physics-constraints-to-make-intuitive-vr-interactions/901636'>great talk from Antony Stevens about this topic</a>, which covers the process of how I implemented this.<br><n-tab></n-tab>Implementing these physics-based hands was not a straight forward process, however. One of the biggest design considerations I had to worry about was teleportating next to a wall; the player's hands immediately teleport to the player's new location. If one of the hands happens to be through a wall, there would be no way to retrieve it back because it now interacts with the environment. To solve this issue, I created a raytracing system that would scan the area in front of the player whenever they are teleporting. If a wall or obstacle is detected, the physics hand will get the normal vector of the surface the raycast collides with, and teleport right snug against that surface. In practice, this took many attempts to perfect due to how many different kinds of surfaces were in the game, however, I eventually figured out a system that worked universally.<br><n-tab></n-tab>Aside from these bigger tasks, I was responsible for taking requests made by other development teams and trying to fix their problems to the best of my ability. Because of our moderately large development team (around 80 people), I needed to respond to around 2 or 3 different smaller tasks per day. This would require me to talk with the leads of these development teams to access their needs, and I would generally respond with a solution within a few hours. <br><n-tab></n-tab>The most pressing task I was given during my employment happened near the end of my time at Xana Ad Hoc, when we were preparing for the final project build. When I ran said build, it would crash almost immediately, giving a very vague error message. This happened one day before our deadline to submit a final build, which caused some panic amongst the development team. Thankfully, I quickly learned how to use Unreal Engine's build debugging tools, and found that the crash was coming from functions that handled baked lighting. After disabling all of the baked lighting, the build worked perfectly. Because of my efforts, we were able to get a working final build submitted to the higher-ups within the time we had left.",
-            "retrospect": "If I were to redo my time on this project, I would try to spend more time trying to unravel some of the older blueprints made by previous teams. The few blueprints that I was able to work on improved drastically, however, there were many that I did not have the time to improve, which will continue to serve as technical debt unless fixed.",
-            "link": "https://www.changelingvr.com/",
-            "photoGallery": [
-                {
-                    "url": "media/changeling/box.gif",
-                    "subtitle": "Physics-based XR Interactions Demo"
-                },
-                {
-                    "url": "media/changeling/oldTP.png",
-                    "subtitle": "Teleportation Code Before My Cleanup and Optimizations"
-                },
-                {
-                    "url": "media/changeling/newTP.png",
-                    "subtitle": "Teleportation Code After My Cleanup and Optimizations"
-                },
-                {
-                    "url": "media/changeling/spline.png",
-                    "subtitle": "Teleportation Spline and Portal"
                 }
             ]
         },
