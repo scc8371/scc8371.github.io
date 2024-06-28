@@ -608,6 +608,16 @@
     z-index: 10;
 }
 
+.sm-icon{
+    position: absolute;
+    z-index: 100;
+
+    width: 20%;
+    left: 77.5%;
+    margin-right: 2.5%;
+    margin-top: 2.5%;
+}
+
 .card-body {
     background:
         conic-gradient(from -60deg at 50% calc(100%/3), #9a9a9a 0 120deg, #0000 0),

@@ -18,7 +18,7 @@ if(url.includes("project=")){
 
 function loadProjectPreviewData() {
     loader.projectData.projects.forEach(project => {
-        let panel = new projectPanel.ProjectPanel(project.name, project.shortDescription, project.description, project.coverImage, loader.projectData.projects.indexOf(project));
+        let panel = new projectPanel.ProjectPanel(project.name, project.shortDescription, project.description, project.coverImage, loader.projectData.projects.indexOf(project), project.icon);
         projectSection.appendChild(panel);
 
         panel.addEventListener("mousemove", (e) => {

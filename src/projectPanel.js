@@ -14,6 +14,7 @@ const template = `
 <div class="card">
 <div class="card-decor"></div>
   <img src="media/bottle-knights.png" class="card-img-top" alt="Default">
+  <img src="media/def-icon.png" class='sm-icon'>
   <div class="card-body">   
   
   <h5 class="card-title">Default</h5>
@@ -27,7 +28,7 @@ const template = `
 `
 
 class ProjectPanel extends HTMLElement {
-    constructor(name, shortDescription, description, image, index) {
+    constructor(name, shortDescription, description, image, index, icon) {
         super();
 
         this.name = name;
@@ -36,15 +37,20 @@ class ProjectPanel extends HTMLElement {
         this.image = image;
         //this.trailer = trailer;
         this.index = index; 
+        this.icon = icon;
 
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.innerHTML = template;
     }
 
     connectedCallback() {
+
+        if(this.icon == undefined) this.icon = "media/def-icon.png";
+        
         this.shadowRoot.querySelector('.card-img-top').src = this.image;
         this.shadowRoot.querySelector('.card-title').innerHTML = this.name;
         this.shadowRoot.querySelector('.card-text').innerHTML = this.description;
+        this.shadowRoot.querySelector('.sm-icon').src = this.icon;
 
         this.shadowRoot.querySelector('.card').onclick = () => {
             location.href = "project.html#project-desc-section";
