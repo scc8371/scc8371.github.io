@@ -320,12 +320,12 @@
     left: 5%;
 
     background:
-        conic-gradient(from -60deg at 50% calc(100%/3), #9a9a9a 0 120deg, #0000 0),
-        conic-gradient(from 120deg at 50% calc(200%/3), #9a9a9a 0 120deg, #0000 0),
-        conic-gradient(from 60deg at calc(200%/3), #9a9a9a 60deg, #676767 0 120deg, #0000 0),
-        conic-gradient(from 180deg at calc(100%/3), #343434 60deg, #9a9a9a 0 120deg, #0000 0),
-        linear-gradient(90deg, #343434 calc(100%/6), #676767 0 50%,
-            #343434 0 calc(500%/6), #676767 0);
+        conic-gradient(from -60deg at 50% calc(100%/3), var(--primaryColor) 0 120deg, #0000 0),
+        conic-gradient(from 120deg at 50% calc(200%/3), var(--primaryColor) 0 120deg, #0000 0),
+        conic-gradient(from 60deg at calc(200%/3), var(--primaryColor) 60deg, var(--secondaryColor) 0 120deg, #0000 0),
+        conic-gradient(from 180deg at calc(100%/3), var(--trinaryColor) 60deg, var(--primaryColor) 0 120deg, #0000 0),
+        linear-gradient(90deg, var(--trinaryColor) calc(100%/6), var(--secondaryColor) 0 50%,
+            var(--trinaryColor) 0 calc(500%/6), var(--secondaryColor) 0);
     background-size: 66px 38px;
 
     box-shadow: inset 0px 0px 1000px 1000px rgba(0, 0, 0, 0.8), 0px 0px 15px 15px rgba(0, 0, 0, 0.7);
@@ -451,7 +451,7 @@
         max-height: auto;
         justify-self: center;
     }
-    
+
 
     .left {
         grid-area: project;
@@ -608,7 +608,7 @@
     z-index: 10;
 }
 
-.sm-icon{
+.sm-icon {
     position: absolute;
     z-index: 100;
 
@@ -620,12 +620,12 @@
 
 .card-body {
     background:
-        conic-gradient(from -60deg at 50% calc(100%/3), #9a9a9a 0 120deg, #0000 0),
-        conic-gradient(from 120deg at 50% calc(200%/3), #9a9a9a 0 120deg, #0000 0),
-        conic-gradient(from 60deg at calc(200%/3), #9a9a9a 60deg, #676767 0 120deg, #0000 0),
-        conic-gradient(from 180deg at calc(100%/3), #343434 60deg, #9a9a9a 0 120deg, #0000 0),
-        linear-gradient(90deg, #343434 calc(100%/6), #676767 0 50%,
-            #343434 0 calc(500%/6), #676767 0);
+        conic-gradient(from -60deg at 50% calc(100%/3), var(--primaryColor) 0 120deg, #0000 0),
+        conic-gradient(from 120deg at 50% calc(200%/3), var(--primaryColor) 0 120deg, #0000 0),
+        conic-gradient(from 60deg at calc(200%/3), var(--primaryColor) 60deg, var(--secondaryColor) 0 120deg, #0000 0),
+        conic-gradient(from 180deg at calc(100%/3), var(--trinaryColor) 60deg, var(--primaryColor) 0 120deg, #0000 0),
+        linear-gradient(90deg, var(--trinaryColor) calc(100%/6), var(--secondaryColor) 0 50%,
+            var(--trinaryColor) 0 calc(500%/6), var(--secondaryColor) 0);
     background-size: 66px 38px;
 
 
@@ -735,7 +735,7 @@ iframe {
         margin: 0rem !important;
         padding: 0rem !important;
     }
-    
+
 
     .diffBtn {
         margin: 0.5rem !important;
@@ -761,7 +761,7 @@ iframe {
 
     .my-name {
         margin: 0rem !important;
-        margin-bottom: 0.5rem !important; 
+        margin-bottom: 0.5rem !important;
         padding: 0rem !important;
         font-size: 1.25rem !important;
     }
@@ -787,6 +787,7 @@ iframe {
     }
 
 }
+
 @media screen and (max-height: 700px) {
     .back-button {
         top: 80%;
@@ -795,11 +796,11 @@ iframe {
 }
 
 @media screen and (max-height: 620px) {
-    .diffBtn{
+    .diffBtn {
         padding: 0rem !important;
     }
 
-    .pfp{
+    .pfp {
         visibility: hidden;
         position: absolute;
         margin: .1rem !important;

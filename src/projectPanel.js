@@ -12,7 +12,6 @@ const template = `
 
 <div class="project-panel">
 <div class="card">
-<div class="card-decor"></div>
   <img src="media/bottle-knights.png" class="card-img-top" alt="Default">
   <img src="media/def-icon.png" class='sm-icon'>
   <div class="card-body">   
@@ -28,7 +27,7 @@ const template = `
 `
 
 class ProjectPanel extends HTMLElement {
-    constructor(name, shortDescription, description, image, index, icon) {
+    constructor(name, shortDescription, description, image, index, icon, color) {
         super();
 
         this.name = name;
@@ -38,6 +37,7 @@ class ProjectPanel extends HTMLElement {
         //this.trailer = trailer;
         this.index = index; 
         this.icon = icon;
+        this.color = color;
 
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.innerHTML = template;
@@ -46,7 +46,7 @@ class ProjectPanel extends HTMLElement {
     connectedCallback() {
 
         if(this.icon == undefined) this.icon = "media/def-icon.png";
-        
+
         this.shadowRoot.querySelector('.card-img-top').src = this.image;
         this.shadowRoot.querySelector('.card-title').innerHTML = this.name;
         this.shadowRoot.querySelector('.card-text').innerHTML = this.description;

@@ -68,7 +68,8 @@
                     "url": "media/ninjas/award.jpg",
                     "subtitle": "Best Experimental Game at RIT's EDGE Showcase"
                 }
-            ]
+            ],
+            "color": "#C1424F"
         },
         {
             "name": "Changeling VR",
@@ -106,7 +107,8 @@
                     "url": "media/changeling/spline.png",
                     "subtitle": "Teleportation Spline and Portal"
                 }
-            ]
+            ],
+            "color": "#ffe09a"
         },
         {
             "name": "NASA X-Hab Program",
@@ -132,7 +134,8 @@
                     "subtitle": "Push up prototype in Unreal Engine 5 using hand tracking"
                 }
             ],
-            "retrospect": "If I continued development on this project, newer technology to test, like the Meta Quest 3, would have saved me a lot of time. Hand tracking using the Meta Quest or Meta Quest 2 is very primitive, which caused some issues when initially setting up the push-up detection system."
+            "retrospect": "If I continued development on this project, newer technology to test, like the Meta Quest 3, would have saved me a lot of time. Hand tracking using the Meta Quest or Meta Quest 2 is very primitive, which caused some issues when initially setting up the push-up detection system.",
+            "color": "#becbcf"
         },
         {
             "name": "Nebulicious",
@@ -171,7 +174,8 @@
                     "url": "media/nebulicious/neb_sceneView.png",
                     "subtitle": "Game Scene Setup"
                 }
-            ]
+            ],
+            "color": "#b19fde"
         },
         {
             "name": "The Shed",
@@ -196,7 +200,8 @@
                     "url": "media/shed/shed_gameplay.png",
                     "subtitle": "The Shed Gameplay"
                 }
-            ]
+            ],
+            "color": "#3d3837"
         },
         {
             "name": "Icarus VR",
@@ -243,7 +248,9 @@
                     "url": "media/icarus/discus-physics.gif",
                     "subtitle": "Discus Physics Example"
                 }
-            ]
+            ],
+
+            "color": "#99ffff"
         },
         {
             "name": "Doodle Day",
@@ -281,7 +288,8 @@
                     "url": "media/doodleday/doodleday-4.png",
                     "subtitle": "News Tab"
                 }
-            ]
+            ],
+            "color": "#b2cbba"
         },
         {
             "name": "Dark Matter",
@@ -323,7 +331,8 @@
                     "url": "media/darkmatter/darkmatter_pause.png",
                     "subtitle": "Dark Matter Pause Screen"
                 }
-            ]
+            ],
+            "color": "#d28264"
         },
         {
             "name": "Helpless",
@@ -362,7 +371,8 @@
                     "url": "media/helpless/helpless-gameover.png",
                     "subtitle": "Helpless Game Over"
                 }
-            ]
+            ],
+            "color": "#bfc4d0"
         },
         {
             "name": "Myne Graphics Engine",
@@ -385,7 +395,8 @@
                     "url": "media/myne/cube.gif",
                     "subtitle": "Myne 3D Functionality Demo"
                 }
-            ]
+            ],
+            "color": "#4fbcb4"
         },
         {
             "name": "Audio Visualizer",
@@ -421,7 +432,8 @@
                     "url": "media/visualizer/settings.gif",
                     "subtitle": "Settings Demonstration"
                 }
-            ]
+            ],
+            "color": "#01d004"
         },
         {
             "name": "Roll Arena 64",
@@ -456,7 +468,8 @@
                     "url": "media/rollarena/rollarena3.png",
                     "subtitle": "Complete Game Board"
                 }
-            ]
+            ],
+            "color": "#e1d59b"
         },
         {
             "name": "Bottle Knights!",
@@ -492,7 +505,8 @@
                     "subtitle": "Victory Screen!"
                 }
             ],
-            "retrospect": "If I did this project again, I would store all entity data in a better format, likely in a conjoined list. Along with this, I liked the idea of having DOM elements as controls back then, however, it created more problems than what it was worth. I would likely have the entire game be canvas based, including controls."
+            "retrospect": "If I did this project again, I would store all entity data in a better format, likely in a conjoined list. Along with this, I liked the idea of having DOM elements as controls back then, however, it created more problems than what it was worth. I would likely have the entire game be canvas based, including controls.",
+            "color": "#c14a34"
         },
         {
             "name": "Karnissa's Castle",
@@ -526,7 +540,8 @@
                     "url": "media/karnissascastle/karnissa3.png",
                     "subtitle": "Lever Puzzle"
                 }
-            ]
+            ],
+            "color": "#dbd8df"
         }
     ]
 }

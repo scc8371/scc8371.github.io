@@ -11,20 +11,126 @@ let projectSection = document.querySelector('.projectSection')
 let url = window.location.href;
 let predefProject;
 
-if(url.includes("project=")){
+let primaryBgColor = "#9a9a9a";
+let secondaryBgColor = "#676767";
+let thirdBgColor = "#343434";
+
+let rt = document.querySelector(":root");
+rt.style.setProperty("--primaryColor", primaryBgColor);
+rt.style.setProperty("--secondaryColor", secondaryBgColor);
+rt.style.setProperty("--trinaryColor", thirdBgColor);
+
+let selectedColor;
+let selectedElement = undefined;
+
+let sidePanel = document.querySelector("#no-move");
+
+window.requestAnimationFrame(update);
+
+let cards = [];
+
+let particleColor = "#FFFFF0";
+
+const isMobile = {
+    Android: function () {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function () {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function () {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function () {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function () {
+        return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+    },
+    any: function () {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
+
+if (url.includes("project=")) {
     let sstring = url.substring(url.indexOf("=") + 1);
-    predefProject = sstring.split("%20").join(' '); 
+    predefProject = sstring.split("%20").join(' ');
 }
 
 function loadProjectPreviewData() {
     loader.projectData.projects.forEach(project => {
-        let panel = new projectPanel.ProjectPanel(project.name, project.shortDescription, project.description, project.coverImage, loader.projectData.projects.indexOf(project), project.icon);
+        let panel = new projectPanel.ProjectPanel(project.name, project.shortDescription, project.description, project.coverImage, loader.projectData.projects.indexOf(project), project.icon, project.color);
         projectSection.appendChild(panel);
+
+        cards.push(panel);
 
         panel.addEventListener("mousemove", (e) => {
             rotateElement(e, panel);
-        })
+        });
+
+        panel.addEventListener("mouseenter", (e) => {
+            selectedColor = project.color;
+            selectedElement = e.target;
+        });
+
+        panel.addEventListener("mouseleave", (e) => {
+            selectedColor = undefined;
+            selectedElement = undefined;
+        });
     });
+}
+
+function update() {
+    if (loader.projectDescSection) return;
+    if (isMobile.any()) return;
+
+    window.requestAnimationFrame(update);
+
+    if (selectedElement != undefined) {
+        let style = getComputedStyle(selectedElement);
+
+        if (selectedColor != undefined) {
+            let newColorPrimary = interpolate(style.getPropertyValue("--primaryColor"), selectedColor, 0.1);
+            let newColorSecondary = interpolate(style.getPropertyValue("--primaryColor"), LightenColor(selectedColor, -50), 0.5);
+            let newColorTrinary = interpolate(style.getPropertyValue("--primaryColor"), LightenColor(selectedColor, -150), 0.5);
+
+
+            selectedElement.style.setProperty("--primaryColor", newColorPrimary);
+            selectedElement.style.setProperty("--secondaryColor", newColorSecondary);
+            selectedElement.style.setProperty("--trinaryColor", newColorTrinary);
+
+            sidePanel.style.setProperty("--primaryColor", newColorPrimary);
+            sidePanel.style.setProperty("--secondaryColor", newColorSecondary);
+            sidePanel.style.setProperty("--trinaryColor", newColorTrinary);
+        }
+
+
+    }
+    else {
+        let style = getComputedStyle(sidePanel);
+        let newColorPrimary = interpolate(style.getPropertyValue("--primaryColor"), primaryBgColor, .1);
+        let newColorSecondary = interpolate(style.getPropertyValue("--primaryColor"), secondaryBgColor, .5);
+        let newColorTrinary = interpolate(style.getPropertyValue("--primaryColor"), thirdBgColor, .5);
+
+        sidePanel.style.setProperty("--primaryColor", newColorPrimary);
+        sidePanel.style.setProperty("--secondaryColor", newColorSecondary);
+        sidePanel.style.setProperty("--trinaryColor", newColorTrinary);
+    }
+
+    for (let card of cards) {
+        let style = getComputedStyle(card);
+
+        if (card != selectedElement && style.getPropertyValue("--primaryColor") != primaryBgColor) {
+            let newColorPrimary = interpolate(style.getPropertyValue("--primaryColor"), primaryBgColor, 1);
+            let newColorSecondary = interpolate(style.getPropertyValue("--primaryColor"), secondaryBgColor, 1);
+            let newColorTrinary = interpolate(style.getPropertyValue("--primaryColor"), thirdBgColor, 1);
+
+
+            card.style.setProperty("--primaryColor", newColorPrimary);
+            card.style.setProperty("--secondaryColor", newColorSecondary);
+            card.style.setProperty("--trinaryColor", newColorTrinary);
+        }
+    }
 }
 
 function loadProjectData() {
@@ -33,7 +139,7 @@ function loadProjectData() {
     let index = window.localStorage.getItem("scc8371-projectIndex");
     let previousIndex = window.localStorage.getItem("scc8371-previousProjectIndex");
 
-    if(predefProject){
+    if (predefProject) {
         let newProject = loader.projectData.projects.find(project => project.name == predefProject);
         index = loader.projectData.projects.indexOf(newProject);
         window.localStorage.setItem("scc8371-projectIndex", index);
@@ -42,7 +148,7 @@ function loadProjectData() {
         window.localStorage.setItem("scc8371-projectIndex", previousIndex);
         window.localStorage.setItem("scc8371-previousProjectIndex", "-1");
     }
-    
+
     let project = loader.projectData.projects[index];
 
     let name = project.name;
@@ -229,6 +335,34 @@ function getOffset(el) {
     };
 }
 
+function interpolate(color1, color2, percent) {
+    // Convert the hex colors to RGB values
+    const r1 = parseInt(color1.substring(1, 3), 16);
+    const g1 = parseInt(color1.substring(3, 5), 16);
+    const b1 = parseInt(color1.substring(5, 7), 16);
 
-export { loadProjectPreviewData, loadProjectData };
+    const r2 = parseInt(color2.substring(1, 3), 16);
+    const g2 = parseInt(color2.substring(3, 5), 16);
+    const b2 = parseInt(color2.substring(5, 7), 16);
+
+    // Interpolate the RGB values
+    const r = Math.round(r1 + (r2 - r1) * percent);
+    const g = Math.round(g1 + (g2 - g1) * percent);
+    const b = Math.round(b1 + (b2 - b1) * percent);
+
+    // Convert the interpolated RGB values back to a hex color
+    return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+}
+
+function LightenColor(color, percent) {
+    var num = parseInt(color.replace("#", ""), 16),
+        amt = Math.round(2.55 * percent),
+        R = (num >> 16) + amt,
+        B = (num >> 8 & 0x00FF) + amt,
+        G = (num & 0x0000FF) + amt;
+    return "#" + (0x1000000 + (R < 255 ? R < 1 ? 0 : R : 255) * 0x10000 + (B < 255 ? B < 1 ? 0 : B : 255) * 0x100 + (G < 255 ? G < 1 ? 0 : G : 255)).toString(16).slice(1);
+};
+
+
+export { loadProjectPreviewData, loadProjectData, particleColor };
 

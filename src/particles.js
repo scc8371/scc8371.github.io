@@ -1,3 +1,5 @@
+
+
 const canvas = document.querySelector("#particleCanvas");
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
@@ -6,6 +8,7 @@ let scrollVel = 0;
 let scrolling = false;
 let prevY = window.scrollY;
 
+let particleColor = "#FFFFF0";
 let particles;
 
 let mouse = {
@@ -46,7 +49,28 @@ window.addEventListener('scroll', (e) => {
     window.isScrollingTimeout = setTimeout(function () {
         scrolling = false;
     }, 1);
-})
+});
+
+const isMobile = {
+    Android: function () {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function () {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function () {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function () {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function () {
+        return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+    },
+    any: function () {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
 
 
 class Particle {
@@ -64,7 +88,7 @@ class Particle {
     draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size / 2, 0, Math.PI * 2, false);
-        ctx.fillStyle = '#FFFFF0';
+        ctx.fillStyle = particleColor;
         ctx.fill();
         ctx.closePath();
     }
@@ -129,7 +153,14 @@ class Particle {
     }
 }
 
+function changeParticleColor(color) {
+    particleColor = color;
+}
+
 function init() {
+
+    if (isMobile.any()) return;
+
     particles = [];
 
     let numParticles = 50 + (canvas.height * canvas.width) / 5000;
@@ -170,7 +201,8 @@ function connect() {
 
             if (dist < (canvas.width / 10) * (canvas.height / 15)) {
                 opacity = 1 - (dist / 10000);
-                ctx.strokeStyle = `rgba(200, 200, 200, ${opacity})`;
+                let color = hexToRGB(particleColor, opacity);
+                ctx.strokeStyle = color;
                 ctx.lineWidth = 1;
 
                 ctx.beginPath();
@@ -184,8 +216,22 @@ function connect() {
                 ctx.stroke();
             }
         }
-    }  
+    }
 }
 
 init();
 anim();
+
+function hexToRGB(hex, alpha) {
+    var r = parseInt(hex.slice(1, 3), 16),
+        g = parseInt(hex.slice(3, 5), 16),
+        b = parseInt(hex.slice(5, 7), 16);
+
+    if (alpha) {
+        return "rgba(" + r + ", " + g + ", " + b + ", " + alpha + ")";
+    } else {
+        return "rgb(" + r + ", " + g + ", " + b + ")";
+    }
+}
+
+export { changeParticleColor };
