@@ -25,6 +25,9 @@ let selectedElement = undefined;
 
 let sidePanel = document.querySelector("#no-move");
 
+let projectColor;
+let centDiv;
+
 window.requestAnimationFrame(update);
 
 let cards = [];
@@ -81,7 +84,6 @@ function loadProjectPreviewData() {
 }
 
 function update() {
-    if (loader.projectDescSection) return;
     if (isMobile.any()) return;
 
     window.requestAnimationFrame(update);
@@ -108,9 +110,26 @@ function update() {
     }
     else {
         let style = getComputedStyle(sidePanel);
-        let newColorPrimary = interpolate(style.getPropertyValue("--primaryColor"), primaryBgColor, .1);
-        let newColorSecondary = interpolate(style.getPropertyValue("--primaryColor"), secondaryBgColor, .5);
-        let newColorTrinary = interpolate(style.getPropertyValue("--primaryColor"), thirdBgColor, .5);
+
+        let newColorPrimary;
+        let newColorSecondary;
+        let newColorTrinary;
+
+        if (loader.projectDescSection && projectColor) {
+            newColorPrimary = interpolate(style.getPropertyValue("--primaryColor"), projectColor, 0.1);
+            newColorSecondary = interpolate(style.getPropertyValue("--primaryColor"), LightenColor(projectColor, -50), 0.5);
+            newColorTrinary = interpolate(style.getPropertyValue("--primaryColor"), LightenColor(projectColor, -150), 0.5);
+
+            centDiv.style.setProperty("--primaryColor", newColorPrimary);
+            centDiv.style.setProperty("--secondaryColor", newColorSecondary);
+            centDiv.style.setProperty("--trinaryColor", newColorTrinary);
+        }
+        else {
+
+            newColorPrimary = interpolate(style.getPropertyValue("--primaryColor"), primaryBgColor, .1);
+            newColorSecondary = interpolate(style.getPropertyValue("--primaryColor"), secondaryBgColor, .5);
+            newColorTrinary = interpolate(style.getPropertyValue("--primaryColor"), thirdBgColor, .5);
+        }
 
         sidePanel.style.setProperty("--primaryColor", newColorPrimary);
         sidePanel.style.setProperty("--secondaryColor", newColorSecondary);
@@ -151,6 +170,8 @@ function loadProjectData() {
 
     let project = loader.projectData.projects[index];
 
+    centDiv = document.querySelector(".centered-div");
+
     let name = project.name;
     let link = project.link;
     let trailer = project.trailerEmbed;
@@ -165,6 +186,7 @@ function loadProjectData() {
     let goals = project.goals;
     let responsibilities = project.responsibilities;
     let retrospect = project.retrospect;
+    projectColor = project.color;
 
     //header + trailer embeds
     if (name != null) document.querySelector(".modTitle").innerHTML = name;
