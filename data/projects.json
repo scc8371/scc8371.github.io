@@ -139,7 +139,7 @@
         },
         {
             "name": "Olympus Interactive Website",
-            "description": "A Company Website Created using React/Typescript and Node.js",
+            "description": "A Company Website Created using React/Typescript",
             "coverImage": "media/olympussite/olympussite.gif",
             "role": "<reg-programmer></reg-programmer>",
             "teamSize": "2",
