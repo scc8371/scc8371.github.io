@@ -192,6 +192,10 @@ function loadProjectData() {
     if (name != null) document.querySelector(".modTitle").innerHTML = name;
     if (link != null) document.querySelector('.modButton').setAttribute("href", link);
     if (trailer != null) document.querySelector(".modFrame").setAttribute("src", trailer);
+    else{
+        let embedFrame = document.querySelector(".embed-responsive");
+        embedFrame.parentElement.removeChild(embedFrame);
+    } 
 
 
     let modP = document.querySelector(".modP");

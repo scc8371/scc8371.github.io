@@ -138,6 +138,45 @@
             "color": "#becbcf"
         },
         {
+            "name": "Olympus Interactive Website",
+            "description": "A Company Website Created using React/Typescript and Node.js",
+            "coverImage": "media/olympussite/olympussite.gif",
+            "role": "<reg-programmer></reg-programmer>",
+            "teamSize": "2",
+            "duration": "August 2024",
+            "tools": "Node.js, React, Bootstrap, Webpack, Figma",
+            "overview": "This website is a side-project of mine to allow my small group of developers to have a homepage for our work. It was created in my free time in a month's time and was an opportunity for me to further my web development skills with React and TypeScript.",
+            "goals": [
+                "To improve my skills in web development, specifically using React and TypeScript",
+                "To create a homepage for my team, Olympus Interactive."
+            ],
+            "responsibilities": "I was responsible for most of the development of the page. I implented Node to create a development environment for myself, and utilized React components for the frontend of the site. I helped with design work using Figma, however, I was not the primary designer for the page layout.<n-tab></n-tab>The site is still a work in progress, and will update with more features and improvements as I get time to work on it further.",
+            "link": "https://www.olympusinteractive.com/",
+            "photoGallery": [
+                {
+                    "url": "media/olympussite/olympussite_mockup.png",
+                    "subtitle": "Initial Mockup of Site Using Figma"
+                },
+                {
+                    "url": "media/olympussite/os_landing.png",
+                    "subtitle": "Landing Page"
+                },
+                {
+                    "url": "media/olympussite/os_gamepage.png",
+                    "subtitle": "Project Section"
+                },
+                {
+                    "url": "media/olympussite/os_team.png",
+                    "subtitle": "Team Section"
+                },
+                {
+                    "url": "media/olympussite/os_contact.png",
+                    "subtitle": "Contact Section"
+                }
+            ],
+            "color": "#becbcf"
+        },
+        {
             "name": "Nebulicious",
             "description": "A Cooking Simulator Made for Society of Play's Hexcode Jam 3 in Under 10 Days.",
             "coverImage": "media/nebulicious/nebulicious.gif",

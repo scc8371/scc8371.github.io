@@ -200,7 +200,7 @@ body {
         "desc img";
 
     grid-template-columns: 1.5fr 1fr;
-    grid-template-rows: 0.4fr 1fr .2fr;
+    grid-template-rows: auto;
     align-items: center !important;
 }
 
@@ -209,6 +209,13 @@ body {
 #project-desc-section button {
     margin: 1rem;
 }
+
+#project-desc-section .modTitle{
+    grid-area: header;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+}
+
 
 #projects,
 #about-me-section,
@@ -255,7 +262,7 @@ body {
             "desc desc"
             "img img";
         grid-template-columns: 1fr;
-        grid-template-rows: 0.1fr 1fr;
+        grid-template-rows: auto 1fr;
     }
 
     #project-desc-section button {
