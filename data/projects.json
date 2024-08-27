@@ -142,6 +142,7 @@
             "description": "A Company Website Created using React/Typescript",
             "coverImage": "media/olympussite/olympussite.gif",
             "role": "<reg-programmer></reg-programmer>",
+            "docs": "https://www.figma.com/design/XCSPbh0OkenJu3KeFrE24N/Team-Site?node-id=0-1&t=aBsXCt8YtvNxy0u8-0",
             "teamSize": "2",
             "duration": "August 2024",
             "tools": "Node.js, React, Bootstrap, Webpack, Figma",
