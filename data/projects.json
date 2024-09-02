@@ -178,6 +178,28 @@
             "color": "#becbcf"
         },
         {
+            "name": "[PROTOTYPE] Pokemon Wordle Game",
+            "description": "A Full Stack Web App Using Node, Express, ArangoDB, and React",
+            "coverImage": "media/wordle/wordle.gif",
+            "role": "<reg-programmer></reg-programmer>",
+            "teamSize": "1",
+            "duration": "August 2024 - September 2024",
+            "tools": "Node, Express, ArangoDB, React, Nginx, Bootstrap, TypeScript, JavaScript",
+            "overview": "This is a work in progress application that I have made to learn more about web development. The project is a server-based application that interfaces with a React application. I wanted to create a wordle-like application for some time, and decided to use Pokemon as the basis because I am very familiar with the franchise. A new pokemon is chosen for players every 24 hours (midnight EST), and the goal is to guess the pokemon of the day in six or fewer guesses.",
+            "goals": [
+                "To improve my skills in web development, specifically backend development using databases and Node applications."
+            ],
+            "responsibilities": "I was the sole developer of this application. I started with the backend services, creating a Node/Express app that I later hosted on an AWS Ubuntu client, forwarded to my website using Nginx.<n-tab></n-tab><br> One major thing that I learned while making this application is the importance of SSL certificates. Up until I was about to deploy my application, I was reading API calls through the IP address of the web server I hosted my Node application on, which was unsecure. I then had to learn about how to secure this API, and looked into Nginx, which allowed me to alter the DNS settings of my website to provide a secure place for my API to be called. This took a bit of time for me to understand, but I am familiar with the process now. The API is being interfaced from <a href='https://pokemonapi.samichamberlain.com/'>here</a>. <n-tab></n-tab><br> While working on the Node application, I set up an ArangoDB instance on the web server, allowing for entries to be stored and read on clients whenever requested. I was familiar with SQL databases before ArangoDB, which made this transition daunting to start. However, I quickly started to like the structure of ArangoDB; the query language is much like regular programming and having edge documents to represent connections between regular documents made a lot of sense to me compared to SQL databases. I ended up hosting this on the same web server as my Node application, and it has one database that stores the information of Pokemon entries.<br><n-tab></n-tab>Finally, I worked on the frontend as a React/TypeScript project. This is the part that needs the most work, in my opinion. I did not prioritize working on any styling as I wanted to get a minimum viable product running ASAP. As such, most of my steps forward are going to be in the frontend application, trying to improve the user experience of the project as a whole.",
+            "link": "./pkmnwordle",
+            "photoGallery": [
+                {
+                    "url": "media/wordle/wordle-ui.png",
+                    "subtitle": "Current Frontend Interface"
+                }
+            ],
+            "color": "#becbcf"
+        },
+        {
             "name": "Nebulicious",
             "description": "A Cooking Simulator Made for Society of Play's Hexcode Jam 3 in Under 10 Days.",
             "coverImage": "media/nebulicious/nebulicious.gif",
