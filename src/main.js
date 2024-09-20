@@ -190,12 +190,17 @@ function loadProjectData() {
 
     //header + trailer embeds
     if (name != null) document.querySelector(".modTitle").innerHTML = name;
-    if (link != null) document.querySelector('.modButton').setAttribute("href", link);
+    if (link != null) {
+        let linkButton = document.querySelector('.modButton');
+        linkButton.setAttribute("href", link);
+        linkButton.setAttribute("target", "_blank");
+
+    }
     if (trailer != null) document.querySelector(".modFrame").setAttribute("src", trailer);
-    else{
+    else {
         let embedFrame = document.querySelector(".embed-responsive");
         embedFrame.parentElement.removeChild(embedFrame);
-    } 
+    }
 
 
     let modP = document.querySelector(".modP");
