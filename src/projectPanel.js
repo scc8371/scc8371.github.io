@@ -12,7 +12,7 @@ const template = `
 
 <div class="project-panel">
 <div class="card">
-  <img src="media/bottle-knights.png" class="card-img-top project-image" width="400" height="300" alt="Default">
+  <img src="media/bottle-knights.png" class="card-img-top project-image" width="400" height="300">
   <img src="media/def-icon.png" class='sm-icon'>
   <div class="card-body">   
   

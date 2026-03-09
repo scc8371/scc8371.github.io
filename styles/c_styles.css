@@ -36,6 +36,7 @@
 .project-image {
     height: 300px !important;
     object-fit: cover;
+    background: black;
 }
 
 .social-button:hover {
