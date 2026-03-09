@@ -166,15 +166,15 @@ function init() {
     let numParticles = 50 + (canvas.height * canvas.width) / 5000;
 
     //caps the num of particles to prevent lag at larger resolutions. 
-    numParticles = Math.min(numParticles, 1000);
+    numParticles = Math.min(numParticles, 750);
 
     for (let i = 0; i < numParticles; i++) {
         let size = (Math.random() * 5) + 1;
-        let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
-        let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
+        let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size);
+        let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size);
 
-        let directionX = (Math.random() * 1) - .5;
-        let directionY = (Math.random() * 1) - .5;
+        let directionX = (Math.random()) - .5;
+        let directionY = (Math.random()) - .5;
 
         let color = '#000000';
 
@@ -184,7 +184,6 @@ function init() {
 
 function anim() {
     if (isMobile.any()) return;
-    requestAnimationFrame(anim);
     ctx.clearRect(0, 0, innerWidth, innerHeight);
     for (let i = 0; i < particles.length; i++) {
         particles[i].update();
@@ -194,45 +193,44 @@ function anim() {
 }
 
 function connect() {
-    let opacity = 1;
+    const MIN_DIST = (canvas.width / 20) * (canvas.height / 20);
+
+    ctx.lineWidth = 1;
+
     for (let i = 0; i < particles.length; i++) {
-        for (let j = i; j < particles.length; j++) {
-            let dist = ((particles[i].x - particles[j].x) * (particles[i].x - particles[j].x))
-                + ((particles[i].y - particles[j].y) * (particles[i].y - particles[j].y));
+        const p1 = particles[i];
 
-            if (dist < (canvas.width / 10) * (canvas.height / 15)) {
-                opacity = 1 - (dist / 10000);
-                let color = hexToRGB(particleColor, opacity);
-                ctx.strokeStyle = color;
-                ctx.lineWidth = 1;
+        for (let j = i + 1; j < particles.length; j++) {
+            const p2 = particles[j];
 
+            const dx = p1.x - p2.x;
+            //continue if distance is too large...
+            if (dx * dx > MIN_DIST) continue;
+
+            const dy = p1.y - p2.y;
+
+            const distSq = dx * dx + dy * dy;
+
+            if (distSq < MIN_DIST) {
                 ctx.beginPath();
-                ctx.moveTo(particles[i].x, particles[i].y);
-                ctx.lineTo(particles[j].x, particles[j].y);
+                const opacity = 1 - (distSq / 10000);
+                ctx.strokeStyle = `rgba(255, 255, 255, ${opacity})`;
 
-
-
-                ctx.closePath();
+                ctx.moveTo(p1.x, p1.y);
+                ctx.lineTo(p2.x, p2.y);
 
                 ctx.stroke();
             }
+
+
         }
+
     }
+
 }
 
 init();
-anim();
 
-function hexToRGB(hex, alpha) {
-    var r = parseInt(hex.slice(1, 3), 16),
-        g = parseInt(hex.slice(3, 5), 16),
-        b = parseInt(hex.slice(5, 7), 16);
-
-    if (alpha) {
-        return "rgba(" + r + ", " + g + ", " + b + ", " + alpha + ")";
-    } else {
-        return "rgb(" + r + ", " + g + ", " + b + ")";
-    }
-}
+setInterval(anim, 20);
 
 export { changeParticleColor };

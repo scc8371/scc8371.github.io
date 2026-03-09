@@ -12,7 +12,7 @@ const template = `
 
 <div class="project-panel">
 <div class="card">
-  <img src="media/bottle-knights.png" class="card-img-top  project-image" alt="Default">
+  <img src="media/bottle-knights.png" class="card-img-top project-image" width="400" height="300" loading="lazy" alt="Default">
   <img src="media/def-icon.png" class='sm-icon'>
   <div class="card-body">   
   
@@ -34,8 +34,7 @@ class ProjectPanel extends HTMLElement {
         this.description = description;
         this.shortDescription = shortDescription;
         this.image = image;
-        //this.trailer = trailer;
-        this.index = index; 
+        this.index = index;
         this.icon = icon;
         this.color = color;
 
@@ -45,7 +44,7 @@ class ProjectPanel extends HTMLElement {
 
     connectedCallback() {
 
-        if(this.icon == undefined) this.icon = "media/def-icon.png";
+        if (this.icon == undefined) this.icon = "media/def-icon.png";
 
         this.shadowRoot.querySelector('.card-img-top').src = this.image;
         this.shadowRoot.querySelector('.card-title').innerHTML = this.name;
@@ -54,7 +53,7 @@ class ProjectPanel extends HTMLElement {
 
         this.shadowRoot.querySelector('.card').onclick = () => {
             location.href = "project.html#project-desc-section";
-            
+
             window.localStorage.setItem("scc8371-projectIndex", this.index);
             window.localStorage.setItem("scc8371-previousProjectIndex", "-1");
         }
