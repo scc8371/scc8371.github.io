@@ -33,6 +33,11 @@
     opacity: 1 !important;
 }
 
+.project-image {
+    height: 300px !important;
+    object-fit: cover;
+}
+
 .social-button:hover {
     background-color: black;
     color: white !important;
