@@ -216,6 +216,10 @@ body {
     margin-bottom: 1rem !important;
 }
 
+#projects {
+    display: grid;
+    justify-content: center;
+}
 
 #projects,
 #about-me-section,

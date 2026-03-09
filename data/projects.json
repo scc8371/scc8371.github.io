@@ -105,6 +105,7 @@
       "description": "A Jackbox-Inspired Web Game Using Websockets for Synchronous Data Communication",
       "coverImage": "media/beats-of-deceit/beats-of-deceit.png",
       "docs": "https://github.com/scc8371/juxtafy-server",
+      "trailerEmbed": "https://www.youtube.com/embed/7DGB4w2Vk8I?autoplay=1",
       "role": "<reg-programmer></reg-programmer>",
       "teamSize": "4",
       "duration": "January 2026 (2 days)",
